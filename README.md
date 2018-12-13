@@ -16,7 +16,7 @@
 | --- | --- | --- | :---: |
 | [Architecture for Plasma Chain](https://ethresear.ch/t/evm-compatible-transaction-fee-gas-delegated-execution-architecture-for-plasma-chain/3106) | 정순형(Kevin) | August 2018 | |
 | [Plasma EVM 2.0: state-enforceable construction](https://ethresear.ch/t/plasma-evm-2-0-state-enforceable-construction/3025) | 박주형(Carl), 박정원(Aiden), <br> 정순형(Kevin) | August 2018 | |
-| [EVM Compatible Transaction Fee(GAS) Delegated Execution](https://ethresear.ch/t/evm-compatible-transaction-fee-gas-delegated-execution-architecture-for-plasma-chain/3106) | 정순형(Kevin), <br> 신건우(Thomas), <br> 황재승(Jason), 박주형(Carl) | August 2018 |  |
+| [EVM Compatible Transaction Fee(GAS) Delegated Execution](https://ethresear.ch/t/evm-compatible-transaction-fee-gas-delegated-execution-architecture-for-plasma-chain/3106) | 정순형(Kevin), <br> 신건우(Thomas), <br> 황재승(Jason), <br> 박주형(Carl) | August 2018 |  |
 | [Plasma EVM Implementation](https://docs.google.com/presentation/d/1wjYg36bNQYWEIUQT7ZHtWH2Xc0EfM2N2VmgMbFN2JyU/edit#slide=id.p) | 박주형(Carl) | August 2018 |  |
 | [Data Availability Solution for Plasma EVM without Confirmation](https://ethresear.ch/t/data-availability-solution-for-plasma-evm-without-confirmation/3294) | 박정원(Aiden) | September 2018 |  |
 | [Data Availability problem in implementing Plasma design](https://medium.com/onther-tech/data-availability-problem-in-implementing-plasma-design-6e23df1a147f) | 송무복(Jake) | September 2018 |  |
@@ -66,7 +66,7 @@
 | [Ethereum Gas Price 분석](https://medium.com/onther-tech/ethereum-gas-price-%EB%B6%84%EC%84%9D-de958ce6c654) | 신진환(Jin)| September 2018 | |
 | [Ethereum Gas Price Analysis(EN.)](https://medium.com/onther-tech/ethereum-gas-price-analysis-b70080e2e0d7) | 신진환(Jin)| September 2018 | |
 | [Ethereum 2.0 - Randomness](https://medium.com/onther-tech/ethereum-2-0-randomness-5f99565c6293) | 신진환(Jin)| September 2018 | |
-| [Ethereum DEVCON4 Review :: Deep dive in to Ethereum UX - 1. UI & User Research](https://medium.com/onther-tech/ethereum-devcon-iv-overview-deep-dive-into-ethereum-ux-1-dapp-ui-user-research-5593c07f2059) | Danny(허상범) | November 2018 | |
+| [Ethereum DEVCON4 Review :: Deep dive in to Ethereum UX <br> - 1. UI & User Research](https://medium.com/onther-tech/ethereum-devcon-iv-overview-deep-dive-into-ethereum-ux-1-dapp-ui-user-research-5593c07f2059) | Danny(허상범) | November 2018 | |
 
 ## Ethereum Core
 | Title | Author(s) | Publication Date | Video |  
@@ -95,7 +95,7 @@
 | [MinimeToken by Onther Inc.](https://docs.google.com/presentation/d/1BFGDuX1nM_H8u-v6INLmEWFa5wmRpXx5prYqvl4R1_E/edit#slide=id.p3) | 신건우(Thomas) | March 2018 | |
 | [SMT(SmartMesh) 토큰 무한생성 해킹 설명과 대비책](https://medium.com/onther-tech/smt-%ED%86%A0%ED%81%B0-%EC%9D%B4%EC%A4%91%EC%A7%80%EB%B6%88-%ED%95%B4%ED%82%B9-%EC%84%A4%EB%AA%85%EA%B3%BC-%EB%8C%80%EB%B9%84%EC%B1%85-8bef3f41bcd2) | 정순형(Kevin) | April 2018 | |
 | [Smart contract programming](https://docs.google.com/presentation/d/1d1DTqo8GdhshJyp0iaQqE5xBbEkMYwRXcrr3m95dT3o/edit#slide=id.g3af5057d5a_0_0) | 박주형(Carl) | May 2018 | [View](https://www.youtube.com/watch?v=Es54i39tl1U) |
-| [ONTHER DEVCON 0 : Token & ICO Generator](https://docs.google.com/presentation/d/1biZm1gj6frsicP_Sira4zM1_J-LWKNIA4B_cKn5or4k/edit#slide=id.p) | 정순형(Kevin) | | [View](https://www.youtube.com/watch?v=blfeAtXNH3s)|
+| [ONTHER DEVCON 0 : Token & ICO Generator](https://docs.google.com/presentation/d/1biZm1gj6frsicP_Sira4zM1_J-LWKNIA4B_cKn5or4k/edit#slide=id.p) | 정순형(Kevin) | May 2018 | [View](https://www.youtube.com/watch?v=blfeAtXNH3s)|
 | [내 토큰을 마음대로 빼갈 수 있는 컨트렉트를 만들 수 있을까?](https://medium.com/onther-tech/%EB%82%B4-%ED%86%A0%ED%81%B0%EC%9D%84-%EB%A7%98%EB%8C%80%EB%A1%9C-%EB%B9%BC%EA%B0%88-%EC%88%98-%EC%9E%88%EB%8A%94-%EC%BB%A8%ED%8A%B8%EB%A0%89%ED%8A%B8%EB%A5%BC-%EB%A7%8C%EB%93%A4-%EC%88%98-%EC%9E%88%EC%9D%84%EA%B9%8C-3f607d3c5ceb) | 정순형(Kevin)| June 2018 | |
 | [거래소에 (이더 클래식 → ERC20)으로 오입금 했을 때 정말 복구 방법이 없을까?]() | 정순형(Kevin)| June 2018 | |
 | [About Solidity](https://medium.com/onther-tech/about-solidity-ffccd16caea2) | 신건우(Thomas) | June 2018 | |
