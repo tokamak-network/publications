@@ -15,8 +15,8 @@
 | Title | Author(s) | Publication Date | Video |
 | --- | --- | --- | :---: |
 | [Architecture for Plasma Chain](https://ethresear.ch/t/evm-compatible-transaction-fee-gas-delegated-execution-architecture-for-plasma-chain/3106) | 정순형(Kevin) | August 2018 | |
-| [Plasma EVM 2.0: state-enforceable construction](https://ethresear.ch/t/plasma-evm-2-0-state-enforceable-construction/3025) | 박주형(Carl), <br> 박정원(Aiden), <br> 정순형(Kevin) | August 2018 | |
-| [EVM Compatible Transaction Fee(GAS) Delegated Execution](https://ethresear.ch/t/evm-compatible-transaction-fee-gas-delegated-execution-architecture-for-plasma-chain/3106) | 정순형(Kevin), <br> 신건우(Thomas), <br> 황재승(Jason), <br> 박주형(Carl) | August 2018 |  |
+| [Plasma EVM 2.0: state-enforceable construction](https://ethresear.ch/t/plasma-evm-2-0-state-enforceable-construction/3025) | 박주형(Carl) <br> 박정원(Aiden) <br> 정순형(Kevin) | August 2018 | |
+| [EVM Compatible Transaction Fee(GAS) Delegated Execution](https://ethresear.ch/t/evm-compatible-transaction-fee-gas-delegated-execution-architecture-for-plasma-chain/3106) | 정순형(Kevin) <br> 신건우(Thomas) <br> 황재승(Jason) <br> 박주형(Carl) | August 2018 |  |
 | [Plasma EVM Implementation](https://docs.google.com/presentation/d/1wjYg36bNQYWEIUQT7ZHtWH2Xc0EfM2N2VmgMbFN2JyU/edit#slide=id.p) | 박주형(Carl) | August 2018 |  |
 | [Data Availability Solution for Plasma EVM without Confirmation](https://ethresear.ch/t/data-availability-solution-for-plasma-evm-without-confirmation/3294) | 박정원(Aiden) | September 2018 |  |
 | [Data Availability problem in implementing Plasma design](https://medium.com/onther-tech/data-availability-problem-in-implementing-plasma-design-6e23df1a147f) | 송무복(Jake) | September 2018 |  |
@@ -28,7 +28,7 @@
 | --- | --- | --- | :---: |
 | [Plasma EVM](https://docs.google.com/presentation/d/1sAkYOCNdTb5aLj967pXirZedHqjoIXrVSQMvNS7tPk0/edit#slide=id.p) | 박주형(Carl) | August 2018 |  |
 | [Transaction Fee(GAS) Delegated Execution Model <br> in Py-EVM](https://medium.com/onther-tech/transaction-fee-gas-delegated-execution-model-in-py-evm-f2d57cea1008) | 신건우(Thomas) | September 2018 | |
-| [플라즈마 EVM <br> : 탈중앙화된 상태를 강제하는 튜링 완전한 사이드 체인](https://hackmd.io/ciFhWJJrRbGFqA7Vc6tVJQ) | 박주형(Carl), <br> 박정원(Aiden), <br> 정순형(Kevin), <br> 황재승(jason) | September 2018 | |
+| [플라즈마 EVM <br> : 탈중앙화된 상태를 강제하는 튜링 완전한 사이드 체인](https://hackmd.io/ciFhWJJrRbGFqA7Vc6tVJQ) | 박주형(Carl) <br> 박정원(Aiden) <br> 정순형(Kevin) <br> 황재승(jason) | September 2018 | |
 | [플라즈마와 Data Availability 문제](https://medium.com/onther-tech/%ED%94%8C%EB%9D%BC%EC%A6%88%EB%A7%88%EC%99%80-data-availability-%EB%AC%B8%EC%A0%9C-894d66eb2080) | 송무복(Jake) | October 2018 | |
 | [누구나 쉽게 이해하는 플라즈마 EVM](https://docs.google.com/presentation/d/10SzBYndUXm8OYWNI-n-USXLrJoe3g4eveF51tR-ptgU/edit#slide=id.p) | 정순형(Kevin) | October 2018 | |
 | [일반상태(튜링완전) 플라즈마 관련 연구 분석](https://docs.google.com/presentation/d/1FeJU9RLUUi108I53GgKS9rQYHvQIsduSPjjLCQLuIUI/edit) | 박정원(Aiden) | October 2018 | |
@@ -44,6 +44,7 @@
 | [플라즈마 화이트페이퍼 번역](https://github.com/Onther-Tech/plasma-korea) | Onther | April 2018 | |
 | [Raiden Network](https://docs.google.com/presentation/d/1gis69QsmiE7ZrGWbHwGizIbIy2fxWqZ2rddUC_PNm6k/edit#slide=id.g3ccd028687_0_86) | 허상범(Danny) | June 2018 | |
 | [Plasma ERC721 implementation (Loomnetwork)](https://medium.com/onther-tech/plasma-erc721-implementation-loomnetwork-9f8ec59bb25b) | 박주형(Carl) | June 2018 | |
+| [Plasma MVP(7f80bc9) Smart Contract Audit](https://docs.google.com/presentation/d/1ebaFufMnhYb8iu7WYXn7jLmWU4IaRC1GIBWUeZbExt8/edit#slide=id.p) | 정순형(Kevin) | June 2018 | [View](https://www.youtube.com/watch?v=KYaRddUP-xk) |
 | [Plasma MVP Audit](https://medium.com/onther-tech/plasma-mvp-audit-%EB%85%B9%EC%B7%A8%EB%A1%9D-script-166a2c5012b4) | Onther | June 2018 | |
 | [TrueBit: scrypt-interactive implementation](https://medium.com/onther-tech/truebit-scrypt-interactive-implementation-502032ac173a) | 박주형(Carl)| June 2018 | |
 | [Plasma 101 : Let's Scale with Cryptoeconomics](https://medium.com/onther-tech/plasma-101-lets-scale-with-cryptoeconomics-ee0c9fac4989) | 허상범(Danny) | June 2018 | |
@@ -134,10 +135,10 @@
 | [Monaco](https://docs.google.com/presentation/d/1qi3TIpcEY7CWU3zI2JABmAgFLg1OXPq2VGpUCUpcvwk/edit#slide=id.p3) | Onther | 2017 | |
 | [BAT](https://docs.google.com/presentation/d/1lwM52Ofsfmh7541Gu78ZvRcUSHwjk5biwaOEV6u4dq4/edit?usp=sharing) | 김휘경(Zoe) | 2017 | |
 | [1sŦ](https://docs.google.com/presentation/d/13w3rWSj3OpB_jpd0MngF3ZiFyDxI3stCOD3UswJx-q0/edit?usp=sharing) | 김휘경(Zoe) | 2017 | |
-| [MakerDAO](https://docs.google.com/presentation/d/1Sn4_I-rM2b6ovKj3WffCa0KJf8-FTb0CtjT8GhDVP-Y/edit#slide=id.p) | 강주형(Jace), <br> 김휘경(Zoe) | February 2018 | |
-| [Digix Dao](https://docs.google.com/presentation/d/1-udiVkNffAE7vMHM_yQ0369vJ2x_dj8bgUU3WY3OEFU/edit#slide=id.p) | 강주형(Jace), <br> 김휘경(Zoe) | March 2018 | |
+| [MakerDAO](https://docs.google.com/presentation/d/1Sn4_I-rM2b6ovKj3WffCa0KJf8-FTb0CtjT8GhDVP-Y/edit#slide=id.p) | 강주형(Jace) <br> 김휘경(Zoe) | February 2018 | |
+| [Digix Dao](https://docs.google.com/presentation/d/1-udiVkNffAE7vMHM_yQ0369vJ2x_dj8bgUU3WY3OEFU/edit#slide=id.p) | 강주형(Jace) <br> 김휘경(Zoe) | March 2018 | |
 | [Kyber Network](https://docs.google.com/presentation/d/1b9ra0R55VmNtzXYkx6ROKKZGhHlMHg5_Ky-MRoKFd4A/edit#slide=id.p) | 강주형(Jace) | March 2018 | |
-| [OmiseGo](https://docs.google.com/presentation/d/1E2ZixUBGKyAw4P1GDouYpmRwgh5-cSrD8dHUs7ZF4qA/edit#slide=id.p) | 강주형(Jace),<br> 김휘경(Zoe) | March 2018 | |
+| [OmiseGo](https://docs.google.com/presentation/d/1E2ZixUBGKyAw4P1GDouYpmRwgh5-cSrD8dHUs7ZF4qA/edit#slide=id.p) | 강주형(Jace) <br> 김휘경(Zoe) | March 2018 | |
 | [Status Network](https://docs.google.com/presentation/d/15ZPsBCYRNOjgurhgM0KOC6r9_lRYKEQiaWxFXGCxH9M/edit#slide=id.p) | 강주형(Jace) | March 2018 | |
 | [Filecoin](https://drive.google.com/open?id=17lVmZtMc58aumevSFggTNsu-JpDtXgp2wybT_WGw-WE) | 허상범(Danny) | April 2018 | |
 
