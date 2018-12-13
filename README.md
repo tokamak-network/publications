@@ -13,7 +13,7 @@
 
 ### English version
 | Title | Author(s) | Publication Date | Video |
-| --- | --- | :---: | :---: |
+| --- | --- | --- | :---: |
 | [Architecture for Plasma Chain](https://ethresear.ch/t/evm-compatible-transaction-fee-gas-delegated-execution-architecture-for-plasma-chain/3106) | 정순형(Kevin) | August 2018 | |
 | [Plasma EVM 2.0: state-enforceable construction](https://ethresear.ch/t/plasma-evm-2-0-state-enforceable-construction/3025) | 박주형(Carl), <br> 박정원(Aiden), <br> 정순형(Kevin) | August 2018 | |
 | [EVM Compatible Transaction Fee(GAS) Delegated Execution](https://ethresear.ch/t/evm-compatible-transaction-fee-gas-delegated-execution-architecture-for-plasma-chain/3106) | 정순형(Kevin), <br> 신건우(Thomas), <br> 황재승(Jason), <br> 박주형(Carl) | August 2018 |  |
@@ -25,7 +25,7 @@
 
 ### Korean version
 | Title | Author(s) | Publication Date | Video |  
-| --- | --- | :---: | :---: |
+| --- | --- | --- | :---: |
 | [Plasma EVM](https://docs.google.com/presentation/d/1sAkYOCNdTb5aLj967pXirZedHqjoIXrVSQMvNS7tPk0/edit#slide=id.p) | 박주형(Carl) | August 2018 |  |
 | [Transaction Fee(GAS) Delegated Execution Model <br> in Py-EVM](https://medium.com/onther-tech/transaction-fee-gas-delegated-execution-model-in-py-evm-f2d57cea1008) | 신건우(Thomas) | September 2018 | |
 | [플라즈마 EVM <br> : 탈중앙화된 상태를 강제하는 튜링 완전한 사이드 체인](https://hackmd.io/ciFhWJJrRbGFqA7Vc6tVJQ) | 박주형(Carl), <br> 박정원(Aiden), <br> 정순형(Kevin), <br> 황재승(jason) | September 2018 | |
@@ -38,7 +38,7 @@
 
 ## Ethereum Scalability
 | Title | Author(s) | Publication Date | Video |  
-| --- | --- | :---: | :---: |
+| --- | --- | --- | :---: |
 | [플라즈마 일반](https://docs.google.com/presentation/d/1QYNLcAvI3YwEt8CdpxfT5WnsGaKispDuNIlUf6c-I4E/edit#slide=id.p3) |  Onther | 2018 | |
 | [Deep Dive Into Plasma MVP](https://docs.google.com/presentation/d/1gLgeA6_o1WTz7PtSrzclmx8moZ9oAxTG5ZJl8U1tgqg/edit?usp=sharing) |  정순형(Kevin) | April 2018 | |
 | [플라즈마 화이트페이퍼 번역](https://github.com/Onther-Tech/plasma-korea) | Onther | April 2018 | |
@@ -52,7 +52,7 @@
 
 ## General Ethereum
 | Title | Author(s) | Publication Date | Video |  
-| --- | --- | :---: | :---: |
+| --- | --- | --- | :---: |
 | [Whisper 프로토콜](https://docs.google.com/presentation/d/1zA9_66ywegS3Jl_brus9sfjcElqVzQT1qvYPhyJKsJY/edit?usp=sharing) | Onther | August 2017 | |
 | [이더리움 캐스퍼 이해](https://docs.google.com/presentation/d/1Kidwr3VsP8C1wA2a8Pzxtuess-lnLSNx5CMqN1sE3SU/edit?usp=sharing) | Onther | September 2017 | |
 | [web3.py](https://docs.google.com/presentation/d/1meEuaCBlhSqyH2WpOkpsYDjKRISXtssA4BzCEoI9i8o/edit#slide=id.p) | 정순형(Kevin) | 2017 | |
@@ -70,7 +70,7 @@
 
 ## Ethereum Core
 | Title | Author(s) | Publication Date | Video |  
-| --- | --- | :---: | :---: |
+| --- | --- | --- | :---: |
 | [이더리움 옐로우페이퍼 이해 1](https://docs.google.com/presentation/d/1CdRl48rLgfITPWDqltnZ-Jzxy3pV3RbjpzUvKsQRNnU/edit?usp=sharing) | Onther | August 2017 | |
 | [이더리움 옐로우페이퍼 이해2](https://docs.google.com/presentation/d/1-ci2Ue4tdetuAXRyx3p1PflKzEvRH8wvfTeOkhrS9dI/edit?usp=sharing) | Onther | September 2017 | |
 | [이더리움 옐로우페이퍼 이해3](https://docs.google.com/presentation/d/1-ci2Ue4tdetuAXRyx3p1PflKzEvRH8wvfTeOkhrS9dI/edit#slide=id.p3) | Onther | September 2017 | |
@@ -83,7 +83,7 @@
 
 ## Smart Contract Development
 | Title | Author(s) | Publication Date | Video |  
-| --- | --- | :---: | :---: |
+| --- | --- | --- | :---: |
 | [Mastering Truffle](https://docs.google.com/presentation/d/1ONHk1ZwNXPe9650Nivv9xaNdN9ec45X22D136RyLAME/edit#slide=id.p) | Onther | August 2017| |
 | [Smart Contract Audit](https://docs.google.com/presentation/d/1I5JjEVCFsD6UbKOLERQ8pOTsF2fEsnj5RBcDKU_aozc/edit#slide=id.p) | 박주형(Carl) | December 2017 | |
 | [Wolf Contract](https://docs.google.com/presentation/d/16MaPJcTZ3IV9KNd_N_KvGpWhtYrQelsXFBEtw0468fE/edit#slide=id.p) | 정순형(Kevin) | December 2017 | |
@@ -106,7 +106,7 @@
 
 ## Token Model
 | Title | Author(s) | Publication Date | Video |  
-| --- | --- | :---: | :---: |
+| --- | --- | --- | :---: |
 | [ICO Trilemma[Blog]](https://medium.com/onther-tech/ico-%ED%8A%B8%EB%A6%B4%EB%A0%88%EB%A7%88-trillema-ico-%EC%82%BC%EC%9C%84%EC%9D%BC%EC%B2%B4%EB%B6%88%EA%B0%80%EB%8A%A5%EC%84%B1-87c6d9233a78) | 정순형(Kevin) | March 2018 | |
 | [탈중앙화(Decentralization)](https://docs.google.com/presentation/d/1kNQxJgbaTSx93R3owcYAtdQZnx3IBEiU8HfXmUlsDQc/edit?usp=sharing) | 정순형(Kevin) | April 2018 | |
 | [ERC20 TOP100 Business Model](https://docs.google.com/presentation/d/1yiZa08psrObA3d8u0AoRvq3XUFQ1Lk5dC8mjH64i248/edit#slide=id.p) | 강주형(Jace) | May 2018 | |
@@ -118,7 +118,7 @@
 
 ## Dapp Analysis
 | Title | Author(s) | Publication Date | Video |  
-| --- | --- | :---: | :---: |
+| --- | --- | --- | :---: |
 | [DGD](https://docs.google.com/presentation/d/1nBQws6tC8TFFAVtNWuPAvn6KAYdrhC_1wTS5hi4M7FQ/edit) | Onther | 2017 | |
 | [CVC](https://docs.google.com/presentation/d/1iiuJXwprLwJwWCpqBjdpvAXG3Xz285lrz6SwvEto8AM/edit#slide=id.p3) | Onther | 2017 | |
 | [Gnosis](https://docs.google.com/presentation/d/1eSYYhaxSEgGwqqBsSlcAtu609LJABgGGIRyIuJfP0B0/edit) | Onther | 2017 | |
@@ -137,14 +137,14 @@
 | [MakerDAO](https://docs.google.com/presentation/d/1Sn4_I-rM2b6ovKj3WffCa0KJf8-FTb0CtjT8GhDVP-Y/edit#slide=id.p) | 강주형(Jace), <br> 김휘경(Zoe) | February 2018 | |
 | [Digix Dao](https://docs.google.com/presentation/d/1-udiVkNffAE7vMHM_yQ0369vJ2x_dj8bgUU3WY3OEFU/edit#slide=id.p) | 강주형(Jace), <br> 김휘경(Zoe) | March 2018 | |
 | [Kyber Network](https://docs.google.com/presentation/d/1b9ra0R55VmNtzXYkx6ROKKZGhHlMHg5_Ky-MRoKFd4A/edit#slide=id.p) | 강주형(Jace) | March 2018 | |
-| [OmiseGo](https://docs.google.com/presentation/d/1E2ZixUBGKyAw4P1GDouYpmRwgh5-cSrD8dHUs7ZF4qA/edit#slide=id.p) | 강주형(Jace),김휘경(Zoe) | March 2018 | |
+| [OmiseGo](https://docs.google.com/presentation/d/1E2ZixUBGKyAw4P1GDouYpmRwgh5-cSrD8dHUs7ZF4qA/edit#slide=id.p) | 강주형(Jace),<br> 김휘경(Zoe) | March 2018 | |
 | [Status Network](https://docs.google.com/presentation/d/15ZPsBCYRNOjgurhgM0KOC6r9_lRYKEQiaWxFXGCxH9M/edit#slide=id.p) | 강주형(Jace) | March 2018 | |
 | [Filecoin](https://drive.google.com/open?id=17lVmZtMc58aumevSFggTNsu-JpDtXgp2wybT_WGw-WE) | 허상범(Danny) | April 2018 | |
 
 
 ## Bitcoin Core
 | Title | Author(s) | Publication Date | Video |  
-| --- | --- | :---: | :---: |
+| --- | --- | --- | :---: |
 | [Bloom Filter](https://docs.google.com/presentation/d/1FipuUsbBBL_lCcIcvHRrZQ6sspB17R2AWucKY0zHrt8/edit#slide=id.p) | 황재승(Jason) | March 2018 | |
 | [Bitcoins the hard way](https://docs.google.com/presentation/d/1R-xY0FrkWyd_2-FB9-VZbxP-p0cMYUGKO7XQEbwNgjw/edit#slide=id.p) | 황재승(Jason) | March 2018 | |
 | [Bitcoin OP_RETURN](https://docs.google.com/presentation/d/1H46MtFgLbP7_GWI4AOoz4YaWvni79lo56IjBrUk__6o/edit#slide=id.p9) | 신건우(Thomas) | March 2018 | |
