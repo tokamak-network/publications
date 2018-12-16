@@ -165,7 +165,7 @@
 | [ERC20 토큰 Top100 Business model과 토큰 분류[Blog]](https://medium.com/onther-tech/erc20-%ED%86%A0%ED%81%B0-top100-business-model%EA%B3%BC-%ED%86%A0%ED%81%B0-%EB%B6%84%EB%A5%98-1-9f471797bc33) | 강주형(Jace) | Jun 2018 | |
 | [Token Sale Mechanism by Smart Contract](https://docs.google.com/presentation/d/1zUZuMhW_diFrzAUiGZTtYBn7AOZMCAUMjveBX0zukjM/edit#slide=id.p) | 허상범(Danny)| June 2018 | [View](https://www.youtube.com/watch?v=bSaSvjzWG3g) |
 | [Intro to TokenOS](https://medium.com/onther-tech/intro-to-token-os-6291be9644ea) | 허상범(Danny)| June 2018 | |
-| [Deep Dive https://docs.google.com/presentation/d/1zUZuMhW_diFrzAUiGZTtYBn7AOZMCAUMjveBX0zukjM/edit?usp=drive_web&ouid=104276459804264279701into Token OS - #1. Sale](https://medium.com/onther-tech/deep-dive-into-tokenos-1-sale-fb944f004ec1) | 허상범(Danny) | August 2018 | |
+| [Deep Dive Token OS - #1. Sale](https://medium.com/onther-tech/deep-dive-into-tokenos-1-sale-fb944f004ec1) | 허상범(Danny) | August 2018 | |
 | [The Theory of Token Seigniorage](https://docs.google.com/presentation/d/1jXoDFvyppKzmtzgVoueonWvbCrMzxZjwB0nENvOBU9g/edit) | 허상범(Danny) | September 2018 | [View](https://www.youtube.com/watch?v=-6Pa_L0FYdE#t=7h12m49s) |
 | [(돈 쉽게 버는)토큰이코노미 구성과 설계 방법](https://docs.google.com/presentation/d/17ddOKCVcjWrA5tvUN1qI40PQHgWd4REdG6bRnEkWIFo/edit#slide=id.g4325d86a58_0_5) | 정순형(Kevin) | October 2018| |
 | [Microeconomic Analysis of Gas Price Mechanism and Mitigation](https://hackmd.io/oe-bT8GcRvCc7vBgeOJyLw)| 허상범(Danny) | November 2018 | |
