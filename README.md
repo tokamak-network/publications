@@ -23,7 +23,7 @@
 | [Data Availability problem in implementing Plasma design](https://medium.com/onther-tech/data-availability-problem-in-implementing-plasma-design-6e23df1a147f) | 송무복(Jake) | September 2018 |  |
 | [PoC Implementation of Plasma EVM](https://ethresear.ch/t/poc-implementation-of-plasma-evm/3958) | 박주형(Carl) | October 2018 |  |
 | [(ver.0.1)Data availability solution  for Plasma EVM](https://docs.google.com/presentation/d/1CYkbFu9XpX0QaxppUvhVOGFnsCLnZksrusNz1GJ_QIk/edit#slide=id.g44ce769bee_0_266) | 박정원(Aiden) | |
-| [Dancing philosophers problem, verification game, Plasmachain and data availability](https://medium.com/onther-tech/dancing-philosophers-problem-verification-game-sidechain-and-data-availability-translated-c60ac51afcfa) | 정순형(Kevin) | October 2018 |  |
+| [Dancing philosophers problem, verification game, <br> Plasmachain and data availability](https://medium.com/onther-tech/dancing-philosophers-problem-verification-game-sidechain-and-data-availability-translated-c60ac51afcfa) | 정순형(Kevin) | October 2018 |  |
 | [Plasma World Map](https://ethresear.ch/t/plasma-world-map-the-hitchhiker-s-guide-to-the-plasma/4333) | 박정원(Aiden) | November 2018 |  |
 
 
@@ -87,7 +87,7 @@
 | [Ethereum Gas Price Analysis(EN.)](https://medium.com/onther-tech/ethereum-gas-price-analysis-b70080e2e0d7) | 신진환(Jin)| September 2018 | |
 | [GHOST protocol](https://docs.google.com/presentation/d/11OSC2883AsopNuAMgWLFm4WshkJqWTrpR-MbKuZ6nZs/edit#slide=id.p) | 신건우(Thomas) | October 2018 | |
 | [이더리움의 이해](https://docs.google.com/presentation/d/1t6sqUhex35C6kl_VDE6z-aFLDwyDqAiR2G2p3-RcCJg/edit#slide=id.g431a210fed_0_325) | 황재승(Jason) | October 2018 | |
-| [Ethereum DEVCON4 Review :: Deep dive in to Ethereum UX <br> - 1. UI & User Research](https://medium.com/onther-tech/ethereum-devcon-iv-overview-deep-dive-into-ethereum-ux-1-dapp-ui-user-research-5593c07f2059) | Danny(허상범) | November 2018 | |
+| [Ethereum DEVCON4 Review :: <br> Deep dive in to Ethereum UX - 1. UI & User Research](https://medium.com/onther-tech/ethereum-devcon-iv-overview-deep-dive-into-ethereum-ux-1-dapp-ui-user-research-5593c07f2059) | Danny(허상범) | November 2018 | |
 | [Ethereum 2.0 - Randomness](https://docs.google.com/presentation/d/1mVwi8p_KHIWR4HgwOSMJDLwoIzd6n9EwX4XKIP-88o8/edit?usp=sharing) | 신진환(Jin)| November 2018 | |
 | [Ethereum 2.0 - Randomness[Blog]](https://medium.com/onther-tech/ethereum-2-0-randomness-5f99565c6293) | 신진환(Jin)| November 2018 | |
 
@@ -108,7 +108,7 @@
 | [Developing Core with Py-EVM](https://docs.google.com/presentation/d/1RJnc1OsK7vGcSVjPV_2alhgCXTdn4X9zuSllhB-aHw0/edit#slide=id.p) | 정순형(Kevin) | July 2018 | |
 | [geth(/cmd/geth)](https://docs.google.com/presentation/d/1WFaWG3DRrKES6YrhFyLIvumn8PuLarmw55jek_8vzuo/edit#slide=id.p) | 신건우(Thomas) | September 2018 | |
 | [Geth Package](https://docs.google.com/presentation/d/1_9TZJEB--JmaU4T78If_vwvNcKls2vBUVnXqZqkUylQ/edit#slide=id.p) | 황재승(Jason) | September 2018 | |
-| [go-ethereum/ fetcher, downloader, rawdb, ethdb 패키지 분석](https://docs.google.com/presentation/d/1Wtv_BoYGeM6ocA3XsP-6JINkzW1ETOSvOdKjavkJpjc/edit?usp=sharing)| 신진환(Jin) | September 2018 | |
+| [go-ethereum /fetcher, downloader, rawdb, ethdb](https://docs.google.com/presentation/d/1Wtv_BoYGeM6ocA3XsP-6JINkzW1ETOSvOdKjavkJpjc/edit?usp=sharing)| 신진환(Jin) | September 2018 | |
 | [geth(plasma/init)](https://docs.google.com/presentation/d/1dOFcq1gsq5rh_UrgfuvutQMb5OCeDhQi5PFxnFflQT8/edit#slide=id.g432225dd33_0_62)| 신건우(Thomas) | October 2018 | |
 | [WIP, plasma/event](https://docs.google.com/presentation/d/1PTW1QsFTLM5dxB31xLUAryJeoO1BWMVTH6xWHlfBsgc/edit?usp=sharing) | 신건우(Thomas) | October 2018 | |
 | [geth(txpool)](https://docs.google.com/presentation/d/1MYcwJOyi_FbAVufuEu___gvTmLuGcm_7jD7MZMG0KsY/edit#slide=id.g44fcaa1bb9_0_331) | 신건우(Thomas) | October 2018 | |
@@ -144,7 +144,7 @@
 | [Auditing Reference](https://hackmd.io/s/HJXdQo-cX) | 황재승(Jason) | October 2018 | |
 | [Trustless Smart Contract Upgradability](https://medium.com/onther-tech/%EC%B2%A0%ED%95%99%EC%9E%90%EC%9D%98-%EB%8D%B0%EB%B8%8C%EC%BD%984-%EC%B0%B8%EA%B4%80%EA%B8%B0-trustless-smart-contract-upgradability-f16ec937b96e) | 정순형(Kevin) | November 2018| |
 | [Upgradeable smart contract applications using proxy patterns](https://medium.com/onther-tech/upgradeable-smart-contract-applications-using-proxy-patterns-2053a5780287) | 신건우(Thomas) | November 2018 | |
-| [스마트 컨트렉트의 기술적 이해](https://docs.google.com/presentation/d/19W4rHndsnhDGG0WDnpWqT1GZvLrRSsD3hSsK4rS4HBg/edit?usp=sharing) | 정순형(Kevin) | | June 2018 | |
+| [스마트 컨트렉트의 기술적 이해](https://docs.google.com/presentation/d/19W4rHndsnhDGG0WDnpWqT1GZvLrRSsD3hSsK4rS4HBg/edit?usp=sharing) | 정순형(Kevin) | June 2018 | |
 | [Deconstructing a Solidity Contract](https://docs.google.com/presentation/d/1EXNqgmXbyOLAH_gPr3HFFVTzORRABqdtc9jpanKjCsY/edit#slide=id.p) | 신건우(Thomas) | November 2018 | |
 
 ## Token Model
@@ -166,7 +166,7 @@
 | [DGD - token contract](https://docs.google.com/presentation/d/1nBQws6tC8TFFAVtNWuPAvn6KAYdrhC_1wTS5hi4M7FQ/edit) | Onther | 2017 | |
 | [Gnosis - token contract](https://docs.google.com/presentation/d/1eSYYhaxSEgGwqqBsSlcAtu609LJABgGGIRyIuJfP0B0/edit) | Onther | 2017 | |
 | [Golem - token contract](https://docs.google.com/presentation/d/1rTN5kqOkuzPVbxgqeDMSxW42bW_v2W9LK_gS_TBqSHg/edit#slide=id.p9) | Onther | 2017 | |
-| [MLN] - token contract(https://docs.google.com/presentation/d/1jHAkoW7JjvRrs1oCqr5KACblFy7uADWta-pSb6bWIEg/edit#slide=id.p3) | Onther | 2017 | |
+| [MLN - token contract](https://docs.google.com/presentation/d/1jHAkoW7JjvRrs1oCqr5KACblFy7uADWta-pSb6bWIEg/edit#slide=id.p3) | Onther | 2017 | |
 | [Status and Aragon - token contract](https://docs.google.com/presentation/d/1YL7bfqVZe-n_meecrft4bzKQ35FuN37vrXxAsRu1XHo/edit?usp=sharing) | Onther | 2017 | |
 | [TenXPay - token contract](https://docs.google.com/presentation/d/1azGMRKtOrter3VYtbCsu15EcXJiovBW8VMFSeI0diYY/edit?usp=sharing) | Onther | 2017 | |
 | [Edgeless - token contract](https://docs.google.com/presentation/d/1Xks-Zs818kLcqWIKzJZEOOieorsGtncR9BCT_IDd4XA/edit?usp=sharing) | Onther | 2017 | |
