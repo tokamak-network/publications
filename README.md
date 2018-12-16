@@ -22,7 +22,7 @@
 | [Data Availability Solution for Plasma EVM without Confirmation](https://ethresear.ch/t/data-availability-solution-for-plasma-evm-without-confirmation/3294) | 박정원(Aiden) | September 2018 |  |
 | [Data Availability problem in implementing Plasma design](https://medium.com/onther-tech/data-availability-problem-in-implementing-plasma-design-6e23df1a147f) | 송무복(Jake) | September 2018 |  |
 | [PoC Implementation of Plasma EVM](https://ethresear.ch/t/poc-implementation-of-plasma-evm/3958) | 박주형(Carl) | October 2018 |  |
-| [(ver.0.1)Data availability solution  for Plasma EVM](https://docs.google.com/presentation/d/1CYkbFu9XpX0QaxppUvhVOGFnsCLnZksrusNz1GJ_QIk/edit#slide=id.g44ce769bee_0_266) | 박정원(Aiden) | October 2018 | |
+| [Data availability solution  for Plasma EVM[ver.0.1]](https://docs.google.com/presentation/d/1CYkbFu9XpX0QaxppUvhVOGFnsCLnZksrusNz1GJ_QIk/edit#slide=id.g44ce769bee_0_266) | 박정원(Aiden) | October 2018 | |
 | [Dancing philosophers problem, verification game, <br> Plasmachain and data availability](https://medium.com/onther-tech/dancing-philosophers-problem-verification-game-sidechain-and-data-availability-translated-c60ac51afcfa) | 정순형(Kevin) | October 2018 |  |
 | [Plasma World Map](https://ethresear.ch/t/plasma-world-map-the-hitchhiker-s-guide-to-the-plasma/4333) | 박정원(Aiden) | November 2018 |  |
 
@@ -97,7 +97,7 @@
 | [Ethereum DEVCON4 Review <br> :: Deep dive in to Ethereum UX - 1. UI & User Research](https://medium.com/onther-tech/ethereum-devcon-iv-overview-deep-dive-into-ethereum-ux-1-dapp-ui-user-research-5593c07f2059) | Danny(허상범) | November 2018 | |
 | [Ethereum 2.0 - Randomness](https://docs.google.com/presentation/d/1mVwi8p_KHIWR4HgwOSMJDLwoIzd6n9EwX4XKIP-88o8/edit?usp=sharing) | 신진환(Jin)| November 2018 | |
 | [Ethereum 2.0 - Randomness[Blog]](https://medium.com/onther-tech/ethereum-2-0-randomness-5f99565c6293) | 신진환(Jin)| November 2018 | |
-| [Zero-Knowledge Proof Basic_Aiden](https://docs.google.com/presentation/d/1iKkSsJILHrizTWjOAg02DveOI8lEJfUREDkAsMKOgnY/edit#slide=id.p) | 박정원(Aiden) | December 2018 | [View1](https://www.youtube.com/watch?v=93TWY6pyxvE&index=5&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN) <br> [View2](https://www.youtube.com/watch?v=3iAqQdp1sWE&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=6) |
+| [Zero-Knowledge Proof Basic](https://docs.google.com/presentation/d/1iKkSsJILHrizTWjOAg02DveOI8lEJfUREDkAsMKOgnY/edit#slide=id.p) | 박정원(Aiden) | December 2018 | [View1](https://www.youtube.com/watch?v=93TWY6pyxvE&index=5&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN) <br> [View2](https://www.youtube.com/watch?v=3iAqQdp1sWE&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=6) |
 
 
 ## Ethereum Core
@@ -114,7 +114,7 @@
 | [Geth network layer](https://docs.google.com/presentation/d/1XUCuk0vzQYpZjOqhGlZTDsaO5qRf01zHrlNbVK_2A58/edit#slide=id.p) | 박주형(Carl) | May 2018 | [View](https://www.youtube.com/watch?v=O0ahKd8Ldxw&index=3&list=PLwLfLX5QfdGqsCfwu-qhVC8OdJiuyk5QB) |
 | [Geth network layer[Blog]](https://medium.com/onther-tech/geth-network-layer-e12e65760829) | 박주형(Carl) | June 2018 | [View](https://www.youtube.com/watch?v=O0ahKd8Ldxw) |
 | [Developing Core with Py-EVM](https://docs.google.com/presentation/d/1RJnc1OsK7vGcSVjPV_2alhgCXTdn4X9zuSllhB-aHw0/edit#slide=id.p) | 정순형(Kevin) | July 2018 | |
-| [geth(/cmd/geth)](https://docs.google.com/presentation/d/1WFaWG3DRrKES6YrhFyLIvumn8PuLarmw55jek_8vzuo/edit#slide=id.p) | 신건우(Thomas) | September 2018 | |
+| [geth /cmd/geth](https://docs.google.com/presentation/d/1WFaWG3DRrKES6YrhFyLIvumn8PuLarmw55jek_8vzuo/edit#slide=id.p) | 신건우(Thomas) | September 2018 | |
 | [Geth Package](https://docs.google.com/presentation/d/1_9TZJEB--JmaU4T78If_vwvNcKls2vBUVnXqZqkUylQ/edit#slide=id.p) | 황재승(Jason) | September 2018 | |
 | [go-ethereum /fetcher /downloader /rawdb /ethdb](https://docs.google.com/presentation/d/1Wtv_BoYGeM6ocA3XsP-6JINkzW1ETOSvOdKjavkJpjc/edit?usp=sharing)| 신진환(Jin) | September 2018 | |
 | [Go Ethereum #1_consensus/type/event/miner](https://docs.google.com/presentation/d/1jnhGGBV4AqVBOYJZS9ALHFV0sPKXbr3QQkGL_lvIZlg/edit#slide=id.p1) | 송무복(Jake) | September 2018 | |
