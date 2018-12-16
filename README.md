@@ -117,11 +117,11 @@
 | [go-ethereum/ fetcher, downloader, rawdb, ethdb 패키지 분석](https://docs.google.com/presentation/d/1Wtv_BoYGeM6ocA3XsP-6JINkzW1ETOSvOdKjavkJpjc/edit?usp=sharing)| 신진환(Jin) | September 2018 | |
 | [Go Ethereum #1_consensus/type/event/miner](https://docs.google.com/presentation/d/1jnhGGBV4AqVBOYJZS9ALHFV0sPKXbr3QQkGL_lvIZlg/edit#slide=id.p1) | 송무복(Jake) | September 2018 | |
 | [Go Ethereum #2_params/vm/ethdb/trie](https://docs.google.com/presentation/d/1DUqRdXDYNWnGcJsvN3M-0Ll8BJ09ZroSYl5BCh7yMt0/edit#slide=id.p1) | 송무복(Jake) | September 2018 | |
-| [geth(plasma/init)](https://docs.google.com/presentation/d/1dOFcq1gsq5rh_UrgfuvutQMb5OCeDhQi5PFxnFflQT8/edit#slide=id.g432225dd33_0_62)| 신건우(Thomas) | October 2018 | |
-| [WIP, plasma/event](https://docs.google.com/presentation/d/1PTW1QsFTLM5dxB31xLUAryJeoO1BWMVTH6xWHlfBsgc/edit?usp=sharing) | 신건우(Thomas) | October 2018 | |
+| [geth(plasma /init)](https://docs.google.com/presentation/d/1dOFcq1gsq5rh_UrgfuvutQMb5OCeDhQi5PFxnFflQT8/edit#slide=id.g432225dd33_0_62)| 신건우(Thomas) | October 2018 | |
+| [WIP, plasma /event](https://docs.google.com/presentation/d/1PTW1QsFTLM5dxB31xLUAryJeoO1BWMVTH6xWHlfBsgc/edit?usp=sharing) | 신건우(Thomas) | October 2018 | |
 | [geth(txpool)](https://docs.google.com/presentation/d/1MYcwJOyi_FbAVufuEu___gvTmLuGcm_7jD7MZMG0KsY/edit#slide=id.g44fcaa1bb9_0_331) | 신건우(Thomas) | October 2018 | |
-| [geth(/miner, /worker)](https://docs.google.com/presentation/d/1rQngQ0d6GaFMuxTCW5gZ2O12MZpqZzx9UpLcle9I6XQ/edit#slide=id.p) | 신건우(Thomas) | October 2018 | |
-| [geth(/eth, /core, /core/vm)](https://docs.google.com/presentation/d/1UE4mMz7395pZmVOhFecnNv33AN0sGaNsmyr0hB2uNDs/edit#slide=id.p) | 신건우(Thomas) | October 2018 | |
+| [geth(/miner /worker)](https://docs.google.com/presentation/d/1rQngQ0d6GaFMuxTCW5gZ2O12MZpqZzx9UpLcle9I6XQ/edit#slide=id.p) | 신건우(Thomas) | October 2018 | |
+| [geth(/eth /core /core /vm)](https://docs.google.com/presentation/d/1UE4mMz7395pZmVOhFecnNv33AN0sGaNsmyr0hB2uNDs/edit#slide=id.p) | 신건우(Thomas) | October 2018 | |
 | [Gasless Plasma Chain for Dapp](https://docs.google.com/presentation/d/129S0pUkIbCh5RLt6dNTeLvZL2jf_fgS56-X9qdrURwc/edit) | 정순형(Kevin) | November 2018 | |
 
 ## Smart Contract Development
