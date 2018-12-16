@@ -77,7 +77,7 @@
 | --- | --- | --- | :---: |
 | [Whisper 프로토콜](https://docs.google.com/presentation/d/1zA9_66ywegS3Jl_brus9sfjcElqVzQT1qvYPhyJKsJY/edit?usp=sharing) | Onther | August 2017 | |
 | [이더리움 캐스퍼 이해](https://docs.google.com/presentation/d/1Kidwr3VsP8C1wA2a8Pzxtuess-lnLSNx5CMqN1sE3SU/edit?usp=sharing) | Onther | September 2017 | |
-| [web3.py](https://docs.google.com/presentation/d/1meEuaCBlhSqyH2WpOkpsYDjKRISXtssA4BzCEoI9i8o/edit#slide=id.p) | 정순형(Kevin) | 2017 | |
+| [web3.py](https://docs.google.com/presentation/d/1meEuaCBlhSqyH2WpOkpsYDjKRISXtssA4BzCEoI9i8o/edit#slide=id.p) | 정순형(Kevin) | March 2018 | |
 | [Application Binary Interface Specification](https://docs.google.com/presentation/d/1IgN9Hffa5BV7AIYzMgYjP2A8doUGoBB9_eqTx3ZZDlQ/edit#slide=id.p3) | 신건우(Thomas) | April 2018 | |
 | [Ethereum Data Structure](https://docs.google.com/presentation/d/1HICoNDrdOkGeSvEjbmBnPMfuqO6hFG793-Z3LovNOMg/edit#slide=id.p3) | 신건우(Thomas) | May 2018 | |
 | [Casper FFG Overview](https://medium.com/onther-tech/casper-ffg-overview-e09fbe4f7d2c) | 박주형(Carl) | June 2018 | |
@@ -215,9 +215,9 @@
 ## Bitcoin Core
 | Title | Author(s) | Publication Date | Video |  
 | --- | --- | --- | :---: |
+| [비트코인의 구조와 원리](https://docs.google.com/presentation/d/1HOORDDMV5z1qkCJCh9b274bhtMsKfBiKgykpWFqGTkM/edit#slide=id.p) | 정순형(Kevin) | February 2018 | |
 | [Bloom Filter](https://docs.google.com/presentation/d/1FipuUsbBBL_lCcIcvHRrZQ6sspB17R2AWucKY0zHrt8/edit#slide=id.p) | 황재승(Jason) | March 2018 | |
 | [Bitcoins the hard way](https://docs.google.com/presentation/d/1R-xY0FrkWyd_2-FB9-VZbxP-p0cMYUGKO7XQEbwNgjw/edit#slide=id.p) | 황재승(Jason) | March 2018 | |
 | [Bitcoin OP_RETURN](https://docs.google.com/presentation/d/1H46MtFgLbP7_GWI4AOoz4YaWvni79lo56IjBrUk__6o/edit#slide=id.p9) | 신건우(Thomas) | March 2018 | |
 | [Bitcoin mining the hard way](https://docs.google.com/presentation/d/1UXda4s8Lt1AvvTR9zt474B1fUuAZtzWHLEqpnqsIwZk/edit#slide=id.g371268003a_0_31) | 황재승(Jason)| March 2018 | |
 | [Bitcoin Transaction and Script](https://docs.google.com/presentation/d/11c2c40zXyXU3kIwhA8F0_US_zvECpD_lW1xRz4OVsgY/edit#slide=id.p3) | 신건우(Thomas) | March 2018 | |
-| [비트코인의 구조와 원리](https://docs.google.com/presentation/d/1HOORDDMV5z1qkCJCh9b274bhtMsKfBiKgykpWFqGTkM/edit#slide=id.p) | 정순형(Kevin) | February 2018 | |
