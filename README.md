@@ -35,13 +35,15 @@
 | [Transaction Fee(GAS) Delegated Execution Model <br> in Py-EVM](https://medium.com/onther-tech/transaction-fee-gas-delegated-execution-model-in-py-evm-f2d57cea1008) | 신건우(Thomas) | September 2018 | |
 | [플라즈 EVM <br> : 탈중앙화된 상태를 강제하는 튜링 완전한 사이드 체인](https://hackmd.io/ciFhWJJrRbGFqA7Vc6tVJQ) | 박주형(Carl) <br> 박정원(Aiden) <br> 정순형(Kevin) <br> 황재승(jason) | September 2018 | |
 | [A proposal for Data availability Solution of Plasma EVM](https://hackmd.io/s/H1bk0Z-DQ) | 박정원(Aiden) | September 2018 | |
+| [Plasma EVM PoC1 <br> : Transaction Fee delegate Execution Model](https://docs.google.com/presentation/d/1JlxnIxdZQSAwNlOJbBvTJ46sLoWD5hWE_2nZoQWMi3M/edit#slide=id.p) | 신건우(Thomas) | September 2018 | [View](https://www.youtube.com/watch?v=ciog3ksfuqo&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=16&t=0s) |
+| [solEVM(ERC20 demo)](https://docs.google.com/presentation/d/1YuyRCSeHkhqpAYGfpuC_zKhuqHfzqeWu7scumvJyEIg/edit?usp=sharing) | 신건우(Thomas) | September 2018 | [View1](https://www.youtube.com/watch?v=sRsIPAY5FEs&index=8&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN) <br> [View2](https://www.youtube.com/watch?v=hNApH_Edb6g&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=9) |
 | [플라즈마와 Data Availability 문제](https://medium.com/onther-tech/%ED%94%8C%EB%9D%BC%EC%A6%88%EB%A7%88%EC%99%80-data-availability-%EB%AC%B8%EC%A0%9C-894d66eb2080) | 송무복(Jake) | October 2018 | |
 | [누구나 쉽게 이해하는 플라즈마 EVM](https://docs.google.com/presentation/d/10SzBYndUXm8OYWNI-n-USXLrJoe3g4eveF51tR-ptgU/edit#slide=id.p) | 정순형(Kevin) | October 2018 | [View](https://www.youtube.com/watch?v=qWovBjf5wXI&list=PLwLfLX5QfdGpRo99-jVEuEvP9_ro22WQZ&index=1) |
 | [Plasma EVM Cryptoeconomics](https://docs.google.com/presentation/d/19VVHxiGTDmPVlpRIj1mviI0NINhCDAZtK0iS21oJaLA/edit#slide=id.g4663fc44a6_0_0) | 허상범(Danny) | October 2018 | [View](https://www.youtube.com/watch?v=Y_AP855EPNg) |
 | [일반상태(튜링완전) 플라즈마 관련 연구 분석](https://docs.google.com/presentation/d/1FeJU9RLUUi108I53GgKS9rQYHvQIsduSPjjLCQLuIUI/edit) | 박정원(Aiden) | October 2018 | [View](https://www.youtube.com/watch?v=-39LcTj6_Q0&list=PLwLfLX5QfdGpRo99-jVEuEvP9_ro22WQZ&index=2) |
 | [춤추는 철학자의 문제](https://medium.com/onther-tech/%EC%B6%A4%EC%B6%94%EB%8A%94-%EC%B2%A0%ED%95%99%EC%9E%90%EC%9D%98-%EB%AC%B8%EC%A0%9C-%EA%B2%80%EC%A6%9D-%EA%B2%8C%EC%9E%84-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%82%AC%EC%9D%B4%EB%93%9C-%EC%B2%B4%EC%9D%B8%EA%B3%BC-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B0%80%EC%9A%A9%EC%84%B1-dancing-philosophers-problem-verification-game-sidechain-fa2b5e1e0ca3) | 정순형(Kevin) | October 2018 | |
 | [Deep Inside SolEVM and Verification Game](https://docs.google.com/presentation/d/1NbhAGDccm6Y2wnm8z0fXYpseDSWsnlaDgUgqTNfn-TI/edit#slide=id.p) | 정순형(Kevin) | October 2018 | |
-| [Plasma Leap Review](https://docs.google.com/presentation/d/1G4vbiyX-Z_Ytu6APhkZUb-m518UswFedpDfRXCuR6HU/edit#slide=id.p) | 박정원(Aiden) | October 2018 | [View](https://www.youtube.com/watch?v=FXmT27z6DHg) |
+| [Plasma Leap Review](https://docs.google.com/presentation/d/1G4vbiyX-Z_Ytu6APhkZUb-m518UswFedpDfRXCuR6HU/edit#slide=id.p) | 박정원(Aiden) | October 2018 | [View](https://www.youtube.com/wFatch?v=FXmT27z6DHg) |
 | [Plasma EVM Economics Paper <br> : The Mechanism Design and Economic Philosophy (v.0.9)](https://hackmd.io/s/rJgPxWYTm) | 허상범(Danny) | November 2018 | |
 | [SolEVM 이해하기](https://docs.google.com/presentation/d/1Zf3Oh_k50bz5-KsXFY4JQAWDvpXt0ilHXrxF4aoHz-c/edit#slide=id.p) | 정순형(Kevin) | November 2018 | |
 | [Plasma World Map[Blog]](https://medium.com/onther-tech/plasma-world-map-kr-9c1eec16859e) | 박정원(Aiden) | November 2018 |  |
@@ -79,14 +81,14 @@
 | [이더리움 캐스퍼 이해](https://docs.google.com/presentation/d/1Kidwr3VsP8C1wA2a8Pzxtuess-lnLSNx5CMqN1sE3SU/edit?usp=sharing) | Onther | September 2017 | |
 | [web3.py](https://docs.google.com/presentation/d/1meEuaCBlhSqyH2WpOkpsYDjKRISXtssA4BzCEoI9i8o/edit#slide=id.p) | 정순형(Kevin) | March 2018 | |
 | [Application Binary Interface Specification](https://docs.google.com/presentation/d/1IgN9Hffa5BV7AIYzMgYjP2A8doUGoBB9_eqTx3ZZDlQ/edit#slide=id.p3) | 신건우(Thomas) | April 2018 | |
-| [Ethereum Data Structure](https://docs.google.com/presentation/d/1HICoNDrdOkGeSvEjbmBnPMfuqO6hFG793-Z3LovNOMg/edit#slide=id.p3) | 신건우(Thomas) | May 2018 | |
+| [Ethereum Data Structure](https://docs.google.com/presentation/d/1HICoNDrdOkGeSvEjbmBnPMfuqO6hFG793-Z3LovNOMg/edit#slide=id.p3) | 신건우(Thomas) | May 2018 | [View](https://www.youtube.com/watch?v=DzhIp7phBJY&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=17&t=30s) |
 | [Casper FFG Overview](https://medium.com/onther-tech/casper-ffg-overview-e09fbe4f7d2c) | 박주형(Carl) | June 2018 | |
 | [Docker로 private swarm network 구축하기](https://medium.com/onther-tech/docker%EB%A1%9C-private-swarm-network-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0-e6e674bf4794) | 황재승(Jason) | June 2018 | |
 | [Cryptoeconomics 101](https://medium.com/onther-tech/cryptoeconomics-101-9d9fcc226cb5) | 허상범(Danny) | June 2018| |
 | [Geth Private Network](https://medium.com/onther-tech/geth%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-private-ethereum-chain-private-network-%EA%B5%AC%EC%B6%95-82feeb1d0bbc) | 신건우(Thomas) | June 2018 | |
 | [Casper FFG : CAPM and Validation Yield 번역본](https://medium.com/onther-tech/casper-ffg-capm-%EA%B2%80%EC%A6%9D-%EC%88%98%EC%9D%B5%EB%A5%A0-%EB%B2%88%EC%97%AD%EB%B3%B8-3111bb1494bc) | 허상범(Danny) | June 2018 | |
 | [RLP(with python)](https://docs.google.com/presentation/d/1uoVfLT-GiKXbNELl8xRal4Bpr1DPAXBn8V093DQ3Nfw/edit#slide=id.p3)| 신건우(Thomas) | July 2018 | |
-| [Puppeth 파헤치기](https://medium.com/onther-tech/puppeth-%ED%8C%8C%ED%97%A4%EC%B9%98%EA%B8%B0-5f2eed03f8c) | 황재승(Jason) | July 2018 | |
+| [Puppeth 파헤치기](https://medium.com/onther-tech/puppeth-%ED%8C%8C%ED%97%A4%EC%B9%98%EA%B8%B0-5f2eed03f8c) | 황재승(Jason) | July 2018 | [View](https://www.youtube.com/watch?v=1KNu9Kk3Er4&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=20&t=0s) |
 | [General State Plasma Plasmabits & ParsecLabs](https://docs.google.com/presentation/d/1MSrygKBdFm9r-Q7fMkIPULQVTbBSWLOB9IDhKScnMPw/edit#slide=id.g3dd2141ed9_0_0) | 박정원(Aiden) | August 2018 | |
 | [Whisper 노드 구축 및 테스트](https://medium.com/onther-tech/ethereum-whisper-%EB%85%B8%EB%93%9C-%EA%B5%AC%EC%B6%95-%EB%B0%8F-%ED%85%8C%EC%8A%A4%ED%8A%B8-1b04fa8b9abf) | 신진환(Jin)| September 2018 | |
 | [Managing IPFS hash with Smart Contract](https://medium.com/onther-tech/managing-ipfs-hash-with-smart-contract-bb8db43fa18f) | 황재승(Jason) | September 2018 | |
@@ -142,6 +144,7 @@
 | [MinimeToken by Onther Inc.](https://docs.google.com/presentation/d/1BFGDuX1nM_H8u-v6INLmEWFa5wmRpXx5prYqvl4R1_E/edit#slide=id.p3) | 신건우(Thomas) | March 2018 | |
 | [SMT(SmartMesh) 토큰 무한생성 해킹 설명과 대비책](https://medium.com/onther-tech/smt-%ED%86%A0%ED%81%B0-%EC%9D%B4%EC%A4%91%EC%A7%80%EB%B6%88-%ED%95%B4%ED%82%B9-%EC%84%A4%EB%AA%85%EA%B3%BC-%EB%8C%80%EB%B9%84%EC%B1%85-8bef3f41bcd2) | 정순형(Kevin) | April 2018 | |
 | [Onward with Ethereum Smart Contract Security](https://docs.google.com/presentation/d/1IXmtU6pwcQ8YhfwHBKJLKDX6_TTR4Q9j_D3OvigAjwo/edit?usp=sharing)| 신건우(Thomas) | April 2018 | |
+| [Transfer from and approve problem](https://docs.google.com/presentation/d/15Bx5aekfKCtE_cIDqyEJamIgZQiZ5WJWvAtqnN44n2I/edit?usp=sharing) | 신건우(Thomas) | April 2018 | |[View](https://www.youtube.com/watch?v=E-mkfRkZuoY&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=14&t=865s) |
 | [Truffle 시작하기](https://docs.google.com/presentation/d/1zdq9tQoFEVZTnKBd4ylXdyWYCebS3fEc0Z9RLXueLfo/edit#slide=id.p3) | 신건우(Thomas) | May 2018 | |
 | [Smart contract programming](https://docs.google.com/presentation/d/1d1DTqo8GdhshJyp0iaQqE5xBbEkMYwRXcrr3m95dT3o/edit#slide=id.g3af5057d5a_0_0) | 박주형(Carl) | May 2018 | [View](https://www.youtube.com/watch?v=Es54i39tl1U) |
 | [Token OS PoC : Token & ICO Generator](https://docs.google.com/presentation/d/1biZm1gj6frsicP_Sira4zM1_J-LWKNIA4B_cKn5or4k/edit#slide=id.p) | 정순형(Kevin) | May 2018 | [View](https://www.youtube.com/watch?v=blfeAtXNH3s)|
@@ -157,12 +160,15 @@
 | [Upgradeable smart contract applications using proxy patterns](https://medium.com/onther-tech/upgradeable-smart-contract-applications-using-proxy-patterns-2053a5780287) | 신건우(Thomas) | November 2018 | |
 | [스마트 컨트렉트의 기술적 이해](https://docs.google.com/presentation/d/19W4rHndsnhDGG0WDnpWqT1GZvLrRSsD3hSsK4rS4HBg/edit?usp=sharing) | 정순형(Kevin) | June 2018 | |
 | [Deconstructing a Solidity Contract](https://docs.google.com/presentation/d/1EXNqgmXbyOLAH_gPr3HFFVTzORRABqdtc9jpanKjCsY/edit#slide=id.p) | 신건우(Thomas) | November 2018 | |
+| [Dappsys라이브러리 사용과 활용](https://docs.google.com/presentation/d/1G2yq-9XeuxStYD4EjC4rx6QcQyssPm_j4H3Do-OsY_Q/edit?usp=sharing) | 신진환(Jin) | December 2018 | [View](https://www.youtube.com/watch?v=D1xjYCJ9jsI&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=15&t=1021s) |
 
-## Token Model
+## Token Model & ETC
 | Title | Author(s) | Publication Date | Video |  
 | --- | --- | --- | :---: |
 | [ICO Trilemma[Blog]](https://medium.com/onther-tech/ico-%ED%8A%B8%EB%A6%B4%EB%A0%88%EB%A7%88-trillema-ico-%EC%82%BC%EC%9C%84%EC%9D%BC%EC%B2%B4%EB%B6%88%EA%B0%80%EB%8A%A5%EC%84%B1-87c6d9233a78) | 정순형(Kevin) | March 2018 | |
+| [DAICO](https://docs.google.com/presentation/d/1vcFjuHobwt2Q7A_wQOTUakkujWqh-8lGGsFBoARCusk/edit?usp=sharing) | Onther | March 2018 | |
 | [탈중앙화(Decentralization)](https://docs.google.com/presentation/d/1kNQxJgbaTSx93R3owcYAtdQZnx3IBEiU8HfXmUlsDQc/edit?usp=sharing) | 정순형(Kevin) | April 2018 | |
+| [블록체인 기업의 핵심 역량](https://medium.com/onther-tech/%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8-%EA%B8%B0%EC%97%85%EC%9D%98-%ED%95%B5%EC%8B%AC-%EC%97%AD%EB%9F%89-3210cf8651eb) | 정순형(Kevin) | May 2018 | |
 | [ERC20 TOP100 Business Model](https://docs.google.com/presentation/d/1yiZa08psrObA3d8u0AoRvq3XUFQ1Lk5dC8mjH64i248/edit#slide=id.p) | 강주형(Jace) | May 2018 | [View](https://www.youtube.com/watch?v=5Hb_Oj4OOic)|
 | [토큰 모델의 새로운 숙제 : 가치확보 (Value Capture)](https://medium.com/onther-tech/%ED%86%A0%ED%81%B0-%EB%AA%A8%EB%8D%B8%EC%9D%98-%EC%83%88%EB%A1%9C%EC%9A%B4-%EC%88%99%EC%A0%9C-%EA%B0%80%EC%B9%98-%ED%99%95%EB%B3%B4-value-capture-cd12fe5f9b52)| 허상범(Dannu) | May 2018 | |
 | [ERC20 토큰 Top100 Business model과 토큰 분류[Blog]](https://medium.com/onther-tech/erc20-%ED%86%A0%ED%81%B0-top100-business-model%EA%B3%BC-%ED%86%A0%ED%81%B0-%EB%B6%84%EB%A5%98-1-9f471797bc33) | 강주형(Jace) | Jun 2018 | |
@@ -181,7 +187,7 @@
 | [DGD - token contract](https://docs.google.com/presentation/d/1nBQws6tC8TFFAVtNWuPAvn6KAYdrhC_1wTS5hi4M7FQ/edit) | Onther | 2017 | |
 | [Gnosis - token contract](https://docs.google.com/presentation/d/1eSYYhaxSEgGwqqBsSlcAtu609LJABgGGIRyIuJfP0B0/edit) | Onther | 2017 | |
 | [Golem - token contract](https://docs.google.com/presentation/d/1rTN5kqOkuzPVbxgqeDMSxW42bW_v2W9LK_gS_TBqSHg/edit#slide=id.p9) | Onther | 2017 | |
-| [[MLN] - token contract](https://docs.google.com/presentation/d/1jHAkoW7JjvRrs1oCqr5KACblFy7uADWta-pSb6bWIEg/edit#slide=id.p3) | Onther | 2017 | |
+| [MLN - token contract](https://docs.google.com/presentation/d/1jHAkoW7JjvRrs1oCqr5KACblFy7uADWta-pSb6bWIEg/edit#slide=id.p3) | Onther | 2017 | |
 | [Status and Aragon - token contract](https://docs.google.com/presentation/d/1YL7bfqVZe-n_meecrft4bzKQ35FuN37vrXxAsRu1XHo/edit?usp=sharing) | Onther | 2017 | |
 | [TenXPay - token contract](https://docs.google.com/presentation/d/1azGMRKtOrter3VYtbCsu15EcXJiovBW8VMFSeI0diYY/edit?usp=sharing) | Onther | 2017 | |
 | [Edgeless - token contract](https://docs.google.com/presentation/d/1Xks-Zs818kLcqWIKzJZEOOieorsGtncR9BCT_IDd4XA/edit?usp=sharing) | Onther | 2017 | |
