@@ -14,9 +14,9 @@
 ### English version
 | Title | Author(s) | Publication Date | Video |
 | --- | --- | --- | :---: |
-| [(링크권한수정필요-kevin)PoC1 : EVM Compatible Transaction Fee(GAS) <br> Delegated Execution Architecture(Egnlish)](https://ethresear.ch/t/evm-compatible-transaction-fee-gas-delegated-execution-architecture-for-plasma-chain/3106) | 정순형(Kevin) <br> 신건우(Thomas) <br> 황재승(Jason) <br> 박주형(Carl) | August 2018 | |
-| [(링크권한수정필요-carl)Plasma EVM 2.0](https://hackmd.io/m8TXSv2eSkGwsj7ni27Mag) | 박주형(Carl) <br> 박정원(Aiden) <br> 정순형(Kevin) | August 2018 | |
-| [Plasma EVM Implementation](https://docs.google.com/presentation/d/1wjYg36bNQYWEIUQT7ZHtWH2Xc0EfM2N2VmgMbFN2JyU/edit#slide=id.p) | 박주형(Carl) | August 2018 |  |
+| [PoC1 : EVM Compatible Transaction <br> Fee(GAS) Delegated Execution Architecture(Egnlish)](https://ethresear.ch/t/evm-compatible-transaction-fee-gas-delegated-execution-architecture-for-plasma-chain/3106) | 정순형(Kevin) <br> 신건우(Thomas) <br> 황재승(Jason) <br> 박주형(Carl) | August 2018 |(링크권한수정필요-kevin)|
+| [Plasma EVM 2.0](https://hackmd.io/m8TXSv2eSkGwsj7ni27Mag) | 박주형(Carl) <br> 박정원(Aiden) <br> 정순형(Kevin) | August 2018 | |
+| [Plasma EVM Implementation](https://docs.google.com/presentation/d/1wjYg36bNQYWEIUQT7ZHtWH2Xc0EfM2N2VmgMbFN2JyU/edit#slide=id.p) | 박주형(Carl) | August 2018 | (링크권한수정필요-carl)|
 | [EVM Compatible Gas Delegated Transaction Execution Model](https://docs.google.com/presentation/d/11riwRBrGEVr2vw08_O4nhZ8KDOUf3otdrsKCsTk0AK8/edit#slide=id.p) | 정순형(Kevin) | September 2018 |  |
 | [Data Availability Solution for Plasma EVM without Confirmation](https://ethresear.ch/t/data-availability-solution-for-plasma-evm-without-confirmation/3294) | 박정원(Aiden) | September 2018 |  |
 | [Data Availability problem in implementing Plasma design](https://medium.com/onther-tech/data-availability-problem-in-implementing-plasma-design-6e23df1a147f) | 송무복(Jake) | September 2018 |  |
