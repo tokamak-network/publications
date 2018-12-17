@@ -21,7 +21,7 @@
 | [Data Availability Solution for Plasma EVM without Confirmation](https://ethresear.ch/t/data-availability-solution-for-plasma-evm-without-confirmation/3294) | 박정원(Aiden) | September 2018 |  |
 | [Data Availability problem in implementing Plasma design](https://medium.com/onther-tech/data-availability-problem-in-implementing-plasma-design-6e23df1a147f) | 송무복(Jake) | September 2018 |  |
 | [PoC Implementation of Plasma EVM](https://ethresear.ch/t/poc-implementation-of-plasma-evm/3958) | 박주형(Carl) | October 2018 |  |
-| [Data availability solution  for Plasma EVM(ver.0.1)](https://docs.google.com/presentation/d/1CYkbFu9XpX0QaxppUvhVOGFnsCLnZksrusNz1GJ_QIk/edit#slide=id.g44ce769bee_0_266) | 박정원(Aiden) | October 2018 | |
+| [Explaining Data availability solution for Plasma EVM](https://docs.google.com/presentation/d/1CYkbFu9XpX0QaxppUvhVOGFnsCLnZksrusNz1GJ_QIk/edit#slide=id.g44ce769bee_0_266) | 박정원(Aiden) | October 2018 | |
 | [Dancing philosophers problem, verification game, <br> Plasmachain and data availability](https://medium.com/onther-tech/dancing-philosophers-problem-verification-game-sidechain-and-data-availability-translated-c60ac51afcfa) | 정순형(Kevin) | October 2018 |  |
 | [Plasma World Map](https://ethresear.ch/t/plasma-world-map-the-hitchhiker-s-guide-to-the-plasma/4333) | 박정원(Aiden) | November 2018 |  |
 
@@ -79,7 +79,6 @@
 | [이더리움 캐스퍼 이해](https://docs.google.com/presentation/d/1Kidwr3VsP8C1wA2a8Pzxtuess-lnLSNx5CMqN1sE3SU/edit?usp=sharing) | Onther | September 2017 | |
 | [web3.py](https://docs.google.com/presentation/d/1meEuaCBlhSqyH2WpOkpsYDjKRISXtssA4BzCEoI9i8o/edit#slide=id.p) | 정순형(Kevin) | March 2018 | |
 | [Application Binary Interface Specification](https://docs.google.com/presentation/d/1IgN9Hffa5BV7AIYzMgYjP2A8doUGoBB9_eqTx3ZZDlQ/edit#slide=id.p3) | 신건우(Thomas) | April 2018 | |
-| [Ethereum Data Structure](https://docs.google.com/presentation/d/1HICoNDrdOkGeSvEjbmBnPMfuqO6hFG793-Z3LovNOMg/edit#slide=id.p3) | 신건우(Thomas) | May 2018 | [View](https://www.youtube.com/watch?v=DzhIp7phBJY&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=17&t=30s) |
 | [Casper FFG Overview](https://medium.com/onther-tech/casper-ffg-overview-e09fbe4f7d2c) | 박주형(Carl) | June 2018 | |
 | [Docker로 private swarm network 구축하기](https://medium.com/onther-tech/docker%EB%A1%9C-private-swarm-network-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0-e6e674bf4794) | 황재승(Jason) | June 2018 | |
 | [Cryptoeconomics 101](https://medium.com/onther-tech/cryptoeconomics-101-9d9fcc226cb5) | 허상범(Danny) | June 2018| |
@@ -120,7 +119,6 @@
 | [Go Ethereum #1_consensus/type/event/miner](https://docs.google.com/presentation/d/1jnhGGBV4AqVBOYJZS9ALHFV0sPKXbr3QQkGL_lvIZlg/edit#slide=id.p1) | 송무복(Jake) | September 2018 | |
 | [Go Ethereum #2_params/vm/ethdb/trie](https://docs.google.com/presentation/d/1DUqRdXDYNWnGcJsvN3M-0Ll8BJ09ZroSYl5BCh7yMt0/edit#slide=id.p1) | 송무복(Jake) | September 2018 | |
 | [geth plasma /init](https://docs.google.com/presentation/d/1dOFcq1gsq5rh_UrgfuvutQMb5OCeDhQi5PFxnFflQT8/edit#slide=id.g432225dd33_0_62)| 신건우(Thomas) | October 2018 | |
-| [WIP, plasma /event](https://docs.google.com/presentation/d/1PTW1QsFTLM5dxB31xLUAryJeoO1BWMVTH6xWHlfBsgc/edit?usp=sharing) | 신건우(Thomas) | October 2018 | |
 | [geth txpool](https://docs.google.com/presentation/d/1MYcwJOyi_FbAVufuEu___gvTmLuGcm_7jD7MZMG0KsY/edit#slide=id.g44fcaa1bb9_0_331) | 신건우(Thomas) | October 2018 | |
 | [geth /miner /worker](https://docs.google.com/presentation/d/1rQngQ0d6GaFMuxTCW5gZ2O12MZpqZzx9UpLcle9I6XQ/edit#slide=id.p) | 신건우(Thomas) | October 2018 | |
 | [geth /eth /core /core /vm](https://docs.google.com/presentation/d/1UE4mMz7395pZmVOhFecnNv33AN0sGaNsmyr0hB2uNDs/edit#slide=id.p) | 신건우(Thomas) | October 2018 | |
