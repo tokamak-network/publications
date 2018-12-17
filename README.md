@@ -5,8 +5,9 @@
 * [General Ethereum](#general-ethereum)
 * [Ethereum Core](#ethereum-core )
 * [Smart Contract Development](#smart-contract-development)
-* [Token Model, ETC](#token-model, etc)
+* [Token Model & ETC](#token-model-\&-etc)
 * [Dapp Analysis](#dapp-analysis)
+* [ETC](#etc)
 * [Bitcoin Core](#bitcoin-core)
 
 ## Plasma EVM
@@ -166,7 +167,7 @@
 | [Dappsys라이브러리 사용과 활용](https://docs.google.com/presentation/d/1G2yq-9XeuxStYD4EjC4rx6QcQyssPm_j4H3Do-OsY_Q/edit?usp=sharing) | 신진환(Jin) | December 2018 | [View](https://www.youtube.com/watch?v=D1xjYCJ9jsI&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=15&t=1021s) |
 | [Getting Start with Vyper](https://medium.com/onther-tech/devcon4-%EC%B0%B8%EA%B4%80%EA%B8%B0-getting-start-with-vyper-3e6415a31ec1) | 황재승(Jason) | December 2018 | |
 
-## Token Model, ETC
+## Token Model & ETC
 | Title | Author(s) | Publication Date | Video |  
 | --- | --- | --- | :---: |
 | [ICO Trilemma, 삼위일체불가능[Blog]](https://medium.com/onther-tech/ico-%ED%8A%B8%EB%A6%B4%EB%A0%88%EB%A7%88-trillema-ico-%EC%82%BC%EC%9C%84%EC%9D%BC%EC%B2%B4%EB%B6%88%EA%B0%80%EB%8A%A5%EC%84%B1-87c6d9233a78) | 정순형(Kevin) | March 2018 | |
@@ -220,7 +221,6 @@
 | [Wanchain](https://docs.google.com/presentation/d/1eRHRG3tF2WJcnGrDJZ8h3OrSm4pSYu6Ne-JFnU3OtGs/edit#slide=id.p) |강주형(Jace) | July 2018 | |
 | [뱅코르 씹어먹기[개념편]](https://docs.google.com/presentation/d/1SsGquxt_7sO7IDcS-t0E_Pciz8p2UMO0KndJ6uINllA/edit#slide=id.p) | 정순형(Kevin) | August 2018 | |
 | [Tezos 토큰모델](https://docs.google.com/presentation/d/1le25sBFJIeVYiye-hwd7rEQLlXBrauNk3AbmtQj2puM/edit) |강주형(Jace) | October 2018 | [View](https://www.youtube.com/watch?v=1wryBRG49ug) |
-
 
 ## Bitcoin Core
 | Title | Author(s) | Publication Date | Video |  
