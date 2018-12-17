@@ -5,7 +5,7 @@
 * [General Ethereum](#general-ethereum)
 * [Ethereum Core](#ethereum-core )
 * [Smart Contract Development](#smart-contract-development)
-* [Token Model & ETC](#token-model-&-etc)
+* [Token Model / ETC](#token-model-/-etc)
 * [Dapp Analysis](#dapp-analysis)
 * [Bitcoin Core](#bitcoin-core)
 
@@ -32,7 +32,7 @@
 | Title | Author(s) | Publication Date | Video |  
 | --- | --- | --- | :---: |
 | [플라즈마 EVM](https://docs.google.com/presentation/d/1sAkYOCNdTb5aLj967pXirZedHqjoIXrVSQMvNS7tPk0/edit#slide=id.p) | 박주형(Carl) | August 2018 | [View](https://www.youtube.com/watch?v=-6Pa_L0FYdE#t=1h45m21s) |
-| [Technical side of  Moscow  for non-developers](https://docs.google.com/presentation/d/1kfkwCddTGB84TGO9fuUgzDCUlJ7N3jWhe2zaqrtQCKA/edit#slide=id.g3fd1b89833_0_192) | 정순형(Kevin) | August 2018 | |
+| [Technical side of  Moscow  for non-developers](https://docs.google.com/presentation/d/1kfkwCddTGB84TGO9fuUgzDCUlJ7N3jWhe2zaqrtQCKA/edit#slide=id.p) | 정순형(Kevin) | August 2018 | |
 | [Transaction Fee(GAS) Delegated Execution Model <br> in Py-EVM](https://medium.com/onther-tech/transaction-fee-gas-delegated-execution-model-in-py-evm-f2d57cea1008) | 신건우(Thomas) | September 2018 | |
 | [플라즈마 EVM <br> : 탈중앙화된 상태를 강제하는 튜링 완전한 사이드 체인](https://hackmd.io/ciFhWJJrRbGFqA7Vc6tVJQ) | 박주형(Carl) <br> 박정원(Aiden) <br> 정순형(Kevin) <br> 황재승(jason) | September 2018 | |
 | [A proposal for Data availability Solution of Plasma EVM](https://hackmd.io/s/H1bk0Z-DQ) | 박정원(Aiden) | September 2018 | |
@@ -72,6 +72,7 @@
 | [Plasma vs Sharding](https://docs.google.com/presentation/d/19sI2AWYyB0pTuYyeoyyAbPqEp8tZpYmJ1WG4Ypsn278/edit#slide=id.g447a05718c_0_6) |황재승(Jason) | October 2018 | [View](https://www.youtube.com/watch?v=Kf_srbbH-hE) |
 | [ZoKrates - zero knowledge tool box](https://docs.google.com/presentation/d/1vayPmeW9QuxQqczNSMub5agO_uiJu-bHBJmzA2uLJ5s/edit#slide=id.p1) | 송무복(Jake) | November 2018 | |
 | [Devcon 4 Review — Ewasm Project](https://medium.com/onther-tech/devcon-4-review-ewasm-project-d9e03e76a88d) | 송무복(Jake) | November 2018 | |
+| [Sharding, Casper → Serenity!](https://medium.com/onther-tech/sharding-casper-serenity-e25dec162845) | 박주형(Carl) | December 2018 | |
 
 
 ## General Ethereum
@@ -130,9 +131,15 @@
 ## Smart Contract Development
 | Title | Author(s) | Publication Date | Video |  
 | --- | --- | --- | :---: |
+
+| [이더리움 스마트 계약(1) — 개발환경구성](https://medium.com/onther-tech/%EC%9D%B4%EB%8D%94%EB%A6%AC%EC%9B%80-%EC%8A%A4%EB%A7%88%ED%8A%B8-%EA%B3%84%EC%95%BD-1-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD%EA%B5%AC%EC%84%B1-5edab7f5dc87) | 정순형(Kevin) | November 2016 | |
+| [이더리움 스마트 계약(2) — 분산자율조직개념](https://medium.com/onther-tech/%EC%9D%B4%EB%8D%94%EB%A6%AC%EC%9B%80-%EC%8A%A4%EB%A7%88%ED%8A%B8-%EA%B3%84%EC%95%BD-2-%EB%B6%84%EC%82%B0%EC%9E%90%EC%9C%A8%EC%A1%B0%EC%A7%81%EA%B0%9C%EB%85%90-cb79a998d1af) | 정순형(Kevin) | December 2016 | |
+| [이더리움 스마트 계약(3) — 블록체인에 은행 만들기](https://medium.com/onther-tech/%EC%9D%B4%EB%8D%94%EB%A6%AC%EC%9B%80-%EC%8A%A4%EB%A7%88%ED%8A%B8-%EA%B3%84%EC%95%BD-3-%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8%EC%97%90-%EC%9D%80%ED%96%89-%EB%A7%8C%EB%93%A4%EA%B8%B0-9a4c91b9182) | 정순형(Kevin) | December 2016 | |
+| [블록체인 공부 자료 정리 v0.9](https://medium.com/onther-tech/%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8-%EA%B3%B5%EB%B6%80-%EC%9E%90%EB%A3%8C-%EC%A0%95%EB%A6%AC-v0-9-acd011ef8399) | 정순형(Kevin) | December 2016 | |
 | [Mastering Truffle](https://docs.google.com/presentation/d/1ONHk1ZwNXPe9650Nivv9xaNdN9ec45X22D136RyLAME/edit#slide=id.p) | Onther | August 2017| |
 | [Smart Contract Audit](https://docs.google.com/presentation/d/1I5JjEVCFsD6UbKOLERQ8pOTsF2fEsnj5RBcDKU_aozc/edit#slide=id.p) | 박주형(Carl) | December 2017 | |
-| [Wolf Contract](https://docs.google.com/presentation/d/16MaPJcTZ3IV9KNd_N_KvGpWhtYrQelsXFBEtw0468fE/edit#slide=id.p) | 정순형(Kevin) | December 2017 | [View](https://www.youtube.com/watch?v=ZPwIQqJXvCU&feature=youtu.be&t=2h3m49s) |
+| [Wolf Contract[Slide]](https://docs.google.com/presentation/d/16MaPJcTZ3IV9KNd_N_KvGpWhtYrQelsXFBEtw0468fE/edit#slide=id.p) | 정순형(Kevin) | December 2017 | [View](https://www.youtube.com/watch?v=ZPwIQqJXvCU&feature=youtu.be&t=2h3m49s) |
+| [변장한 늑대 — 스마트하지 못한 스마트 계약[Blog]](https://medium.com/onther-tech/%EB%B3%80%EC%9E%A5%ED%95%9C-%EB%8A%91%EB%8C%80-%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%95%98%EC%A7%80-%EB%AA%BB%ED%95%9C-%EC%8A%A4%EB%A7%88%ED%8A%B8-%EA%B3%84%EC%95%BD-45ece882e2b3) | 정순형(Kevin) | December 2017 | |
 | [Evm Transaction Tuning](https://docs.google.com/presentation/d/1EKurUds8QYKJzJQSwmGYA_lztldiXHdZ5lnaVyUxMaE/edit#slide=id.p) | Onther | December 2017 | |
 | [ERC 721 & Meetup Token GAZUA](https://docs.google.com/presentation/d/1-UvnCK9iIOnUznD3F1BBvCnu051XckgsvEvhavfRbHg/edit#slide=id.p) | Onther | December 2017 | |
 | [Dapphub](https://docs.google.com/presentation/d/1cyzPUNO4dkIPMttqBAysWUfqpuYByXfCmPjW3NTQKEw/edit#slide=id.p) | 정순형(Kevin) | February 2018 | |
@@ -148,7 +155,7 @@
 | [Token OS PoC : Token & ICO Generator](https://docs.google.com/presentation/d/1biZm1gj6frsicP_Sira4zM1_J-LWKNIA4B_cKn5or4k/edit#slide=id.p) | 정순형(Kevin) | May 2018 | [View](https://www.youtube.com/watch?v=blfeAtXNH3s)|
 | [내 토큰을 마음대로 빼갈 수 있는 컨트렉트를 만들 수 있을까?](https://medium.com/onther-tech/%EB%82%B4-%ED%86%A0%ED%81%B0%EC%9D%84-%EB%A7%98%EB%8C%80%EB%A1%9C-%EB%B9%BC%EA%B0%88-%EC%88%98-%EC%9E%88%EB%8A%94-%EC%BB%A8%ED%8A%B8%EB%A0%89%ED%8A%B8%EB%A5%BC-%EB%A7%8C%EB%93%A4-%EC%88%98-%EC%9E%88%EC%9D%84%EA%B9%8C-3f607d3c5ceb) | 정순형(Kevin)| June 2018 | |
 | [거래소에 (이더 클래식 → ERC20)으로 오입금 했을 때 <br> 정말 복구 방법이 없을까?]() | 정순형(Kevin)| June 2018 | |
-| [About Solidity](https://docs.google.com/presentation/d/1Sgl9EjhX5kRI6CkJEOWZiUeYQRjn7RDBebtjAi3MI2U/edit) | 신건우(Thomas) | May 2018 | [View](https://www.youtube.com/watch?v=4eDNCSw1B-4&index=5&list=PLwLfLX5QfdGqsCfwu-qhVC8OdJiuyk5QB) |
+| [About Solidity[Slide]](https://docs.google.com/presentation/d/1Sgl9EjhX5kRI6CkJEOWZiUeYQRjn7RDBebtjAi3MI2U/edit) | 신건우(Thomas) | May 2018 | [View](https://www.youtube.com/watch?v=4eDNCSw1B-4&index=5&list=PLwLfLX5QfdGqsCfwu-qhVC8OdJiuyk5QB) |
 | [About Solidity[Blog]](https://medium.com/onther-tech/about-solidity-ffccd16caea2) | 신건우(Thomas) | June 2018 | |
 | [Intro to TokenOS](https://medium.com/onther-tech/intro-to-token-os-6291be9644ea) | 허상범(Danny) | June 2018 | |
 | [Solidity Assembly & ABI Encoding](https://medium.com/onther-tech/solidity-assembly-abi-encoding-db8f79d1c1a1) | 박주형(Carl) | August 2018 | |
@@ -159,11 +166,12 @@
 | [스마트 컨트렉트의 기술적 이해](https://docs.google.com/presentation/d/19W4rHndsnhDGG0WDnpWqT1GZvLrRSsD3hSsK4rS4HBg/edit?usp=sharing) | 정순형(Kevin) | June 2018 | |
 | [Deconstructing a Solidity Contract](https://docs.google.com/presentation/d/1EXNqgmXbyOLAH_gPr3HFFVTzORRABqdtc9jpanKjCsY/edit#slide=id.p) | 신건우(Thomas) | November 2018 | |
 | [Dappsys라이브러리 사용과 활용](https://docs.google.com/presentation/d/1G2yq-9XeuxStYD4EjC4rx6QcQyssPm_j4H3Do-OsY_Q/edit?usp=sharing) | 신진환(Jin) | December 2018 | [View](https://www.youtube.com/watch?v=D1xjYCJ9jsI&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=15&t=1021s) |
+| [Getting Start with Vyper](https://medium.com/onther-tech/devcon4-%EC%B0%B8%EA%B4%80%EA%B8%B0-getting-start-with-vyper-3e6415a31ec1) | 황재승(Jason) | December 2018 | |
 
-## Token Model & ETC
+## Token Model / ETC
 | Title | Author(s) | Publication Date | Video |  
 | --- | --- | --- | :---: |
-| [ICO Trilemma[Blog]](https://medium.com/onther-tech/ico-%ED%8A%B8%EB%A6%B4%EB%A0%88%EB%A7%88-trillema-ico-%EC%82%BC%EC%9C%84%EC%9D%BC%EC%B2%B4%EB%B6%88%EA%B0%80%EB%8A%A5%EC%84%B1-87c6d9233a78) | 정순형(Kevin) | March 2018 | |
+| [ICO Trilemma, 삼위일체불가능[Blog]](https://medium.com/onther-tech/ico-%ED%8A%B8%EB%A6%B4%EB%A0%88%EB%A7%88-trillema-ico-%EC%82%BC%EC%9C%84%EC%9D%BC%EC%B2%B4%EB%B6%88%EA%B0%80%EB%8A%A5%EC%84%B1-87c6d9233a78) | 정순형(Kevin) | March 2018 | |
 | [DAICO](https://docs.google.com/presentation/d/1vcFjuHobwt2Q7A_wQOTUakkujWqh-8lGGsFBoARCusk/edit?usp=sharing) | Onther | March 2018 | |
 | [탈중앙화(Decentralization)](https://docs.google.com/presentation/d/1kNQxJgbaTSx93R3owcYAtdQZnx3IBEiU8HfXmUlsDQc/edit?usp=sharing) | 정순형(Kevin) | April 2018 | |
 | [블록체인 기업의 핵심 역량](https://medium.com/onther-tech/%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8-%EA%B8%B0%EC%97%85%EC%9D%98-%ED%95%B5%EC%8B%AC-%EC%97%AD%EB%9F%89-3210cf8651eb) | 정순형(Kevin) | May 2018 | |
@@ -172,7 +180,7 @@
 | [ERC20 토큰 Top100 Business model과 토큰 분류[Blog]](https://medium.com/onther-tech/erc20-%ED%86%A0%ED%81%B0-top100-business-model%EA%B3%BC-%ED%86%A0%ED%81%B0-%EB%B6%84%EB%A5%98-1-9f471797bc33) | 강주형(Jace) | Jun 2018 | |
 | [Token Sale Mechanism by Smart Contract](https://docs.google.com/presentation/d/1zUZuMhW_diFrzAUiGZTtYBn7AOZMCAUMjveBX0zukjM/edit#slide=id.p) | 허상범(Danny)| June 2018 | [View](https://www.youtube.com/watch?v=bSaSvjzWG3g) |
 | [Intro to TokenOS](https://medium.com/onther-tech/intro-to-token-os-6291be9644ea) | 허상범(Danny)| June 2018 | |
-| [Deep Dive Token OS - #1. Sale](https://medium.com/onther-tech/deep-dive-into-tokenos-1-sale-fb944f004ec1) | 허상범(Danny) | August 2018 | |
+| [Deep Dive into Token OS - #1. Sale](https://medium.com/onther-tech/deep-dive-into-tokenos-1-sale-fb944f004ec1) | 허상범(Danny) | August 2018 | |
 | [The Theory of Token Seigniorage](https://docs.google.com/presentation/d/1jXoDFvyppKzmtzgVoueonWvbCrMzxZjwB0nENvOBU9g/edit) | 허상범(Danny) | September 2018 | [View](https://www.youtube.com/watch?v=-6Pa_L0FYdE#t=7h12m49s) |
 | [(돈 쉽게 버는)토큰이코노미 구성과 설계 방법](https://docs.google.com/presentation/d/17ddOKCVcjWrA5tvUN1qI40PQHgWd4REdG6bRnEkWIFo/edit#slide=id.g4325d86a58_0_5) | 정순형(Kevin) | October 2018| |
 | [Microeconomic Analysis of Gas Price Mechanism and Mitigation](https://hackmd.io/oe-bT8GcRvCc7vBgeOJyLw)| 허상범(Danny) | November 2018 | |
