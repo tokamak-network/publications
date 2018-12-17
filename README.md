@@ -43,10 +43,11 @@
 | [춤추는 철학자의 문제](https://medium.com/onther-tech/%EC%B6%A4%EC%B6%94%EB%8A%94-%EC%B2%A0%ED%95%99%EC%9E%90%EC%9D%98-%EB%AC%B8%EC%A0%9C-%EA%B2%80%EC%A6%9D-%EA%B2%8C%EC%9E%84-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%82%AC%EC%9D%B4%EB%93%9C-%EC%B2%B4%EC%9D%B8%EA%B3%BC-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B0%80%EC%9A%A9%EC%84%B1-dancing-philosophers-problem-verification-game-sidechain-fa2b5e1e0ca3) | 정순형(Kevin) | October 2018 | |
 | [Deep Inside SolEVM and Verification Game](https://docs.google.com/presentation/d/1NbhAGDccm6Y2wnm8z0fXYpseDSWsnlaDgUgqTNfn-TI/edit#slide=id.p) | 정순형(Kevin) | October 2018 | |
 | [Plasma Leap Review](https://docs.google.com/presentation/d/1G4vbiyX-Z_Ytu6APhkZUb-m518UswFedpDfRXCuR6HU/edit#slide=id.p) | 박정원(Aiden) | October 2018 | [View](https://www.youtube.com/wFatch?v=FXmT27z6DHg) |
+| [Gasless Plasma Chain for Dapp](https://docs.google.com/presentation/d/129S0pUkIbCh5RLt6dNTeLvZL2jf_fgS56-X9qdrURwc/edit) | 정순형(Kevin) | November 2018 | |
 | [Plasma EVM Economics Paper <br> : The Mechanism Design and Economic Philosophy(v.0.9)](https://hackmd.io/s/rJgPxWYTm) | 허상범(Danny) <br> 정순형(Kevin) <br> 박정원(Aiden) <br> 박주형(Carl) | November 2018 | |
 | [SolEVM 이해하기](https://docs.google.com/presentation/d/1Zf3Oh_k50bz5-KsXFY4JQAWDvpXt0ilHXrxF4aoHz-c/edit#slide=id.p) | 정순형(Kevin) | November 2018 | |
 | [Plasma World Map[Blog]](https://medium.com/onther-tech/plasma-world-map-kr-9c1eec16859e) | 박정원(Aiden) | November 2018 |  |
-| [Plasma World Map[23회서울이더리움밋업]](https://docs.google.com/presentation/d/1m2vD6gKxPS0WsV_HEF64Ij_f1BSkD3zs-YFthEYiBa8/edit#slide=id.p) | 박정원(Aiden) | November 2018 | [View](https://www.youtube.com/watch?v=eMEsMRMMhH8&index=1&list=PLHhmkDLsvVM3zFfBLqUF-aOvy7JbFtJRQ) |
+| [Plasma World Map(23회서울이더리움밋업)](https://docs.google.com/presentation/d/1m2vD6gKxPS0WsV_HEF64Ij_f1BSkD3zs-YFthEYiBa8/edit#slide=id.p) | 박정원(Aiden) | November 2018 | [View](https://www.youtube.com/watch?v=eMEsMRMMhH8&index=1&list=PLHhmkDLsvVM3zFfBLqUF-aOvy7JbFtJRQ) |
 
 ## Ethereum Scalability
 | Title | Author(s) | Publication Date | Video |  
@@ -66,8 +67,8 @@
 | [Ardor Sidechain](https://docs.google.com/presentation/d/11jjM7AuOD9Tth7eYkGMdfy1TiDU6J8-B2eSQdU50qPk/edit#slide=id.p1) | 송무복(Jake) | August 2018 | |
 | [Stratis Sidechain](https://docs.google.com/presentation/d/1-DIZOwIg3z0MPWNxtoiQvMzkyoAaKUfw7NgSX48UwWc/edit#slide=id.p1) | 송무복(Jake) | August 2018 | |
 | [Let's play with Truebit](https://docs.google.com/presentation/d/1hjqLScv8XaxiJV5cu52jrrlT0u9TvlfdMYbbbUbSpL8/edit#slide=id.p1) | 송무복(Jake) | October 2018 | [View](https://www.youtube.com/watch?v=7oXHVop3r_M&index=9&list=PLwLfLX5QfdGoqO_T2D76xbb3qn4flsurj) |
-| [이더리움 좀 더 알아보기](https://docs.google.com/presentation/d/1Idod7rUfRKVlELoQHWEiINi2xkAn_2KVc2wrT3NCgM8/edit#slide=id.g435114d2f7_0_138) | 황재승(Jason) | October 2018 | |
-| [Plasma vs Sharding](https://docs.google.com/presentation/d/19sI2AWYyB0pTuYyeoyyAbPqEp8tZpYmJ1WG4Ypsn278/edit#slide=id.g447a05718c_0_6) |황재승(Jason) | October 2018 | [View](https://www.youtube.com/watch?v=Kf_srbbH-hE) |
+| [이더리움 좀 더 알아보기](https://docs.google.com/presentation/d/1Idod7rUfRKVlELoQHWEiINi2xkAn_2KVc2wrT3NCgM8/edit#slide=id.p) | 황재승(Jason) | October 2018 | |
+| [Plasma vs Sharding](https://docs.google.com/presentation/d/19sI2AWYyB0pTuYyeoyyAbPqEp8tZpYmJ1WG4Ypsn278/edit#slide=id.p) |황재승(Jason) | October 2018 | [View](https://www.youtube.com/watch?v=Kf_srbbH-hE) |
 | [ZoKrates - zero knowledge tool box](https://docs.google.com/presentation/d/1vayPmeW9QuxQqczNSMub5agO_uiJu-bHBJmzA2uLJ5s/edit#slide=id.p1) | 송무복(Jake) | November 2018 | |
 | [Devcon 4 Review — Ewasm Project](https://medium.com/onther-tech/devcon-4-review-ewasm-project-d9e03e76a88d) | 송무복(Jake) | November 2018 | |
 | [Sharding, Casper → Serenity!](https://medium.com/onther-tech/sharding-casper-serenity-e25dec162845) | 박주형(Carl) | December 2018 | |
@@ -112,7 +113,7 @@
 | [Understanding Ethereum Core](https://docs.google.com/presentation/d/1rE8EQG4b2ZIx4304w88Y2qiogt7KSRMhjyfQaqg3OFA/edit#slide=id.p) | 정순형(Kevin) | April 2018 | |
 | [5분만에 Private Network 구축하기](https://docs.google.com/presentation/d/12dqDI0niHv3XqP8mSUM9bWY-9frl8G9awfcT_gLUnv8/edit#slide=id.p) | 황재승(Jason) | May 2018 | [View](https://www.youtube.com/watch?v=TOH-50wmb6g&index=4&list=PLwLfLX5QfdGqsCfwu-qhVC8OdJiuyk5QB) |
 | [Geth network layer](https://docs.google.com/presentation/d/1XUCuk0vzQYpZjOqhGlZTDsaO5qRf01zHrlNbVK_2A58/edit#slide=id.p) | 박주형(Carl) | May 2018 | [View](https://www.youtube.com/watch?v=O0ahKd8Ldxw&index=3&list=PLwLfLX5QfdGqsCfwu-qhVC8OdJiuyk5QB) |
-| [Geth network layer[Blog]](https://medium.com/onther-tech/geth-network-layer-e12e65760829) | 박주형(Carl) | June 2018 | [View](https://www.youtube.com/watch?v=O0ahKd8Ldxw) |
+| [Geth network layer[Blog]](https://medium.com/onther-tech/geth-network-layer-e12e65760829) | 박주형(Carl) | June 2018 | |
 | [Developing Core with Py-EVM](https://docs.google.com/presentation/d/1RJnc1OsK7vGcSVjPV_2alhgCXTdn4X9zuSllhB-aHw0/edit#slide=id.p) | 정순형(Kevin) | July 2018 | |
 | [geth /cmd/geth](https://docs.google.com/presentation/d/1WFaWG3DRrKES6YrhFyLIvumn8PuLarmw55jek_8vzuo/edit#slide=id.p) | 신건우(Thomas) | September 2018 | |
 | [Geth Package](https://docs.google.com/presentation/d/1_9TZJEB--JmaU4T78If_vwvNcKls2vBUVnXqZqkUylQ/edit#slide=id.p) | 황재승(Jason) | September 2018 | |
@@ -124,7 +125,6 @@
 | [geth /miner /worker](https://docs.google.com/presentation/d/1rQngQ0d6GaFMuxTCW5gZ2O12MZpqZzx9UpLcle9I6XQ/edit#slide=id.p) | 신건우(Thomas) | October 2018 | |
 | [geth /eth /core /core /vm](https://docs.google.com/presentation/d/1UE4mMz7395pZmVOhFecnNv33AN0sGaNsmyr0hB2uNDs/edit#slide=id.p) | 신건우(Thomas) | October 2018 | |
 | [How does go-ethereum work?](https://docs.google.com/presentation/d/1F0n_ZPBjpV6VI6cPh8Sjo7PVyurjonGyNMcndP-9H7M/edit#slide=id.p) | 박정원(Aiden) | October 2018 | [View](https://www.youtube.com/watch?v=SpfjrEK0qa8&index=5&list=PLwLfLX5QfdGoqO_T2D76xbb3qn4flsurj) |
-| [Gasless Plasma Chain for Dapp](https://docs.google.com/presentation/d/129S0pUkIbCh5RLt6dNTeLvZL2jf_fgS56-X9qdrURwc/edit) | 정순형(Kevin) | November 2018 | |
 
 ## Smart Contract Development
 | Title | Author(s) | Publication Date | Video |  
@@ -134,7 +134,6 @@
 | [이더리움 스마트 계약(3) — 블록체인에 은행 만들기](https://medium.com/onther-tech/%EC%9D%B4%EB%8D%94%EB%A6%AC%EC%9B%80-%EC%8A%A4%EB%A7%88%ED%8A%B8-%EA%B3%84%EC%95%BD-3-%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8%EC%97%90-%EC%9D%80%ED%96%89-%EB%A7%8C%EB%93%A4%EA%B8%B0-9a4c91b9182) | 정순형(Kevin) | December 2016 | |
 | [블록체인 공부 자료 정리 v0.9](https://medium.com/onther-tech/%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8-%EA%B3%B5%EB%B6%80-%EC%9E%90%EB%A3%8C-%EC%A0%95%EB%A6%AC-v0-9-acd011ef8399) | 정순형(Kevin) | December 2016 | |
 | [Mastering Truffle](https://docs.google.com/presentation/d/1ONHk1ZwNXPe9650Nivv9xaNdN9ec45X22D136RyLAME/edit#slide=id.p) | Onther | August 2017| |
-| [Smart Contract Audit](https://docs.google.com/presentation/d/1I5JjEVCFsD6UbKOLERQ8pOTsF2fEsnj5RBcDKU_aozc/edit#slide=id.p) | 박주형(Carl) | December 2017 | |
 | [Wolf Contract[Slide]](https://docs.google.com/presentation/d/16MaPJcTZ3IV9KNd_N_KvGpWhtYrQelsXFBEtw0468fE/edit#slide=id.p) | 정순형(Kevin) | December 2017 | [View](https://www.youtube.com/watch?v=ZPwIQqJXvCU&feature=youtu.be&t=2h3m49s) |
 | [변장한 늑대 — 스마트하지 못한 스마트 계약[Blog]](https://medium.com/onther-tech/%EB%B3%80%EC%9E%A5%ED%95%9C-%EB%8A%91%EB%8C%80-%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%95%98%EC%A7%80-%EB%AA%BB%ED%95%9C-%EC%8A%A4%EB%A7%88%ED%8A%B8-%EA%B3%84%EC%95%BD-45ece882e2b3) | 정순형(Kevin) | December 2017 | |
 | [Evm Transaction Tuning](https://docs.google.com/presentation/d/1EKurUds8QYKJzJQSwmGYA_lztldiXHdZ5lnaVyUxMaE/edit#slide=id.p) | Onther | December 2017 | |
