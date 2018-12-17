@@ -9,6 +9,8 @@
 * [Dapp Analysis](#dapp-analysis)
 * [Bitcoin Core](#bitcoin-core)
 
+# Token Model & ETC
+
 ## Plasma EVM
 
 ### English version
