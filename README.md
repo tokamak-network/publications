@@ -129,7 +129,6 @@
 ## Smart Contract Development
 | Title | Author(s) | Publication Date | Video |  
 | --- | --- | --- | :---: |
-
 | [이더리움 스마트 계약(1) — 개발환경구성](https://medium.com/onther-tech/%EC%9D%B4%EB%8D%94%EB%A6%AC%EC%9B%80-%EC%8A%A4%EB%A7%88%ED%8A%B8-%EA%B3%84%EC%95%BD-1-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD%EA%B5%AC%EC%84%B1-5edab7f5dc87) | 정순형(Kevin) | November 2016 | |
 | [이더리움 스마트 계약(2) — 분산자율조직개념](https://medium.com/onther-tech/%EC%9D%B4%EB%8D%94%EB%A6%AC%EC%9B%80-%EC%8A%A4%EB%A7%88%ED%8A%B8-%EA%B3%84%EC%95%BD-2-%EB%B6%84%EC%82%B0%EC%9E%90%EC%9C%A8%EC%A1%B0%EC%A7%81%EA%B0%9C%EB%85%90-cb79a998d1af) | 정순형(Kevin) | December 2016 | |
 | [이더리움 스마트 계약(3) — 블록체인에 은행 만들기](https://medium.com/onther-tech/%EC%9D%B4%EB%8D%94%EB%A6%AC%EC%9B%80-%EC%8A%A4%EB%A7%88%ED%8A%B8-%EA%B3%84%EC%95%BD-3-%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8%EC%97%90-%EC%9D%80%ED%96%89-%EB%A7%8C%EB%93%A4%EA%B8%B0-9a4c91b9182) | 정순형(Kevin) | December 2016 | |
