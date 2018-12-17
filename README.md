@@ -14,9 +14,9 @@
 ### English version
 | Title | Author(s) | Publication Date | Video |
 | --- | --- | --- | :---: |
-| [PoC1 : EVM Compatible Transaction <br> Fee(GAS) Delegated Execution Architecture(Egnlish)](https://ethresear.ch/t/evm-compatible-transaction-fee-gas-delegated-execution-architecture-for-plasma-chain/3106) | 정순형(Kevin) <br> 신건우(Thomas) <br> 황재승(Jason) <br> 박주형(Carl) | August 2018 |(링크권한수정필요-kevin)|
+| [PoC1 : EVM Compatible Transaction <br> Fee(GAS) Delegated Execution Architecture(Egnlish)](https://ethresear.ch/t/evm-compatible-transaction-fee-gas-delegated-execution-architecture-for-plasma-chain/3106) | 정순형(Kevin) <br> 신건우(Thomas) <br> 황재승(Jason) <br> 박주형(Carl) | August 2018 | |
 | [Plasma EVM 2.0](https://hackmd.io/m8TXSv2eSkGwsj7ni27Mag) | 박주형(Carl) <br> 박정원(Aiden) <br> 정순형(Kevin) | August 2018 | |
-| [Plasma EVM Implementation](https://docs.google.com/presentation/d/1wjYg36bNQYWEIUQT7ZHtWH2Xc0EfM2N2VmgMbFN2JyU/edit#slide=id.p) | 박주형(Carl) | August 2018 | (링크권한수정필요-carl)|
+| [Plasma EVM Implementation](https://docs.google.com/presentation/d/1wjYg36bNQYWEIUQT7ZHtWH2Xc0EfM2N2VmgMbFN2JyU/edit#slide=id.p) | 박주형(Carl) | August 2018 | |
 | [EVM Compatible Gas Delegated Transaction Execution Model](https://docs.google.com/presentation/d/11riwRBrGEVr2vw08_O4nhZ8KDOUf3otdrsKCsTk0AK8/edit#slide=id.p) | 정순형(Kevin) | September 2018 |  |
 | [Data Availability Solution for Plasma EVM without Confirmation](https://ethresear.ch/t/data-availability-solution-for-plasma-evm-without-confirmation/3294) | 박정원(Aiden) | September 2018 |  |
 | [Data Availability problem in implementing Plasma design](https://medium.com/onther-tech/data-availability-problem-in-implementing-plasma-design-6e23df1a147f) | 송무복(Jake) | September 2018 |  |
@@ -32,7 +32,7 @@
 | [플라즈마 EVM](https://docs.google.com/presentation/d/1sAkYOCNdTb5aLj967pXirZedHqjoIXrVSQMvNS7tPk0/edit#slide=id.p) | 박주형(Carl) | August 2018 | [View](https://www.youtube.com/watch?v=-6Pa_L0FYdE#t=1h45m21s) |
 | [Technical side of  Moscow  for non-developers](https://docs.google.com/presentation/d/1kfkwCddTGB84TGO9fuUgzDCUlJ7N3jWhe2zaqrtQCKA/edit#slide=id.g3fd1b89833_0_192) | 정순형(Kevin) | August 2018 | |
 | [Transaction Fee(GAS) Delegated Execution Model <br> in Py-EVM](https://medium.com/onther-tech/transaction-fee-gas-delegated-execution-model-in-py-evm-f2d57cea1008) | 신건우(Thomas) | September 2018 | |
-| [플라즈 EVM <br> : 탈중앙화된 상태를 강제하는 튜링 완전한 사이드 체인](https://hackmd.io/ciFhWJJrRbGFqA7Vc6tVJQ) | 박주형(Carl) <br> 박정원(Aiden) <br> 정순형(Kevin) <br> 황재승(jason) | September 2018 | |
+| [플라즈마 EVM <br> : 탈중앙화된 상태를 강제하는 튜링 완전한 사이드 체인](https://hackmd.io/ciFhWJJrRbGFqA7Vc6tVJQ) | 박주형(Carl) <br> 박정원(Aiden) <br> 정순형(Kevin) <br> 황재승(jason) | September 2018 | |
 | [A proposal for Data availability Solution of Plasma EVM](https://hackmd.io/s/H1bk0Z-DQ) | 박정원(Aiden) | September 2018 | |
 | [Plasma EVM PoC1 <br> : Transaction Fee delegate Execution Model](https://docs.google.com/presentation/d/1JlxnIxdZQSAwNlOJbBvTJ46sLoWD5hWE_2nZoQWMi3M/edit#slide=id.p) | 신건우(Thomas) | September 2018 | [View](https://www.youtube.com/watch?v=ciog3ksfuqo&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=16&t=0s) |
 | [solEVM(ERC20 demo)](https://docs.google.com/presentation/d/1YuyRCSeHkhqpAYGfpuC_zKhuqHfzqeWu7scumvJyEIg/edit?usp=sharing) | 신건우(Thomas) | September 2018 | [View1](https://www.youtube.com/watch?v=sRsIPAY5FEs&index=8&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN) <br> [View2](https://www.youtube.com/watch?v=hNApH_Edb6g&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=9) |
@@ -52,7 +52,7 @@
 | Title | Author(s) | Publication Date | Video |  
 | --- | --- | --- | :---: |
 | [플라즈마 일반](https://docs.google.com/presentation/d/1QYNLcAvI3YwEt8CdpxfT5WnsGaKispDuNIlUf6c-I4E/edit#slide=id.p3) |  Onther | 2018 | |
-| [PlasmaMVPIssues](https://docs.google.com/presentation/d/1QNTSHJN2B1kQmrc1Ds6CWE83NzBaczhLNKVRWw-N5lE/edit?usp=sharing) | 박주형(Carl) | March 2018| |
+| [Plasma MVP Issues](https://docs.google.com/presentation/d/1QNTSHJN2B1kQmrc1Ds6CWE83NzBaczhLNKVRWw-N5lE/edit?usp=sharing) | 박주형(Carl) | March 2018| |
 | [Deep Dive Into Plasma MVP](https://docs.google.com/presentation/d/1gLgeA6_o1WTz7PtSrzclmx8moZ9oAxTG5ZJl8U1tgqg/edit?usp=sharing) |  정순형(Kevin) | April 2018 | [View1](https://www.youtube.com/watch?v=_RPx_8hUnfQ&index=2&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN) <br> [View2](https://www.youtube.com/watch?v=n2H-h-A2vzo&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=3) |
 | [플라즈마 화이트페이퍼 번역](https://github.com/Onther-Tech/plasma-korea) | Onther | April 2018 | |
 | [Raiden Network](https://docs.google.com/presentation/d/1gis69QsmiE7ZrGWbHwGizIbIy2fxWqZ2rddUC_PNm6k/edit#slide=id.g3ccd028687_0_86) | 허상범(Danny) | June 2018 | |
@@ -65,7 +65,6 @@
 | [브릿징 체인](https://docs.google.com/presentation/d/15K1fMVn-UwSsvKcjwFNfvmajo724GGNUFfpQhFDpTCk/edit#slide=id.p) | 정순형(Kevin) | July 2018 | |
 | [Ardor Sidechain](https://docs.google.com/presentation/d/11jjM7AuOD9Tth7eYkGMdfy1TiDU6J8-B2eSQdU50qPk/edit#slide=id.p1) | 송무복(Jake) | August 2018 | |
 | [Stratis Sidechain](https://docs.google.com/presentation/d/1-DIZOwIg3z0MPWNxtoiQvMzkyoAaKUfw7NgSX48UwWc/edit#slide=id.p1) | 송무복(Jake) | August 2018 | |
-| [Plasma snapp](https://docs.google.com/presentation/d/1atIG7SOKN52Qny4hzmenOxuabqizqKu1jtHlCiDjF6E/edit#slide=id.p) | 황재승(Jason) | September 2018 | |
 | [Let's play with Truebit](https://docs.google.com/presentation/d/1hjqLScv8XaxiJV5cu52jrrlT0u9TvlfdMYbbbUbSpL8/edit#slide=id.p1) | 송무복(Jake) | October 2018 | [View](https://www.youtube.com/watch?v=7oXHVop3r_M&index=9&list=PLwLfLX5QfdGoqO_T2D76xbb3qn4flsurj) |
 | [이더리움 좀 더 알아보기](https://docs.google.com/presentation/d/1Idod7rUfRKVlELoQHWEiINi2xkAn_2KVc2wrT3NCgM8/edit#slide=id.g435114d2f7_0_138) | 황재승(Jason) | October 2018 | |
 | [Plasma vs Sharding](https://docs.google.com/presentation/d/19sI2AWYyB0pTuYyeoyyAbPqEp8tZpYmJ1WG4Ypsn278/edit#slide=id.g447a05718c_0_6) |황재승(Jason) | October 2018 | [View](https://www.youtube.com/watch?v=Kf_srbbH-hE) |
