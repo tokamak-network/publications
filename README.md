@@ -5,7 +5,7 @@
 * [General Ethereum](#general-ethereum)
 * [Ethereum Core](#ethereum-core )
 * [Smart Contract Development](#smart-contract-development)
-* [Token Model](#token-model)
+* [Token Model & ETC](#token-model-&-ETC)
 * [Dapp Analysis](#dapp-analysis)
 * [Bitcoin Core](#bitcoin-core)
 
