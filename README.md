@@ -7,7 +7,6 @@
 * [Smart Contract Development](#smart-contract-development)
 * [Token Model & ETC](#token-model-\&-etc)
 * [Dapp Analysis](#dapp-analysis)
-* [ETC](#etc)
 * [Bitcoin Core](#bitcoin-core)
 
 ## Plasma EVM
