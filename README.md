@@ -48,6 +48,7 @@
 | [SolEVM 이해하기](https://docs.google.com/presentation/d/1Zf3Oh_k50bz5-KsXFY4JQAWDvpXt0ilHXrxF4aoHz-c/edit#slide=id.p) | 정순형(Kevin) | November 2018 | |
 | [Plasma World Map[Blog]](https://medium.com/onther-tech/plasma-world-map-kr-9c1eec16859e) | 박정원(Aiden) | November 2018 |  |
 | [Plasma World Map(23회서울이더리움밋업)](https://docs.google.com/presentation/d/1m2vD6gKxPS0WsV_HEF64Ij_f1BSkD3zs-YFthEYiBa8/edit#slide=id.p) | 박정원(Aiden) | November 2018 | [View](https://www.youtube.com/watch?v=eMEsMRMMhH8&index=1&list=PLHhmkDLsvVM3zFfBLqUF-aOvy7JbFtJRQ) |
+| [PlasmaEVM Core Dev(User Activated Fork)] | Onther | December 2018 | [View](https://www.youtube.com/watch?v=ikIhihHyCK0&t=10s) |
 
 ## Ethereum Scalability
 | Title | Author(s) | Publication Date | Video |  
