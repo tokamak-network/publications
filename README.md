@@ -71,7 +71,7 @@
 | [Plasma vs Sharding](https://docs.google.com/presentation/d/19sI2AWYyB0pTuYyeoyyAbPqEp8tZpYmJ1WG4Ypsn278/edit#slide=id.p) |황재승(Jason) | October 2018 | [View](https://www.youtube.com/watch?v=Kf_srbbH-hE) |
 | [ZoKrates - zero knowledge tool box](https://docs.google.com/presentation/d/1vayPmeW9QuxQqczNSMub5agO_uiJu-bHBJmzA2uLJ5s/edit#slide=id.p1) | 송무복(Jake) | November 2018 | |
 | [Devcon 4 Review — Ewasm Project](https://medium.com/onther-tech/devcon-4-review-ewasm-project-d9e03e76a88d) | 송무복(Jake) | November 2018 | |
-| [Sharding, Casper → Serenity!](https://medium.com/onther-tech/sharding-casper-serenity-e25dec162845) | 박주형(Carl) | December 2018 | |
+| [Sharding, Casper → Serenity!](https://medium.com/onther-tech/sharding-casper-serenity-e25dec162845) | 박주형(Carl) | December 2018 | [View](https://www.youtube.com/watch?v=VZ8QuBrCnH0&index=22&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN) |
 
 
 ## General Ethereum
