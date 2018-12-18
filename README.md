@@ -125,6 +125,7 @@
 | [geth /miner /worker](https://docs.google.com/presentation/d/1rQngQ0d6GaFMuxTCW5gZ2O12MZpqZzx9UpLcle9I6XQ/edit#slide=id.p) | 신건우(Thomas) | October 2018 | |
 | [geth /eth /core /core /vm](https://docs.google.com/presentation/d/1UE4mMz7395pZmVOhFecnNv33AN0sGaNsmyr0hB2uNDs/edit#slide=id.p) | 신건우(Thomas) | October 2018 | |
 | [How does go-ethereum work?](https://docs.google.com/presentation/d/1F0n_ZPBjpV6VI6cPh8Sjo7PVyurjonGyNMcndP-9H7M/edit#slide=id.p) | 박정원(Aiden) | October 2018 | [View](https://www.youtube.com/watch?v=SpfjrEK0qa8&index=5&list=PLwLfLX5QfdGoqO_T2D76xbb3qn4flsurj) |
+| [Meta Transaction](https://docs.google.com/presentation/d/1vYvNY5o-aNSD6Yh06E3RTo0h3hH5R45hGr4HLGYTjhE/edit#slide=id.p) | 신건우(Thomas) | December 2018 | [View](https://www.youtube.com/watch?v=Ce8jkk1-OSw&index=23&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN) |
 
 ## Smart Contract Development
 | Title | Author(s) | Publication Date | Video |  
