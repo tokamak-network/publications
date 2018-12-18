@@ -91,7 +91,7 @@
 | [General State Plasma Plasmabits & ParsecLabs](https://docs.google.com/presentation/d/1MSrygKBdFm9r-Q7fMkIPULQVTbBSWLOB9IDhKScnMPw/edit#slide=id.g3dd2141ed9_0_0) | 박정원(Aiden) | August 2018 | |
 | [Whisper 노드 구축 및 테스트](https://medium.com/onther-tech/ethereum-whisper-%EB%85%B8%EB%93%9C-%EA%B5%AC%EC%B6%95-%EB%B0%8F-%ED%85%8C%EC%8A%A4%ED%8A%B8-1b04fa8b9abf) | 신진환(Jin)| September 2018 | |
 | [Managing IPFS hash with Smart Contract](https://medium.com/onther-tech/managing-ipfs-hash-with-smart-contract-bb8db43fa18f) | 황재승(Jason) | September 2018 | |
-| [Ethereum Gas Price 분석](https://medium.com/onther-tech/ethereum-gas-price-%EB%B6%84%EC%84%9D-de958ce6c654) | 신진환(Jin)| September 2018 | |
+| [Ethereum Gas Price 분석](https://medium.com/onther-tech/ethereum-gas-price-%EB%B6%84%EC%84%9D-de958ce6c654) | 신진환(Jin)| September 2018 | [View](https://www.youtube.com/watch?v=mlpK8-FsWj0&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=21) |
 | [Ethereum Gas Price Analysis(EN.)](https://medium.com/onther-tech/ethereum-gas-price-analysis-b70080e2e0d7) | 신진환(Jin)| September 2018 | |
 | [GHOST protocol](https://docs.google.com/presentation/d/11OSC2883AsopNuAMgWLFm4WshkJqWTrpR-MbKuZ6nZs/edit#slide=id.p) | 신건우(Thomas) | October 2018 | |
 | [이더리움의 이해](https://docs.google.com/presentation/d/1t6sqUhex35C6kl_VDE6z-aFLDwyDqAiR2G2p3-RcCJg/edit#slide=id.g431a210fed_0_325) | 황재승(Jason) | October 2018 | |
