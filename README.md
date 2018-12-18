@@ -155,7 +155,6 @@
 | [Intro to TokenOS](https://medium.com/onther-tech/intro-to-token-os-6291be9644ea) | 허상범(Danny) | June 2018 | |
 | [Solidity Assembly & ABI Encoding](https://medium.com/onther-tech/solidity-assembly-abi-encoding-db8f79d1c1a1) | 박주형(Carl) | August 2018 | |
 | [How to read Ethereum contract storage?](https://docs.google.com/presentation/d/1Ryngu5o06e00IDMFmG8zIN7m8YGkFi8Wf8077a7y10o/edit#slide=id.g42970481cd_0_14) |신건우(Thomas) | September 2018 | |
-| [Auditing Reference](https://hackmd.io/s/HJXdQo-cX) | 황재승(Jason) | October 2018 | |
 | [Trustless Smart Contract Upgradability](https://medium.com/onther-tech/%EC%B2%A0%ED%95%99%EC%9E%90%EC%9D%98-%EB%8D%B0%EB%B8%8C%EC%BD%984-%EC%B0%B8%EA%B4%80%EA%B8%B0-trustless-smart-contract-upgradability-f16ec937b96e) | 정순형(Kevin) | November 2018| |
 | [Upgradeable smart contract applications using proxy patterns](https://medium.com/onther-tech/upgradeable-smart-contract-applications-using-proxy-patterns-2053a5780287) | 신건우(Thomas) | November 2018 | |
 | [스마트 컨트렉트의 기술적 이해](https://docs.google.com/presentation/d/19W4rHndsnhDGG0WDnpWqT1GZvLrRSsD3hSsK4rS4HBg/edit?usp=sharing) | 정순형(Kevin) | June 2018 | |
