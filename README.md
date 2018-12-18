@@ -33,7 +33,7 @@
 | [플라즈마 EVM](https://docs.google.com/presentation/d/1sAkYOCNdTb5aLj967pXirZedHqjoIXrVSQMvNS7tPk0/edit#slide=id.p) | 박주형(Carl) | August 2018 | [View](https://www.youtube.com/watch?v=-6Pa_L0FYdE#t=1h45m21s) |
 | [Technical side of  Moscow  for non-developers](https://docs.google.com/presentation/d/1kfkwCddTGB84TGO9fuUgzDCUlJ7N3jWhe2zaqrtQCKA/edit#slide=id.p) | 정순형(Kevin) | August 2018 | |
 | [Transaction Fee(GAS) Delegated Execution Model <br> in Py-EVM](https://medium.com/onther-tech/transaction-fee-gas-delegated-execution-model-in-py-evm-f2d57cea1008) | 신건우(Thomas) | September 2018 | |
-| [플라즈마 EVM <br> : 탈중앙화된 상태를 강제하는 튜링 완전한 사이드 체인](https://hackmd.io/ciFhWJJrRbGFqA7Vc6tVJQ) | 박주형(Carl) <br> 박정원(Aiden) <br> 정순형(Kevin) <br> 황재승(jason) | September 2018 | |
+| [플라즈마 EVM 2.0 <br> : 탈중앙화된 상태를 강제하는 튜링 완전한 사이드 체인](https://hackmd.io/ciFhWJJrRbGFqA7Vc6tVJQ) | 박주형(Carl) <br> 박정원(Aiden) <br> 정순형(Kevin) <br> 황재승(jason) | September 2018 | |
 | [A proposal for Data availability Solution of Plasma EVM](https://hackmd.io/s/H1bk0Z-DQ) | 박정원(Aiden) | September 2018 | |
 | [Plasma EVM PoC1 <br> : Transaction Fee delegate Execution Model](https://docs.google.com/presentation/d/1JlxnIxdZQSAwNlOJbBvTJ46sLoWD5hWE_2nZoQWMi3M/edit#slide=id.p) | 신건우(Thomas) | September 2018 | [View](https://www.youtube.com/watch?v=ciog3ksfuqo&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=16&t=0s) |
 | [solEVM(ERC20 demo)](https://docs.google.com/presentation/d/1YuyRCSeHkhqpAYGfpuC_zKhuqHfzqeWu7scumvJyEIg/edit?usp=sharing) | 신건우(Thomas) | September 2018 | [View1](https://www.youtube.com/watch?v=sRsIPAY5FEs&index=8&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN) <br> [View2](https://www.youtube.com/watch?v=hNApH_Edb6g&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=9) |
