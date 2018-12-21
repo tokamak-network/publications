@@ -98,7 +98,7 @@
 | [Ethereum Gas Price Analysis(EN.)](https://medium.com/onther-tech/ethereum-gas-price-analysis-b70080e2e0d7) | 신진환(Jin)| September 2018 | |
 | [GHOST protocol](https://docs.google.com/presentation/d/11OSC2883AsopNuAMgWLFm4WshkJqWTrpR-MbKuZ6nZs/edit#slide=id.p) | 신건우(Thomas) | October 2018 | |
 | [이더리움의 이해](https://docs.google.com/presentation/d/1t6sqUhex35C6kl_VDE6z-aFLDwyDqAiR2G2p3-RcCJg/edit#slide=id.g431a210fed_0_325) | 황재승(Jason) | October 2018 | |
-| [Ethereum DEVCON4 Review <br> :: Deep dive in to Ethereum UX - 1. UI & User Research](https://medium.com/onther-tech/ethereum-devcon-iv-overview-deep-dive-into-ethereum-ux-1-dapp-ui-user-research-5593c07f2059) | Danny(허상범) | November 2018 | |
+| [Ethereum DEVCON4 Review <br> :: Deep dive in to Ethereum UX - 1. UI & User Research](https://medium.com/onther-tech/ethereum-devcon-iv-overview-deep-dive-into-ethereum-ux-1-dapp-ui-user-research-5593c07f2059) | 허상범(Danny) | November 2018 | |
 | [Ethereum 2.0 - Randomness](https://docs.google.com/presentation/d/1mVwi8p_KHIWR4HgwOSMJDLwoIzd6n9EwX4XKIP-88o8/edit?usp=sharing) | 신진환(Jin)| November 2018 | |
 | [Ethereum 2.0 - Randomness[Blog]](https://medium.com/onther-tech/ethereum-2-0-randomness-5f99565c6293) | 신진환(Jin)| November 2018 | |
 | [Zero-Knowledge Proof Basic](https://docs.google.com/presentation/d/1iKkSsJILHrizTWjOAg02DveOI8lEJfUREDkAsMKOgnY/edit#slide=id.p) | 박정원(Aiden) | December 2018 | [View1](https://www.youtube.com/watch?v=93TWY6pyxvE&index=5&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN) <br> [View2](https://www.youtube.com/watch?v=3iAqQdp1sWE&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=6) |
