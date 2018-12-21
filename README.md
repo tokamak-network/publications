@@ -165,7 +165,7 @@
 | [Deconstructing a Solidity Contract](https://docs.google.com/presentation/d/1EXNqgmXbyOLAH_gPr3HFFVTzORRABqdtc9jpanKjCsY/edit#slide=id.p) | 신건우(Thomas) | November 2018 | |
 | [Dappsys라이브러리 사용과 활용](https://docs.google.com/presentation/d/1G2yq-9XeuxStYD4EjC4rx6QcQyssPm_j4H3Do-OsY_Q/edit?usp=sharing) | 신진환(Jin) | December 2018 | [View](https://www.youtube.com/watch?v=D1xjYCJ9jsI&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=15&t=1021s) |
 | [Getting Start with Vyper](https://medium.com/onther-tech/devcon4-%EC%B0%B8%EA%B4%80%EA%B8%B0-getting-start-with-vyper-3e6415a31ec1) | 황재승(Jason) | December 2018 | |
-| [Openzeppelin Solidity] | 박주형(Carl) | December 2018 | [View](https://www.youtube.com/watch?v=ArGZ4dWWnyc&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=12&t=699s) |
+| Openzeppelin Solidity | 박주형(Carl) | December 2018 | [View](https://www.youtube.com/watch?v=ArGZ4dWWnyc&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=12&t=699s) |
 
 ## Token Model & ETC
 | Title | Author(s) | Publication Date | Video |  
@@ -184,7 +184,7 @@
 | [(돈 쉽게 버는)토큰이코노미 구성과 설계 방법](https://docs.google.com/presentation/d/17ddOKCVcjWrA5tvUN1qI40PQHgWd4REdG6bRnEkWIFo/edit#slide=id.g4325d86a58_0_5) | 정순형(Kevin) | October 2018| |
 | [Microeconomic Analysis of Gas Price Mechanism and Mitigation](https://hackmd.io/oe-bT8GcRvCc7vBgeOJyLw)| 허상범(Danny) | November 2018 | |
 | [DevCon4: Special Projects 2018](https://medium.com/onther-tech/%EB%8D%B0%EB%B8%8C%EC%BD%984-%EC%B0%B8%EC%97%AC%EA%B8%B0-1-10-30-%ED%99%94-ca434d7bd68f) |강주형(Jace) | October 2018 | |
-| [영지식 증명(Zero Knowledge Proof; ZKP) 기초1] <br> [영지식 증명(Zero Knowledge Proof; ZKP) 기초2] | 박정원(Aiden) | December 2018 | [View1](https://www.youtube.com/watch?v=93TWY6pyxvE&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=5) <br>[View2](https://www.youtube.com/watch?v=3iAqQdp1sWE&index=6&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN) |
+| 영지식 증명(Zero Knowledge Proof; ZKP) 기초1 <br> 영지식 증명(Zero Knowledge Proof; ZKP) 기초2 | 박정원(Aiden) | December 2018 | [View1](https://www.youtube.com/watch?v=93TWY6pyxvE&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=5) <br>[View2](https://www.youtube.com/watch?v=3iAqQdp1sWE&index=6&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN) |
 | [zk-SNARKs Basic(step1)](https://docs.google.com/presentation/d/1nrypaMEJpd_eXVXU0ms_uFeLuYBXHykD7mMtcJG8PSc/edit#slide=id.p)| 박정원(Aiden) | December 2018 | [View](https://www.youtube.com/watch?v=4m5ymlBjw6k&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=25) |
 
 
@@ -223,10 +223,10 @@
 | [Wanchain](https://docs.google.com/presentation/d/1eRHRG3tF2WJcnGrDJZ8h3OrSm4pSYu6Ne-JFnU3OtGs/edit#slide=id.p) |강주형(Jace) | July 2018 | |
 | [뱅코르 씹어먹기[개념편]](https://docs.google.com/presentation/d/1SsGquxt_7sO7IDcS-t0E_Pciz8p2UMO0KndJ6uINllA/edit#slide=id.p) | 정순형(Kevin) | August 2018 | |
 | [Tezos 토큰모델](https://docs.google.com/presentation/d/1le25sBFJIeVYiye-hwd7rEQLlXBrauNk3AbmtQj2puM/edit) |강주형(Jace) | October 2018 | [View](https://www.youtube.com/watch?v=1wryBRG49ug) |
-| [DAI 아키텍처 분석1] <br> [DAI 아키텍처 분석2] | 송무복(Jake) | December 2018 | [View1](https://www.youtube.com/watch?v=3q5mnv4KNgM&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=19&t=65s) <br>[View2](https://www.youtube.com/watch?v=f7lKvQZMW20&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=18&t=0s) |
-| [OntherDelta Setup On AWS] | 신진환(Jin) | December 2018 | [View](https://www.youtube.com/watch?v=N1pnkZUq4qs&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=21&t=0s) |
+| DAI 아키텍처 분석1 <br> DAI 아키텍처 분석2 | 송무복(Jake) | December 2018 | [View1](https://www.youtube.com/watch?v=3q5mnv4KNgM&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=19&t=65s) <br>[View2](https://www.youtube.com/watch?v=f7lKvQZMW20&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=18&t=0s) |
+| OntherDelta Setup On AWS | 신진환(Jin) | December 2018 | [View](https://www.youtube.com/watch?v=N1pnkZUq4qs&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=21&t=0s) |
 | [MakerDAO, Sai](https://docs.google.com/presentation/d/1nIB9Z_2Lm5zm7nxTQNF-iUZ3b8xvbleWcTCiNDurSSA/edit)| 황재승(Jason) | December 2018 | [View](https://www.youtube.com/watch?v=bn59uVYbXCY&index=26&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN)
-| [OasisDex(maker-otc), Oasis-Proxy 분석] | 신진환(Jin) | December 2018 | [View](https://www.youtube.com/watch?v=_DFlymItl1I&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=27) |
+| OasisDex(maker-otc), Oasis-Proxy 분석 | 신진환(Jin) | December 2018 | [View](https://www.youtube.com/watch?v=_DFlymItl1I&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=27) |
 
 ## Bitcoin Core
 | Title | Author(s) | Publication Date | Video |  
