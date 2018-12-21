@@ -222,7 +222,7 @@
 | [Wanchain](https://docs.google.com/presentation/d/1eRHRG3tF2WJcnGrDJZ8h3OrSm4pSYu6Ne-JFnU3OtGs/edit#slide=id.p) |강주형(Jace) | July 2018 | |
 | [뱅코르 씹어먹기[개념편]](https://docs.google.com/presentation/d/1SsGquxt_7sO7IDcS-t0E_Pciz8p2UMO0KndJ6uINllA/edit#slide=id.p) | 정순형(Kevin) | August 2018 | |
 | [Tezos 토큰모델](https://docs.google.com/presentation/d/1le25sBFJIeVYiye-hwd7rEQLlXBrauNk3AbmtQj2puM/edit) |강주형(Jace) | October 2018 | [View](https://www.youtube.com/watch?v=1wryBRG49ug) |
-| DAI 아키텍처 분석1 <br> DAI 아키텍처 분석2 | 송무복(Jake) | December 2018 | [View1](https://www.youtube.com/watch?v=3q5mnv4KNgM&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=19&t=65s) <br>[View2](https://www.youtube.com/watch?v=f7lKvQZMW20&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=18&t=0s) |
+| DAI 아키텍처 분석 | 송무복(Jake) | December 2018 | [View1](https://www.youtube.com/watch?v=3q5mnv4KNgM&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=19&t=65s) <br>[View2](https://www.youtube.com/watch?v=f7lKvQZMW20&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=18&t=0s) |
 | OntherDelta Setup On AWS | 신진환(Jin) | December 2018 | [View](https://www.youtube.com/watch?v=N1pnkZUq4qs&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=21&t=0s) |
 | [MakerDAO, Sai](https://docs.google.com/presentation/d/1nIB9Z_2Lm5zm7nxTQNF-iUZ3b8xvbleWcTCiNDurSSA/edit)| 황재승(Jason) | December 2018 | [View](https://www.youtube.com/watch?v=bn59uVYbXCY&index=26&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN)
 | OasisDex(maker-otc), Oasis-Proxy 분석 | 신진환(Jin) | December 2018 | [View](https://www.youtube.com/watch?v=_DFlymItl1I&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=27) |
