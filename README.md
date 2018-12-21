@@ -101,7 +101,8 @@
 | [Ethereum DEVCON4 Review <br> :: Deep dive in to Ethereum UX - 1. UI & User Research](https://medium.com/onther-tech/ethereum-devcon-iv-overview-deep-dive-into-ethereum-ux-1-dapp-ui-user-research-5593c07f2059) | 허상범(Danny) | November 2018 | |
 | [Ethereum 2.0 - Randomness](https://docs.google.com/presentation/d/1mVwi8p_KHIWR4HgwOSMJDLwoIzd6n9EwX4XKIP-88o8/edit?usp=sharing) | 신진환(Jin)| November 2018 | |
 | [Ethereum 2.0 - Randomness[Blog]](https://medium.com/onther-tech/ethereum-2-0-randomness-5f99565c6293) | 신진환(Jin)| November 2018 | |
-| [Zero-Knowledge Proof Basic](https://docs.google.com/presentation/d/1iKkSsJILHrizTWjOAg02DveOI8lEJfUREDkAsMKOgnY/edit#slide=id.p) | 박정원(Aiden) | December 2018 | [View1](https://www.youtube.com/watch?v=93TWY6pyxvE&index=5&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN) <br> [View2](https://www.youtube.com/watch?v=3iAqQdp1sWE&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=6) |
+| [Zero-Knowledge Proof(영지식 증명) Basic](https://docs.google.com/presentation/d/1iKkSsJILHrizTWjOAg02DveOI8lEJfUREDkAsMKOgnY/edit#slide=id.p) | 박정원(Aiden) | December 2018 | [View1](https://www.youtube.com/watch?v=93TWY6pyxvE&index=5&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN) <br> [View2](https://www.youtube.com/watch?v=3iAqQdp1sWE&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=6) |
+| [zk-SNARKs Basic(step1)](https://docs.google.com/presentation/d/1nrypaMEJpd_eXVXU0ms_uFeLuYBXHykD7mMtcJG8PSc/edit#slide=id.p)| 박정원(Aiden) | December 2018 | [View](https://www.youtube.com/watch?v=4m5ymlBjw6k&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=25) |
 
 
 ## Ethereum Core
@@ -184,8 +185,6 @@
 | [(돈 쉽게 버는)토큰이코노미 구성과 설계 방법](https://docs.google.com/presentation/d/17ddOKCVcjWrA5tvUN1qI40PQHgWd4REdG6bRnEkWIFo/edit#slide=id.g4325d86a58_0_5) | 정순형(Kevin) | October 2018| |
 | [Microeconomic Analysis of Gas Price Mechanism and Mitigation](https://hackmd.io/oe-bT8GcRvCc7vBgeOJyLw)| 허상범(Danny) | November 2018 | |
 | [DevCon4: Special Projects 2018](https://medium.com/onther-tech/%EB%8D%B0%EB%B8%8C%EC%BD%984-%EC%B0%B8%EC%97%AC%EA%B8%B0-1-10-30-%ED%99%94-ca434d7bd68f) |강주형(Jace) | October 2018 | |
-| 영지식 증명(Zero Knowledge Proof; ZKP) 기초1 <br> 영지식 증명(Zero Knowledge Proof; ZKP) 기초2 | 박정원(Aiden) | December 2018 | [View1](https://www.youtube.com/watch?v=93TWY6pyxvE&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=5) <br>[View2](https://www.youtube.com/watch?v=3iAqQdp1sWE&index=6&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN) |
-| [zk-SNARKs Basic(step1)](https://docs.google.com/presentation/d/1nrypaMEJpd_eXVXU0ms_uFeLuYBXHykD7mMtcJG8PSc/edit#slide=id.p)| 박정원(Aiden) | December 2018 | [View](https://www.youtube.com/watch?v=4m5ymlBjw6k&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=25) |
 
 
 ## Dapp Analysis
