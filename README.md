@@ -1,3 +1,6 @@
+# 아래의 내용은 모두 **[blog.onther.io](http://blog.onther.io)**에 옮겨져 있습니다.
+# All of this contents are transfered to [blog.onther.io](http://blog.onther.io).
+
 # Publications from Onther Inc.
 
 * [Plasma EVM](#plasma-evm)
