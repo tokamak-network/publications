@@ -1,0 +1,13 @@
+{% for tag in site.tags  %}
+  {% for t in tag[1]%}
+    [{{t}}, {{t.size}}]
+  {% endfor %}
+{% endfor %}
+
+<h1>
+  {{site.posts[0].author}}
+  {% if site.posts[0].categories contains "ethereum1" %}
+    True
+  {% endif %}
+  {{site.posts[0].title}}
+</h1>

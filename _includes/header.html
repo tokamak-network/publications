@@ -1,0 +1,49 @@
+<header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar">
+        <span class="icon-bar">
+        <span class="icon-bar">
+      </button>
+      <a href="{{ '/' | prepend: site.baseurl }}" class="navbar-brand">
+        <img src="{{ '/styles/images/onther_logo_horizon.png' | prepend: site.baseurl }}">
+      </a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="{{ '/' | prepend: site.baseurl }}">Home</a>
+        </li>
+        <li>
+          <a href="{{ '/categories/' | prepend: site.baseurl }}">Categories</a>
+        </li>
+        <li>
+          <a href="{{ '/tag' | prepend: site.baseurl }}">Tags</a>
+        </li>
+        <li>
+          <a href="{{ '/authors' | prepend: site.baseurl }}">Authors</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+            <a><span id="busuanzi_container_site_pv">방문자 <span id="busuanzi_value_site_pv"> 입니다.</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">소셜<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a rel="nofollow" target="_blank" href="{{site.github}}">Github</a></li>
+            <li><a rel="nofollow" target="_blank" href="{{site.youtube}}">Youtube</a></li>
+            <li><a rel="nofollow" target="_blank" href="{{site.facebook}}">Facebook</a></li>
+            <li><a rel="nofollow" target="_blank" href="{{site.linkedin}}">Linkedin</a></li>
+            <li><a rel="nofollow" target="_blank" href="{{site.telegram}}">Telegram</a></li>
+            <li><a rel="nofollow" target="_blank" href="{{site.email}}">E-Mail</a></li>
+            <li><a href="{{ '/feed.xml' | prepend: site.baseurl }}">RSS피드</a></li>
+            <li class="divider"></li>
+            <li><a rel="nofollow" target="_blank" href="{{site.blog_github}}">Blog Github</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

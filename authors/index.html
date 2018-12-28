@@ -1,0 +1,40 @@
+---
+layout: default
+title: 저자별 분류
+header: Posts By Author
+---
+
+<div class="container docs-container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="sidebar hidden-print" role="complementary">
+        <div id="navigation">
+        	<h1>Directory</h1>
+      		<ul class="nav sidenav">
+            {% assign posts_by_author = site.posts | group_by:"author" %}
+              {% for author in posts_by_author %}
+              <li><a href="#{{ author.name }}-ref">
+                {{ author.name | join: "/" }} <span style="color: #999999;" >({{ author.items.size }})
+              </a></li>
+              {% endfor %}
+          	</ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9" role="main">
+      <div class="panel docs-content">
+        <div class="wrapper">
+          <div class="home">
+			{% for author in posts_by_author %}
+			  <h2 id="{{ author.name }}-ref">{{ author.name | join: "/" }}</h2>
+			  <ul>
+			    {% assign pages_list = author.items %}
+			    {% include LessOrMore/pages_list %}
+			  </ul>
+			{% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

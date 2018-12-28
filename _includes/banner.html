@@ -1,0 +1,21 @@
+
+<div class="banner">
+  <div class="container">
+  	{% if page.categories != null %}
+      카테고리 :
+      {% for category in page.categories %}
+        <a href="{{ '/categories/' | prepend: site.baseurl }}#{{category}}-ref">
+          {{category}}
+        </a>
+      {% endfor %}
+      	/ 태그 : 
+      {% for tg in page.tag %}
+      	<a href="{{ '/tag/' | prepend: site.baseurl }}#{{tg}}-ref">
+          {{tg}}
+        </a>
+      {% endfor %}
+    {% else %}
+    	{{ site.banner }}
+    {% endif %}
+  </div>
+</div>

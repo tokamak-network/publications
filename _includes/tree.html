@@ -1,0 +1,14 @@
+
+  {% for item in tree %}
+    <li>
+      <a href="#{{ item.name }}-ref">{{ item.name | join: "/" }}
+        <span style="color: #999999;" >({{ site.categories[item.name].size }})
+      </a>
+      <ul class="nav">
+        {% if item.children[0].name %}
+          {% assign tree = item.children %}
+          {% include tree.html %}
+        {% endif %}
+      </ul>
+    </li>
+  {% endfor %}

@@ -1,0 +1,68 @@
+{
+  "name" : "root",
+  "children" : [
+    {
+      "name" : "ethereum",
+      "children" : [
+        {
+          "name" : "core",
+          "children": [
+             {"name" : "stamina","children" : [""] }
+           ]
+        },{
+          "name" : "scalability",
+          "children" : [
+            {
+              "name" : "plasma",
+              "children":[
+                {
+                  "name" : "plasmaEVM",
+                  "children" : [{"name" : "DevCall", "children" : [""]}]
+                }
+              ]
+            },
+            {"name":"zkp", "children" : [""]},
+            {"name" : "ethereum2.0", "children" : [""]}
+          ]
+        },{
+          "name" : "general",
+          "children" : [
+            {"name" : "whisper", "children" : [""]},
+            {"name" : "ux", "children" : [""]},
+            {"name" : "swarm", "children" : [""]}
+          ]
+        },{
+          "name" : "SmartContract",
+          "children" : [
+            {"name" : "SolEVM", "children" : [""]},
+            {
+              "name" : "solidity",
+              "children" : [{"name": "security", "children":[""]}]
+            }
+          ]
+        },{
+          "name" : "dapp",
+          "children" : [
+            {"name" : "tokenomics", "children" : [""]},
+            {"name" : "DEX", "children" : [""]}
+          ]
+        },{
+          "name" : "etc",
+          "children" : [""]
+        }
+      ]
+    },
+    {
+      "name" : "bitcoin",
+      "children" : [
+        {
+          "name" : "core",
+          "chldren" : [""]
+        }
+      ]
+    },{
+      "name" : "altcoin",
+      "children" : [""]
+    }
+   ]
+}
