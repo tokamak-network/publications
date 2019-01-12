@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  Zero-Knowledge Proof Basic Step1
-date:   2018-12-19 00:00:00 +09:00
+title:  Zero-Knowledge Proof Basic Step3
+date:   2018-1-7 00:00:00 +09:00
 author: "박정원(Aiden)"
 categories: ethereum scalability zkp
 tag: [ethereum, scalability, zkp]
-youtubeId : 4m5ymlBjw6k
-slideWebId : 2PACX-1vR_7ZFg2SnE_MsRGk9N_IgZXzwAFvcF9MyaeZUzFdCpIC8CcbaT5qjwVy61y1bUJEb3nA4XobMdNctp
+youtubeId : QwWLzVKV28A
+slideWebId : 2PACX-1vQ6tGTgC7t-jhw4nxTiWelSBX-m7iORj7IICYEewHAjTYEgBsgFvfhBCPspAc09GhUyQ66uNr0fwPJA
 ---
 * content
 {:toc}

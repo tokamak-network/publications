@@ -3,8 +3,8 @@ layout: post
 title:  블록체인 포크와 네트워크 효과, 그리고 외부성
 date:   2018-12-27 00:00:00 +09:00
 author: "허상범(Danny)"
-categories: ethereum scalability zkp
-tag: [ethereum, scalability, zkp]
+categories: ethereum general
+tag: [ethereum, general]
 youtubeId :
 slideWebId :
 ---
