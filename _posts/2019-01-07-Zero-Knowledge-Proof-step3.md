@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Zero-Knowledge Proof Basic Step3
-date:   2018-1-7 00:00:00 +09:00
+date:   2019-1-7 00:00:00 +09:00
 author: "박정원(Aiden)"
 categories: ethereum scalability zkp
 tag: [ethereum, scalability, zkp]
