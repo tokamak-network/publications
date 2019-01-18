@@ -110,7 +110,7 @@
 | [zk-SNARKs Basic(step1)](https://docs.google.com/presentation/d/1nrypaMEJpd_eXVXU0ms_uFeLuYBXHykD7mMtcJG8PSc/edit#slide=id.p)| 박정원(Aiden) | December 2018 | [View](https://www.youtube.com/watch?v=4m5ymlBjw6k&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=25) |
 | zk-SNARKs Basic (step 2) | 박정원(Aiden) | December 2018 | [View](https://www.youtube.com/watch?v=U8pDuzeImV8&feature=youtu.be&fbclid=IwAR3PHqezf5SWlfV-0zLnAbrLRyhB172C2e3obsbutRV8pEyQF0TnRjK8ANU) |
 | zk-SNARKs Basic (step 3) | 박정원(Aiden) | January 2019 | [View](https://www.youtube.com/watch?v=QwWLzVKV28A&feature=youtu.be&fbclid=IwAR05X_N-LDVeXTFotKBiQmidkcZ6f4A4UXuTkUE_g6-V8WX0vUIl1op2L20) |
-| 블록체인 기반 기술의 이해 1편 <br> (공개키암호화, 해시, 합의알고리즘-PoW,PoS,PoA) | 정순형(Kevin) | January 2019 | [View](https://www.youtube.com/watch?v=0CA55bRPML0&list=PLwLfLX5QfdGrG-yjEi6OqtxR4JYlLOHxh&index=7) |
+| 블록체인 기반 기술의 이해 1편 <br> (공개키암호화, 해시, 합의알고리즘-PoW,PoS,PoA) | 정순형(Kevin) | January 2019 | [View](https://www.youtube.com/watch?v=yoAAZcXPx7k&list=PLwLfLX5QfdGrG-yjEi6OqtxR4JYlLOHxh&index=2) |
 | 블록체인 기반 기술의 이해 2편 <br> (스마트 컨트렉트, 성능이슈-플라즈마, 샤딩, 스테이트채널) | 정순형(Kevin) | January 2019 | [View](https://www.youtube.com/watch?v=Ix-4Ul37WWE&list=PLwLfLX5QfdGrG-yjEi6OqtxR4JYlLOHxh&index=4) |
 
 ## Ethereum Core
