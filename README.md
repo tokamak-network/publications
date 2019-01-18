@@ -54,6 +54,8 @@
 | [Plasma World Map(23회서울이더리움밋업)](https://docs.google.com/presentation/d/1m2vD6gKxPS0WsV_HEF64Ij_f1BSkD3zs-YFthEYiBa8/edit#slide=id.p) | 박정원(Aiden) | November 2018 | [View](https://www.youtube.com/watch?v=eMEsMRMMhH8&index=1&list=PLHhmkDLsvVM3zFfBLqUF-aOvy7JbFtJRQ) |
 | Plasma EVM Core Dev(User Activated Fork) | Onther | December 2018 | [View](https://www.youtube.com/watch?v=ikIhihHyCK0&t=10s) |
 | [플라즈마 EVM 2.1 <br> : 탈중앙화된 상태를 강제하는 튜링 완전한 플라즈마](https://hackmd.io/s/B1r45tQC7?fbclid=IwAR3LzguUu0NzLVAEgxYZtF3PND9lYi294slWCjVgxujmEYF_7pAVf7AdY1c) | 박주형(Carl) <br> 박정원(Aiden) <br> 정순형(Kevin) | December 2018 | |
+| Plasma EVM Dev Meeting | Onther | January 2019 | [View](https://www.youtube.com/watch?v=GTGxutej_QA) |
+
 
 ## Ethereum Scalability
 | Title | Author(s) | Publication Date | Video |  
@@ -78,7 +80,7 @@
 | [ZoKrates - zero knowledge tool box](https://docs.google.com/presentation/d/1vayPmeW9QuxQqczNSMub5agO_uiJu-bHBJmzA2uLJ5s/edit#slide=id.p1) | 송무복(Jake) | November 2018 | |
 | [Devcon 4 Review — Ewasm Project](https://medium.com/onther-tech/devcon-4-review-ewasm-project-d9e03e76a88d) | 송무복(Jake) | November 2018 | |
 | [Sharding, Casper → Serenity!](https://medium.com/onther-tech/sharding-casper-serenity-e25dec162845) | 박주형(Carl) | December 2018 | [View](https://www.youtube.com/watch?v=VZ8QuBrCnH0&index=22&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN) |
-
+| State Channel Basic | 박주형(Carl) | January 2019 | [View](https://www.youtube.com/watch?v=JM94EYEhj00&list=PLwLfLX5QfdGrG-yjEi6OqtxR4JYlLOHxh&index=6) |
 
 ## General Ethereum
 | Title | Author(s) | Publication Date | Video |  
@@ -106,7 +108,10 @@
 | [Ethereum 2.0 - Randomness[Blog]](https://medium.com/onther-tech/ethereum-2-0-randomness-5f99565c6293) | 신진환(Jin)| November 2018 | |
 | [Zero-Knowledge Proof(영지식 증명) Basic](https://docs.google.com/presentation/d/1iKkSsJILHrizTWjOAg02DveOI8lEJfUREDkAsMKOgnY/edit#slide=id.p) | 박정원(Aiden) | December 2018 | [View1](https://www.youtube.com/watch?v=93TWY6pyxvE&index=5&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN) <br> [View2](https://www.youtube.com/watch?v=3iAqQdp1sWE&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=6) |
 | [zk-SNARKs Basic(step1)](https://docs.google.com/presentation/d/1nrypaMEJpd_eXVXU0ms_uFeLuYBXHykD7mMtcJG8PSc/edit#slide=id.p)| 박정원(Aiden) | December 2018 | [View](https://www.youtube.com/watch?v=4m5ymlBjw6k&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=25) |
-
+| zk-SNARKs Basic (step 2) | 박정원(Aiden) | December 2018 | [View](https://www.youtube.com/watch?v=U8pDuzeImV8&feature=youtu.be&fbclid=IwAR3PHqezf5SWlfV-0zLnAbrLRyhB172C2e3obsbutRV8pEyQF0TnRjK8ANU) |
+| zk-SNARKs Basic (step 3) | 박정원(Aiden) | January 2019 | [View](https://www.youtube.com/watch?v=QwWLzVKV28A&feature=youtu.be&fbclid=IwAR05X_N-LDVeXTFotKBiQmidkcZ6f4A4UXuTkUE_g6-V8WX0vUIl1op2L20) |
+| 블록체인 기반 기술의 이해 1편 <br> (공개키암호화, 해시, 합의알고리즘-PoW,PoS,PoA) | 정순형(Kevin) | January 2019 | [View](https://www.youtube.com/watch?v=0CA55bRPML0&list=PLwLfLX5QfdGrG-yjEi6OqtxR4JYlLOHxh&index=7) |
+| 블록체인 기반 기술의 이해 2편 <br> (스마트 컨트렉트, 성능이슈-플라즈마, 샤딩, 스테이트채널) | 정순형(Kevin) | January 2019 | [View](https://www.youtube.com/watch?v=Ix-4Ul37WWE&list=PLwLfLX5QfdGrG-yjEi6OqtxR4JYlLOHxh&index=4) |
 
 ## Ethereum Core
 | Title | Author(s) | Publication Date | Video |  
@@ -133,6 +138,8 @@
 | [geth /eth /core /core /vm](https://docs.google.com/presentation/d/1UE4mMz7395pZmVOhFecnNv33AN0sGaNsmyr0hB2uNDs/edit#slide=id.p) | 신건우(Thomas) | October 2018 | |
 | [How does go-ethereum work?](https://docs.google.com/presentation/d/1F0n_ZPBjpV6VI6cPh8Sjo7PVyurjonGyNMcndP-9H7M/edit#slide=id.p) | 박정원(Aiden) | October 2018 | [View](https://www.youtube.com/watch?v=SpfjrEK0qa8&index=5&list=PLwLfLX5QfdGoqO_T2D76xbb3qn4flsurj) |
 | [Meta Transaction](https://docs.google.com/presentation/d/1vYvNY5o-aNSD6Yh06E3RTo0h3hH5R45hGr4HLGYTjhE/edit#slide=id.p) | 신건우(Thomas) | December 2018 | [View](https://www.youtube.com/watch?v=Ce8jkk1-OSw&index=23&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN) |
+| 이더리움 하드포크의 역사와 콘스탄티노플 | 정순형(Kevin) | January 2019 | [View](https://www.youtube.com/watch?v=Mlzx0QJU6S0&index=3&list=PLwLfLX5QfdGrG-yjEi6OqtxR4JYlLOHxh) |
+| [왜 이더리움 1월16일 콘스탄티노플 하드포크는 무기한 연기되었나?](https://medium.com/onther-tech/%EC%99%9C-%EC%BD%98%EC%8A%A4%ED%83%84%ED%8B%B0%EB%85%B8%ED%94%8C-%ED%95%98%EB%93%9C%ED%8F%AC%ED%81%AC%EB%8A%94-%EC%97%B0%EA%B8%B0%EB%90%98%EC%97%88%EB%82%98-685e54d652a5) | 신건우(Thomas) | January 2019 | [View](https://www.youtube.com/watch?v=cdTSxsajibo&list=PLwLfLX5QfdGrG-yjEi6OqtxR4JYlLOHxh&index=5) |
 
 ## Smart Contract Development
 | Title | Author(s) | Publication Date | Video |  
@@ -170,6 +177,7 @@
 | [Dappsys라이브러리 사용과 활용](https://docs.google.com/presentation/d/1G2yq-9XeuxStYD4EjC4rx6QcQyssPm_j4H3Do-OsY_Q/edit?usp=sharing) | 신진환(Jin) | December 2018 | [View](https://www.youtube.com/watch?v=D1xjYCJ9jsI&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=15&t=1021s) |
 | [Getting Start with Vyper](https://medium.com/onther-tech/devcon4-%EC%B0%B8%EA%B4%80%EA%B8%B0-getting-start-with-vyper-3e6415a31ec1) | 황재승(Jason) | December 2018 | |
 | Openzeppelin Solidity | 박주형(Carl) | December 2018 | [View](https://www.youtube.com/watch?v=ArGZ4dWWnyc&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=12&t=699s) |
+| Dev tool for solidity and golang | 박주형(Carl) | January 2019 | [View](https://www.youtube.com/watch?v=0CA55bRPML0&list=PLwLfLX5QfdGrG-yjEi6OqtxR4JYlLOHxh&index=7) |
 
 ## Token Model & ETC
 | Title | Author(s) | Publication Date | Video |  
