@@ -22,7 +22,8 @@
               ]
             },
             {"name":"zkp", "children" : [""]},
-            {"name" : "ethereum2.0", "children" : [""]}
+            {"name" : "ethereum2.0", "children" : [""]},
+            {"name" : "StateChannel", "children" : [""]}
           ]
         },{
           "name" : "general",
