@@ -28,7 +28,7 @@
 | [Explaining Data Availability Solution for Plasma EVM](https://docs.google.com/presentation/d/1CYkbFu9XpX0QaxppUvhVOGFnsCLnZksrusNz1GJ_QIk/edit#slide=id.p) | 박정원(Aiden) | October 2018 | [View](https://www.youtube.com/watch?v=_GS5vDpxE3Y) |
 | [Dancing philosophers problem, verification game, <br> Plasmachain and data availability](https://medium.com/onther-tech/dancing-philosophers-problem-verification-game-sidechain-and-data-availability-translated-c60ac51afcfa) | 정순형(Kevin) | October 2018 |  |
 | [Plasma World Map](https://ethresear.ch/t/plasma-world-map-the-hitchhiker-s-guide-to-the-plasma/4333) | 박정원(Aiden) | November 2018 |  |
-
+| [Plasma EVM 2.1 <br> : State-enforceable, turing-complete plasma|(https://hackmd.io/s/S1ysKeRgN) | 박주형(Carl) <br> 박정원(Aiden) <br> 정순형(Kevin) | January 2019 | |
 
 ### Korean version
 | Title | Author(s) | Publication Date | Video |  
@@ -53,8 +53,10 @@
 | [Plasma World Map[Blog]](https://medium.com/onther-tech/plasma-world-map-kr-9c1eec16859e) | 박정원(Aiden) | November 2018 |  |
 | [Plasma World Map(23회서울이더리움밋업)](https://docs.google.com/presentation/d/1m2vD6gKxPS0WsV_HEF64Ij_f1BSkD3zs-YFthEYiBa8/edit#slide=id.p) | 박정원(Aiden) | November 2018 | [View](https://www.youtube.com/watch?v=eMEsMRMMhH8&index=1&list=PLHhmkDLsvVM3zFfBLqUF-aOvy7JbFtJRQ) |
 | Plasma EVM Core Dev(User Activated Fork) | Onther | December 2018 | [View](https://www.youtube.com/watch?v=ikIhihHyCK0&t=10s) |
-| [플라즈마 EVM 2.1 <br> : 탈중앙화된 상태를 강제하는 튜링 완전한 플라즈마](https://hackmd.io/s/B1r45tQC7?fbclid=IwAR3LzguUu0NzLVAEgxYZtF3PND9lYi294slWCjVgxujmEYF_7pAVf7AdY1c) | 박주형(Carl) <br> 박정원(Aiden) <br> 정순형(Kevin) | December 2018 | |
+| [플라즈마 EVM 2.1 <br> : 탈중앙화된 상태를 강제하는 튜링 완전한 플라즈마](https://hackmd.io/s/B1r45tQC7?fbclid=IwAR3LzguUu0NzLVAEgxYZtF3PND9lYi294slWCjVgxujmEYF_7pAVf7AdY1c) | 박주형(Carl) 박정원(Aiden) <br> 정순형(Kevin) | December 2018 | |
 | Plasma EVM Dev Meeting | Onther | January 2019 | [View](https://www.youtube.com/watch?v=GTGxutej_QA) |
+| [플라즈마 EVM 2.1 <br> : 탈중앙화된 상태를 강제하는 튜링 완전한 플라즈마|(https://hackmd.io/s/B1r45tQC7) | 박주형(Carl) <br> 박정원(Aiden) <br> 정순형(Kevin) | January 2019 | |
+
 
 
 ## Ethereum Scalability
