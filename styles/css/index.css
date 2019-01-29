@@ -7154,8 +7154,13 @@ td.visible-print {
 
 .slide-wrapper iframe{ max-width: 100%;}
 
+.contribute-wrapper{
+  text-align: right;
+}
+
 .contribute-wrapper > input {
-  width: 40px;
+  width: 50px;
+  text-align:right;
 }
 
 /**
