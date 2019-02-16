@@ -28,7 +28,9 @@
 | [Explaining Data Availability Solution for Plasma EVM](https://docs.google.com/presentation/d/1CYkbFu9XpX0QaxppUvhVOGFnsCLnZksrusNz1GJ_QIk/edit#slide=id.p) | 박정원(Aiden) | October 2018 | [View](https://www.youtube.com/watch?v=_GS5vDpxE3Y) |
 | [Dancing philosophers problem, verification game, <br> Plasmachain and data availability](https://medium.com/onther-tech/dancing-philosophers-problem-verification-game-sidechain-and-data-availability-translated-c60ac51afcfa) | 정순형(Kevin) | October 2018 |  |
 | [Plasma World Map](https://ethresear.ch/t/plasma-world-map-the-hitchhiker-s-guide-to-the-plasma/4333) | 박정원(Aiden) | November 2018 |  |
-| [Plasma EVM 2.1 <br> : State-enforceable, turing-complete plasma|(https://hackmd.io/s/S1ysKeRgN) | 박주형(Carl) <br> 박정원(Aiden) <br> 정순형(Kevin) | January 2019 | |
+| [Plasma EVM 2.1 <br> : State-enforceable, turing-complete plasma|(https://hackmd.io/s/HyZ2ms8EX) | 박주형(Carl) <br> 박정원(Aiden) <br> 정순형(Kevin) | January 2019 | |
+|Plasma EVM Demo Video| Onther | February 2019 | [View](https://www.youtube.com/watch?v=EdIeOkFCCOg)|
+
 
 ### Korean version
 | Title | Author(s) | Publication Date | Video |  
@@ -38,6 +40,8 @@
 | [Transaction Fee(GAS) Delegated Execution Model <br> in Py-EVM](https://medium.com/onther-tech/transaction-fee-gas-delegated-execution-model-in-py-evm-f2d57cea1008) | 신건우(Thomas) | September 2018 | |
 | [플라즈마 EVM 2.0 <br> : 탈중앙화된 상태를 강제하는 튜링 완전한 사이드 체인](https://hackmd.io/ciFhWJJrRbGFqA7Vc6tVJQ) | 박주형(Carl) <br> 박정원(Aiden) <br> 정순형(Kevin) <br> 황재승(jason) | September 2018 | |
 | [A proposal for Data availability Solution of Plasma EVM](https://hackmd.io/s/H1bk0Z-DQ) | 박정원(Aiden) | September 2018 | |
+| [PoC1 : EVM Compatible Gas Delegated Transaction Execution Architecture](https://hackmd.io/s/rkpN7iRHQ ) |
+| Onther | September 2018 | |
 | [Plasma EVM PoC1 <br> : Transaction Fee delegate Execution Model](https://docs.google.com/presentation/d/1JlxnIxdZQSAwNlOJbBvTJ46sLoWD5hWE_2nZoQWMi3M/edit#slide=id.p) | 신건우(Thomas) | September 2018 | [View](https://www.youtube.com/watch?v=ciog3ksfuqo&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=16&t=0s) |
 | [solEVM(ERC20 demo)](https://docs.google.com/presentation/d/1YuyRCSeHkhqpAYGfpuC_zKhuqHfzqeWu7scumvJyEIg/edit?usp=sharing) | 신건우(Thomas) | September 2018 | [View1](https://www.youtube.com/watch?v=sRsIPAY5FEs&index=8&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN) <br> [View2](https://www.youtube.com/watch?v=hNApH_Edb6g&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=9) |
 | [플라즈마와 Data Availability 문제](https://medium.com/onther-tech/%ED%94%8C%EB%9D%BC%EC%A6%88%EB%A7%88%EC%99%80-data-availability-%EB%AC%B8%EC%A0%9C-894d66eb2080) | 송무복(Jake) | October 2018 | |
@@ -55,7 +59,6 @@
 | Plasma EVM Core Dev(User Activated Fork) | Onther | December 2018 | [View](https://www.youtube.com/watch?v=ikIhihHyCK0&t=10s) |
 | [플라즈마 EVM 2.1 <br> : 탈중앙화된 상태를 강제하는 튜링 완전한 플라즈마](https://hackmd.io/s/B1r45tQC7?fbclid=IwAR3LzguUu0NzLVAEgxYZtF3PND9lYi294slWCjVgxujmEYF_7pAVf7AdY1c) | 박주형(Carl) 박정원(Aiden) <br> 정순형(Kevin) | December 2018 | |
 | Plasma EVM Dev Meeting | Onther | January 2019 | [View](https://www.youtube.com/watch?v=GTGxutej_QA) |
-| [플라즈마 EVM 2.1 <br> : 탈중앙화된 상태를 강제하는 튜링 완전한 플라즈마|(https://hackmd.io/s/B1r45tQC7) | 박주형(Carl) <br> 박정원(Aiden) <br> 정순형(Kevin) | January 2019 | |
 
 
 
@@ -142,6 +145,7 @@
 | [Meta Transaction](https://docs.google.com/presentation/d/1vYvNY5o-aNSD6Yh06E3RTo0h3hH5R45hGr4HLGYTjhE/edit#slide=id.p) | 신건우(Thomas) | December 2018 | [View](https://www.youtube.com/watch?v=Ce8jkk1-OSw&index=23&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN) |
 | 이더리움 하드포크의 역사와 콘스탄티노플 | 정순형(Kevin) | January 2019 | [View](https://www.youtube.com/watch?v=Mlzx0QJU6S0&index=3&list=PLwLfLX5QfdGrG-yjEi6OqtxR4JYlLOHxh) |
 | [왜 이더리움 1월16일 콘스탄티노플 하드포크는 무기한 연기되었나?](https://medium.com/onther-tech/%EC%99%9C-%EC%BD%98%EC%8A%A4%ED%83%84%ED%8B%B0%EB%85%B8%ED%94%8C-%ED%95%98%EB%93%9C%ED%8F%AC%ED%81%AC%EB%8A%94-%EC%97%B0%EA%B8%B0%EB%90%98%EC%97%88%EB%82%98-685e54d652a5) | 신건우(Thomas) | January 2019 | [View](https://www.youtube.com/watch?v=cdTSxsajibo&list=PLwLfLX5QfdGrG-yjEi6OqtxR4JYlLOHxh&index=5) |
+| Account Abstraction Overview | 박정원(Aiden) | January 2019 | [View](https://www.youtube.com/watch?v=JcV6OClzqaY) |
 
 ## Smart Contract Development
 | Title | Author(s) | Publication Date | Video |  
@@ -239,6 +243,7 @@
 | OntherDelta Setup On AWS | 신진환(Jin) | December 2018 | [View](https://www.youtube.com/watch?v=N1pnkZUq4qs&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=21&t=0s) |
 | [MakerDAO, Sai](https://docs.google.com/presentation/d/1nIB9Z_2Lm5zm7nxTQNF-iUZ3b8xvbleWcTCiNDurSSA/edit)| 황재승(Jason) | December 2018 | [View](https://www.youtube.com/watch?v=bn59uVYbXCY&index=26&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN)
 | OasisDex(maker-otc), Oasis-Proxy 분석 | 신진환(Jin) | December 2018 | [View](https://www.youtube.com/watch?v=_DFlymItl1I&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=27) |
+| [makerDAO의 내부구조와 스마트 CDP 컨트랙트 테스트](http://blog.onther.io/ethereum/smartcontract/solidity/inside-makerDao-and-test/) | 신진환(Jin) | January 2019 | [View](https://www.youtube.com/watch?v=XV0Lokkrm5I) |
 
 ## Bitcoin Core
 | Title | Author(s) | Publication Date | Video |  
