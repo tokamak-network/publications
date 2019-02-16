@@ -29,7 +29,7 @@
 | [Dancing philosophers problem, verification game, <br> Plasmachain and data availability](https://medium.com/onther-tech/dancing-philosophers-problem-verification-game-sidechain-and-data-availability-translated-c60ac51afcfa) | 정순형(Kevin) | October 2018 |  |
 | [Plasma World Map](https://ethresear.ch/t/plasma-world-map-the-hitchhiker-s-guide-to-the-plasma/4333) | 박정원(Aiden) | November 2018 |  |
 | [Plasma EVM 2.1 <br> : State-enforceable, turing-complete plasma](https://hackmd.io/s/HyZ2ms8EX) | 박주형(Carl) <br> 박정원(Aiden) <br> 정순형(Kevin) | January 2019 | |
-|Plasma EVM Demo Video| Onther | February 2019 | [View](https://www.youtube.com/watch?v=EdIeOkFCCOg)|
+|Plasma EVM Demo Video(Enter/Exit ERC20)| Onther | February 2019 | [View](https://www.youtube.com/watch?v=EdIeOkFCCOg)|
 
 
 ### Korean version
