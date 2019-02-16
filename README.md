@@ -66,7 +66,7 @@
 | --- | --- | --- | :---: |
 | [플라즈마 일반](https://docs.google.com/presentation/d/1QYNLcAvI3YwEt8CdpxfT5WnsGaKispDuNIlUf6c-I4E/edit#slide=id.p3) |  Onther | 2018 | |
 | [Plasma MVP Issues](https://docs.google.com/presentation/d/1QNTSHJN2B1kQmrc1Ds6CWE83NzBaczhLNKVRWw-N5lE/edit?usp=sharing) | 박주형(Carl) | March 2018| |
-| [Deep Dive Into Plasma MVP](https://docs.google.com/presentation/d/1gLgeA6_o1WTz7PtSrzclmx8moZ9oAxTG5ZJl8U1tgqg/edit?usp=sharing) |  정순형(Kevin) | April 2018 | [View1](https://www.youtube.com/watch?v=_RPx_8hUnfQ&index=2&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN) <br> [View2](https://www.youtube.com/watch?v=n2H-h-A2vzo&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=3) |
+| [Deep Dive Into Plasma MVP](https://docs.google.com/presentation/d/1gLgeA6_o1WTz7PtSrzclmx8moZ9oAxTG5ZJl8U1tgqg/edit?usp=sharing) |  정순형(Kevin) | April 2018 | [View1](https://www.youtube.com/watch?v=_RPx_8hUnfQ&index=2&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN) <br>[View2](https://www.youtube.com/watch?v=n2H-h-A2vzo&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=3) |
 | [플라즈마 화이트페이퍼 번역](https://github.com/Onther-Tech/plasma-korea) | Onther | April 2018 | |
 | [Raiden Network](https://docs.google.com/presentation/d/1gis69QsmiE7ZrGWbHwGizIbIy2fxWqZ2rddUC_PNm6k/edit#slide=id.g3ccd028687_0_86) | 허상범(Danny) | June 2018 | |
 | [Plasma ERC721 implementation (Loomnetwork)](https://medium.com/onther-tech/plasma-erc721-implementation-loomnetwork-9f8ec59bb25b) | 박주형(Carl) | June 2018 | |
@@ -112,8 +112,8 @@
 | [Ethereum 2.0 - Randomness[Blog]](https://medium.com/onther-tech/ethereum-2-0-randomness-5f99565c6293) | 신진환(Jin)| November 2018 | |
 | [Zero-Knowledge Proof(영지식 증명) Basic](https://docs.google.com/presentation/d/1iKkSsJILHrizTWjOAg02DveOI8lEJfUREDkAsMKOgnY/edit#slide=id.p) | 박정원(Aiden) | December 2018 | [View1](https://www.youtube.com/watch?v=93TWY6pyxvE&index=5&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN) <br> [View2](https://www.youtube.com/watch?v=3iAqQdp1sWE&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=6) |
 | [zk-SNARKs Basic(step1)](https://docs.google.com/presentation/d/1nrypaMEJpd_eXVXU0ms_uFeLuYBXHykD7mMtcJG8PSc/edit#slide=id.p)| 박정원(Aiden) | December 2018 | [View](https://www.youtube.com/watch?v=4m5ymlBjw6k&list=PLwLfLX5QfdGrFmJghcZQtPMitueDQcJyN&index=25) |
-| zk-SNARKs Basic (step 2) | 박정원(Aiden) | December 2018 | [View](https://www.youtube.com/watch?v=U8pDuzeImV8&feature=youtu.be&fbclid=IwAR3PHqezf5SWlfV-0zLnAbrLRyhB172C2e3obsbutRV8pEyQF0TnRjK8ANU) |
-| zk-SNARKs Basic (step 3) | 박정원(Aiden) | January 2019 | [View](https://www.youtube.com/watch?v=QwWLzVKV28A&feature=youtu.be&fbclid=IwAR05X_N-LDVeXTFotKBiQmidkcZ6f4A4UXuTkUE_g6-V8WX0vUIl1op2L20) |
+| zk-SNARKs Basic(step 2) | 박정원(Aiden) | December 2018 | [View](https://www.youtube.com/watch?v=U8pDuzeImV8&feature=youtu.be&fbclid=IwAR3PHqezf5SWlfV-0zLnAbrLRyhB172C2e3obsbutRV8pEyQF0TnRjK8ANU) |
+| zk-SNARKs Basic(step 3) | 박정원(Aiden) | January 2019 | [View](https://www.youtube.com/watch?v=QwWLzVKV28A&feature=youtu.be&fbclid=IwAR05X_N-LDVeXTFotKBiQmidkcZ6f4A4UXuTkUE_g6-V8WX0vUIl1op2L20) |
 | 블록체인 기반 기술의 이해 1편 <br> : 공개키암호화, 해시, 합의알고리즘-PoW,PoS,PoA | 정순형(Kevin) | January 2019 | [View](https://www.youtube.com/watch?v=yoAAZcXPx7k&list=PLwLfLX5QfdGrG-yjEi6OqtxR4JYlLOHxh&index=2) |
 | 블록체인 기반 기술의 이해 2편 <br> : 스마트 컨트렉트, 성능이슈-플라즈마, 샤딩, 스테이트채널 | 정순형(Kevin) | January 2019 | [View](https://www.youtube.com/watch?v=Ix-4Ul37WWE&list=PLwLfLX5QfdGrG-yjEi6OqtxR4JYlLOHxh&index=4) |
 
