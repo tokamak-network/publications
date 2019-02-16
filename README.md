@@ -51,7 +51,7 @@
 | [Deep Inside SolEVM and Verification Game](https://docs.google.com/presentation/d/1NbhAGDccm6Y2wnm8z0fXYpseDSWsnlaDgUgqTNfn-TI/edit#slide=id.p) | 정순형(Kevin) | October 2018 | |
 | [Plasma Leap Review](https://docs.google.com/presentation/d/1G4vbiyX-Z_Ytu6APhkZUb-m518UswFedpDfRXCuR6HU/edit#slide=id.p) | 박정원(Aiden) | October 2018 | [View](https://www.youtube.com/wFatch?v=FXmT27z6DHg) |
 | [Gasless Plasma Chain for Dapp](https://docs.google.com/presentation/d/129S0pUkIbCh5RLt6dNTeLvZL2jf_fgS56-X9qdrURwc/edit) | 정순형(Kevin) | November 2018 | |
-| [Plasma EVM Economics Paper <br> : The Mechanism Design and Economic Philosophy(v.0.9)](https://hackmd.io/s/rJgPxWYTm) | 허상범(Danny) <br> 정순형(Kevin) <br> 박정원(Aiden) <br> 박주형(Carl) | November 2018 | |
+| [Plasma EVM Economics Paper : The Mechanism Design <br> and Economic Philosophy(v.0.9)](https://hackmd.io/s/rJgPxWYTm) | 허상범(Danny) <br> 정순형(Kevin) <br> 박정원(Aiden) <br> 박주형(Carl) | November 2018 | |
 | [SolEVM 이해하기](https://docs.google.com/presentation/d/1Zf3Oh_k50bz5-KsXFY4JQAWDvpXt0ilHXrxF4aoHz-c/edit#slide=id.p) | 정순형(Kevin) | November 2018 | |
 | [Plasma World Map[Blog]](https://medium.com/onther-tech/plasma-world-map-kr-9c1eec16859e) | 박정원(Aiden) | November 2018 |  |
 | [Plasma World Map(23회서울이더리움밋업)](https://docs.google.com/presentation/d/1m2vD6gKxPS0WsV_HEF64Ij_f1BSkD3zs-YFthEYiBa8/edit#slide=id.p) | 박정원(Aiden) | November 2018 | [View](https://www.youtube.com/watch?v=eMEsMRMMhH8&index=1&list=PLHhmkDLsvVM3zFfBLqUF-aOvy7JbFtJRQ) |
