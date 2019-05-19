@@ -7154,6 +7154,15 @@ td.visible-print {
 
 .slide-wrapper iframe{ max-width: 100%;}
 
+.contribute-wrapper{
+  text-align: right;
+}
+
+.contribute-wrapper > input {
+  width: 50px;
+  text-align:right;
+}
+
 /**
 :target{
     padding-top: 70px;

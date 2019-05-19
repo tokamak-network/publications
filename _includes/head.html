@@ -19,6 +19,87 @@
 	<meta name="description" content="{{site.meta_description}}">
 
 	<script src="{{ '/styles/js/jquery.min.js' | prepend: site.baseurl }}"></script>
+	<script>
+
+		var explorer = "https://etherscan.io";
+		var targetAddress = "0x4D5F880c27A0328490A83BF12760892d4CC7E5f9";
+
+		window.addEventListener('load', function() {
+		// Checking if Web3 has been injected by the browser (Mist/MetaMask)
+		if (typeof web3 !== 'undefined') {
+			// Use Mist/MetaMask's provider
+			window.web3 = new Web3(web3.currentProvider);
+			console.log("successfully added metamask!");
+		} else {
+			console.log('No web3? You should consider trying MetaMask!')
+			document.getElementById('metamask_connected').innerHTML = "Metamask Not Connected";
+			// fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
+			window.web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+		}
+		// Now you can start your app & access web3 freely:
+		startApp();
+		});
+
+		function startApp(){
+			var amount = document.getElementById("contribute-amount");
+			amount.defaultValue = 0.1;
+			console.log(amount.Value);
+			web3.eth.getAccounts(function(err,r){
+				document.getElementById('metamask_connected').innerHTML = "Metamask Connected";
+			    if (!err) {
+				  	myAddr = r[0];
+				  	// document.getElementById('accountAddr').innerHTML = getLink(myAddr);
+						refreshTargetBalance();
+					} else {
+				  	console.log(err);
+				}
+		  });
+		}
+
+		function getLink(addr) {
+		  if (addr.length == 42) {
+		    return '<a target="_blank" href="' + explorer + '/address/' + addr + '">' + addr +'</a>';
+		  } else {
+		    return '<a target="_blank" href="' + explorer + '/tx/' + addr + '">' + addr +'</a>';
+		  }
+		}
+
+		function refreshTargetBalance(){
+			web3.eth.getBalance(targetAddress, function(err, r) {
+				var totalBalance = Number(web3.fromWei(r.toNumber())).toFixed(2);
+				document.getElementById('totalContributed').innerHTML = totalBalance;
+			});
+		}
+
+		function contribute(){
+			web3.eth.getAccounts(function(err,r){
+				if(r[0]){
+					myAddr = r[0];
+					var newTxid;
+					var contributeAmount = document.getElementById('contribute-amount').value;
+					var tx = {
+						from : myAddr,
+						to : targetAddress,
+						value : web3.toWei(contributeAmount, "ether")
+					};
+
+					web3.eth.sendTransaction(tx, function(err, hash){
+						console.log(hash);
+						var filter = web3.eth.filter('latest');
+						filter.watch(function(err,r){
+							newTxid = r;
+							console.log('(기록된 블록: ' + r + ')');
+							filter.stopWatching();
+							refreshTargetBalance();
+						});
+					});
+				} else {
+					alert('메타마스크 또는 이더리움 어카운트가 활성화되어 있지 않습니다.\n메타마스크 로그인을 해주세요.');
+				}
+			});
+		}
+
+</script>
 	<!-- <script type="text/javascript" async -->
 <!-- src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?
 config=TeX-AMS-MML_HTMLorMML"></script> -->
