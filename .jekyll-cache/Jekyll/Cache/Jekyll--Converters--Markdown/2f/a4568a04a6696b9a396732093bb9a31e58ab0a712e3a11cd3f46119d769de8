@@ -1,0 +1,22 @@
+I"<ul id="markdown-toc">
+  <li><a href="#video" id="markdown-toc-video">Video</a></li>
+  <li><a href="#slide" id="markdown-toc-slide">Slide</a></li>
+</ul>
+
+<hr />
+<h1 id="video">Video</h1>
+
+<div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/_GS5vDpxE3Y" allowfullscreen=""></iframe>
+  </div>
+<hr />
+
+<h1 id="slide">Slide</h1>
+<div class="slide-wrapper">
+<!-- this is the embed code provided by Google -->
+  <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTIKLoom0vMD55T4jQNRPu-Ee-ofA1lhleH7mtu-MJ95mrVmYmAwbP_g81iErSBhbcg99xO6IIUjIah/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<!-- Google embed ends -->
+</div>
+<hr />
+
+:ET

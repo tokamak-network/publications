@@ -1,0 +1,94 @@
+I"<ul id="markdown-toc">
+  <li><a href="#이게-맞습니까" id="markdown-toc-이게-맞습니까">이게 맞습니까?</a></li>
+  <li><a href="#마무리" id="markdown-toc-마무리">마무리</a></li>
+  <li><a href="#onther-tech" id="markdown-toc-onther-tech">Onther-Tech</a></li>
+  <li><a href="#related-links" id="markdown-toc-related-links">Related Links</a></li>
+</ul>
+
+<blockquote>
+  <p>아래의 내용은 2018/5/17 패스트파이브 신논현에서 이뤄졌던 Blockchain Meet-up in FASTFIVE in May에서 패널토의
+질의를 바탕으로 작성되었습니다.</p>
+</blockquote>
+
+<p><img src="https://cdn-images-1.medium.com/max/800/0*4gMnfUiDZtTa2Z11.jpg" alt="" /></p>
+
+<p>사회자 : 블록체인 기업의 <strong>핵심역량</strong> 은 무엇이라고 생각하십니까?</p>
+
+<p>제가 블록체인 업계에 핵심이 아닌데* 저보다 더 훌륭하신 분들 앞에서 핵심역량에 대해서 말씀드려야하니 무척이나 송구*스럽습니다(좌중 웃음).
+다만 제가 평소에 생각하던 부분이 있어 그 부분을 공유하고자 이런 이야기를 드리고 싶습니다.</p>
+
+<p>전 블록체인 기업이 가져야할 가장 중요한 자질은 기술도 명성도 팀원도 아니라고 생각합니다. 제가 생각하기에 가장 중요한 자질은 i)<strong>도덕성과
+ii)책임감 **그리고</strong> iii)감사할 줄 아는 자세**라고 생각합니다</p>
+
+<p>얼마전 아는 지인분께서 무척이나 흥미로운 질문을 하나 던졌습니다. 곰곰히 생각해 볼만한 내용이죠.</p>
+
+<blockquote>
+  <p>“ICO를 주도하는 팀은 이를 통해 충분한양의 이더리움을 가져가는데, 왜 또 발행되는 토큰의 일부를 더 가져가나요?? 이더도 가져가고 토큰도
+가져가는게 맞나요?”</p>
+</blockquote>
+
+<p>이 질문을 처음 마주 했을 때, 무언가로 얻어 맞은 것 같았습니다. 다들 그렇게 하니까 그러려니 했는데, 사실 깊이 생각해 본적은 없었습니다.
+프로젝트팀은 ICO를 통해 충분한 이더를 가져가는데 왜 또 토큰도 발행해서 가져갈까..?</p>
+
+<p>한참 고민하다가 다음의 결론에 도달했습니다.</p>
+
+<blockquote>
+  <p><strong>프로젝트팀에 가져가는 토큰은 본인들이 발행해서 가져가는게 아니다. ICO 투자자가 프로젝트팀에게 하사하는 것이다.</strong> ICO를 참여하는
+참여자들은 본인들의 이익과 주도팀의 이익이 같아지길 원하고, 이를 위해 최선의 노력을 다하도록 유도하기 위해서 토큰의 일부를 받아가는 것이다.</p>
+</blockquote>
+
+<p>요즘 많은 수의 ICO가 이뤄지고 있습니다. 그런데 심각한 문제가 있습니다. 프로젝트팀이 실질적으로 “가져가는” 토큰이 너무도 많습니다. 일례를
+들어보죠.</p>
+
+<blockquote>
+  <p>개발팀 15%</p>
+</blockquote>
+
+<blockquote>
+  <p>마케팅 15%</p>
+</blockquote>
+
+<blockquote>
+  <p>리저브 30%</p>
+</blockquote>
+
+<blockquote>
+  <p>토큰세일 40%</p>
+</blockquote>
+
+<p>위의 예는 ICO를 통해 마련한 이더리움의 사용처가 아닙니다. 발행되는 토큰에 관한 일반사항입니다.</p>
+
+<p>토큰세일을 제외한 개발팀, 마케팅, 리저브는 별다른 약속과 용처에 대한 로직이 없는 한 주도하는 팀의 EA(외부 어카운트, 일반계정)로 관리하게
+됩니다. 요즘 일어나는 많은 ICO가 실질적으로 <strong>발행량의 60~70퍼센트에 해당하는 토큰을 별다른 제재없이 개발팀이 마음대로 다루고
+처분</strong> 할 수 있는것이죠.</p>
+
+<h3 id="이게-맞습니까">이게 맞습니까?</h3>
+
+<p>ICO를 통해 판매되는 토큰의 분포만 봐도 <strong>ICO라는 과정</strong>을 <strong>주도하는 팀이 어떠한 마인드로 보고 있는지</strong> 알 수 있습니다.</p>
+
+<p>투자자를 호구로 알고 한탕 크게 벌려고 하는건지, 진정으로 만들고자 하는 혁신적인 서비스를 통해서 세상을 조금더 나은 곳으로 만드려는 건지
+말이죠.</p>
+
+<p>ICO라는 과정은 진정으로 하고자 하는 일을을 더 잘 해내기 위해 도움을 요청하고 불특정 다수의 투자자들에게 동의을 구하는 과정입니다.</p>
+
+<p>투자자들에게 <strong>감사하는 마음</strong> 을 가지고 있다고 한다면 감히 이런 구조를 설계할 생각조차 하지 못합니다.</p>
+
+<p>최소한의 <strong>도덕성과 책임감</strong> 을 가지고 있다면 소수의 파티가 많은 수의 토큰을 보유함으로서 펌프&amp;덤프가 일어나 다수에게 피해를 줄 여지가
+있는 비정상적인 토큰 분배 구조를 만들지 않습니다.</p>
+
+<h3 id="마무리">마무리</h3>
+
+<p>ICO라는 암호화폐를 통한 자본조달의 민주화와 혁명이 일어나면서 수 많은 블록체인 기업들이 엄청난 부의 통제권을 가져가게 되었습니다. 제 작은
+아이디어가 널리 퍼져 진정으로 세상을 바꾸고자 하는 선량한 팀들이 일부 부도덕한 사람들에게 가려 빛을 바래는 일이 없기를 바라며 이야기를
+마칩니다.</p>
+
+<h3 id="onther-tech"><a href="https://medium.com/onther-tech?source=footer_card">Onther-Tech</a></h3>
+
+<p>We do Ethereum blockchain focused research and develop. Onther means that we are
+on Ethereum.</p>
+
+<h1 id="related-links">Related Links</h1>
+<ul>
+  <li><a href="https://medium.com/onther-tech/%EB%B8%94%EB%A1%9D%EC%B2%B4%EC%9D%B8-%EA%B8%B0%EC%97%85%EC%9D%98-%ED%95%B5%EC%8B%AC-%EC%97%AD%EB%9F%89-3210cf8651eb">블록체인 기업의 핵심 역량</a></li>
+</ul>
+:ET

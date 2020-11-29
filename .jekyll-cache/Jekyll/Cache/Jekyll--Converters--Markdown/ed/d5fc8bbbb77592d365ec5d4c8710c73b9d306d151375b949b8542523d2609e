@@ -1,0 +1,303 @@
+I"�|<h1 id="8-zk-snark의-예-groth16-프로토콜-4">8. zk-SNARK의 예: Groth16 프로토콜 (4)</h1>
+<blockquote>
+  <p>작성자: 장재혁, <a href="https://infonet.gist.ac.kr/?page_id=6711">GIST 블록체인 인터넷 경제 연구센터 (센터장 이흥노)</a></p>
+
+  <p>This work was created through a joint research with Onther Co., LTD., and supported by a grant-in-aid of Institute of Information &amp; Communications Technology Planning &amp; Evaluation (IITP), Republic of Korea.</p>
+
+  <p>이 글은 정보통신기획평가원(IITP)에서 연구비 지원을 받아 (주)온더와의 공동연구를 통해 만들어진 결과물이다.</p>
+</blockquote>
+
+<h2 id="groth16-프로토콜-qap와-ecc를-활용한-zk-snark-프로토콜">Groth16 프로토콜: QAP와 ECC를 활용한 zk-SNARK 프로토콜</h2>
+
+<p>하나의 증명상황을 가정하겠다. 증명하고자 하는 명제 \(S\)는 “증명자는 비공개 정보 \([[u}_[1}}\),\([[u}_[2}}\)를 알며, 이를 사용하여 함수 \(f\left( [[u}_[1}},[[u}_[2}} \right)\) 충실히 계산 했고, 그 결과로 출력 \([[y}_[1}},[[y}_[2}}\)를 얻었다”이다. 여기서 함수 \(f\)와 출력 값 \([[y}_[1}}\),\([[y}_[2}}\)는 공개된 정보이다. 이 예시에서는 비공개 정보를 2개, 공개 정보를 2개로 설정하였지만, Groth16프로토콜에서는 일반적으로 비공개정보의 개수와 공개 정보의 개수를 제한하지 않는다.</p>
+
+<p>증명자는 QAP를 사용하여 \(f\left( [[u}_[1}},[[u}_[2}} \right)\)를 분해하였다고 가정하겠다. QAP의 결과로 생성된 다항식들은 \([[v}_[i}}\left( x \right)\), \([[w}_[i}}\left( x \right)\), \([[y}_[i}}\left( x \right)\), \(t\left( x \right)\)이며 계수는 \([[c}_[i}}\)이다. 여기서 \(i=1,\cdots ,m\)이고, \([[c}_[1}}=[[u}_[1}}\), \([[c}_[2}}=[[u}_[2}}\), \([[c}_[m-1}}=[[y}_[1}}\), \([[c}_[m}}=[[y}_[2}}\)이다. 즉, \([[c}_[1}},[[c}_[2}},\cdots ,[[c}_[m-2}}\)는 모두 비공개 정보이며, \([[c}_[m-1}}\)과 \([[c}_[m}}\)은 공개된 정보이다. 증명자는 복원다항식 \(p\left( x \right)\)를 계산하였고, 몫 다항식 \(h\left( x \right)\)를 계산하였다고 가정하겠다.</p>
+
+<p>덧붙여 함수 \(f\)는 공개된 정보이기 때문에 검증자를 포함한 누구나 \(i=1,\cdots ,m\)에 대한 QAP 다항식들 \([[v}_[i}}\left( x \right)\), \([[w}_[i}}\left( x \right)\), \([[y}_[i}}\left( x \right)\), \(t\left( x \right)\)를 얻을 수 있다. 그러나 증명자 이외의 그 누구도 비공개 정보 \([[u}_[1}}\),\([[u}_[2}}\)를 알지 못하는 한 QAP 계수들\([[c}_[1}},[[c}_[2}},\cdots ,[[c}_[m-2}}\)를 알 수는 없고, 그러므로 \(h\left( x \right)\)를 알지 못한다.</p>
+
+<p>QAP 결과로 생성된 다항식과 계수들을 공개정보 혹은 비공개정보의 기준으로 분류하면 표 5와 같다.</p>
+
+<p>| 공개 정보   | QAP 계수들 중 \([[c}_[m-1}}\),\([[c}_[m}}\)                      |
+| ———– | ———————————————————— |
+|             | QAP 다항식 \([[v}_[i}}\left( x \right)\),\([[w}_[i}}\left( x \right)\),\([[y}_[i}}\left( x \right)\) for \(i=1,\cdots ,m\) |
+|             | QAP 근 다항식 \(t\left( x \right)\)                            |
+| 비공개 정보 | QAP 계수들 중 \([[c}_[1}},\cdots ,[[c}_[m-2}}\)                |
+|             | QAP 복원다항식 \(p\left( x \right)\)                           |
+|             | QAP 몫 다항식 \(h\left( x \right)\)                            |
+표5 공개/비공개 특성에 따른 QAP 결과의 분류</p>
+
+<p>Groth16 프로토콜의 증명-검증 과정이 프로토콜 4에 소개되어 있다. 프로토콜에서 사용되는 연산들에서 정수간의 사칙연산과 타원곡선 점 덧셈연산, 그리고 타원곡선 점간의 pairing을 잘 구분하여 읽을 필요가 있다. 예를 들어, 같은 \(+\)기호더라도 앞 뒤의 피연산자가 정수이면 정수덧셈이며, 피연산자가 타원곡선의 점이면 점 덧셈연산이고, 피연산자가 pairing 결과이면 정수 곱셈임을 인지하여야 한다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>프로토콜 4. Groth16 프로토콜</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Setup: 제 3자가 실행한다. Common reference string (CRS)를 생성한다.</td>
+    </tr>
+    <tr>
+      <td>1. 무작위 비공개 정수 리스트 \(\tau :=\left( \alpha ,\beta ,\gamma ,\delta ,x \right)\)를 생성한다 (\(\tau\)는 증명자에게 알려져서는 안된다).<br />2. 타원곡선상의 두 점(generator) \(G\)와 \(H\)를 선택하여 공개한다.<br />3. 첫 번째 CRS인 \([[\sigma }_[G}}\)를 생성한다:<br />\(\)\nonumber [[\sigma }<em>[G}}:=\left( \begin[align}&amp; [[\left[ \alpha \right]}</em>[G}},[[\left[ \beta \right]}<em>[G}},[[\left[ \delta \right]}</em>[G}},\left[ [[\left[ [[x}^[i}} \right]}<em>[G}} \right}</em>[i=0}^[n-1}, \&amp;\nonumber \left[ [[\left[ \frac[\beta [[v}<em>[i}}\left( x \right)+\alpha [[w}</em>[i}}\left( x \right)+[[y}<em>[i}}\left( x \right)}[\gamma } \right]}</em>[G}} \right}<em>[i=m-1}^[m}, \&amp;\nonumber \left[ [[\left[ \frac[\beta [[v}</em>[i}}\left( x \right)+\alpha [[w}<em>[i}}\left( x \right)+[[y}</em>[i}}\left( x \right)}[\delta } \right]}<em>[G}} \right}</em>[i=1}^[m-2}, \&amp;\nonumber \left[ [[\left[ \frac[[[x}^[i}}t\left( x \right)}[\delta } \right]}<em>[G}} \right}</em>[i=0}^[n-2}\end[align} \right).\(\)<br /><br />4. 두 번째 CRS인 \([[\sigma }_[H}}\)를 생성한다:<br />\([[\sigma }_[H}}:=\left( [[\left[ \beta \right]}_[H}},[[\left[ \gamma \right]}_[H}},[[\left[ \delta \right]}_[H}},\left\[ [[\left[ [[x}^[i}} \right]}_[H}} \right\}_[i=0}^[n-1} \right)\).<br /><br />5. \([[\sigma }_[G}}\)와 \([[\sigma }_[H}}\)를 공개한다.</td>
+    </tr>
+    <tr>
+      <td>Prove: 증명자가 수행한다. 증명자만이 아는 비공개 정보와 CRS \([[\sigma }_[G}}\), \([[\sigma }_[H}}\)를 조합하여 증거를 생성한다.</td>
+    </tr>
+    <tr>
+      <td>1. 무작위 비공개 정수 \(r\),\(s\)를 생성한다 (\(r\),\(s\)는 검증자에게 알려져서는 안된다).<br />2. CRS \([[\sigma }_[G}}\)를 사용하여 첫 번째 증거 \([[\left[ A \right]}_[G}}\)를 생성한다:<br />\(\)[[\left[ A \right]}<em>[G}}:=[[\left[ \alpha \right]}</em>[G}}+\sum\nolimits_[i=1}^[m}[[[c}<em>[i}}}\sum\nolimits</em>[k=0}^[n-1}[[[a}<em>[i,k}}}[[\left[ [[x}^[k}} \right]}</em>[G}}+r[[\left[ \delta \right]}<em>[G}},\(\)<br />여기서 \([[v}_[i}}\left( x \right)=\sum\nolimits_[k=0}^[n-1}[[[a}_[i,k}}[[x}^[k}}}.\)<br /><br />3. CRS \([[\sigma }_[H}}\)를 사용하여 두 번째 증거 \([[\left[ B \right]}_[H}}\)를 생성한다:<br />\(\)[[\left[ B \right]}</em>[H}}:=[[\left[ \beta \right]}<em>[H}}+\sum\nolimits</em>[i=1}^[m}[[[c}<em>[i}}\sum\nolimits</em>[k=0}^[n-1}[[[b}<em>[i,k}}}[[\left[ [[x}^[k}} \right]}</em>[H}}}+s[[\left[ \delta \right]}<em>[H}},\(\)<br />여기서 \([[w}_[i}}\left( x \right)=\sum\nolimits_[k=0}^[n-1}[[[b}_[i,k}}[[x}^[k}}}.\)<br /><br />4. CRS \([[\sigma }_[G}}\)를 사용하여 세 번째 증거 \([[\left[ C \right]}_[G}}\)를 생성한다:<br />\(\)[[\left[ C \right]}</em>[G}}:=\sum\nolimits_[i=1}^[i=m-2}[[[c}<em>[i}}}[[\left[ \frac[\beta [[v}</em>[i}}\left( x \right)+\alpha [[w}<em>[i}}\left( x \right)+[[y}</em>[i}}\left( x \right)}[\delta } \right]}<em>[G}}+\sum\nolimits</em>[k=0}^[n-2}[[[d}<em>[k}}}[[\left[ \frac[[[x}^[k}}t\left( x \right)}[\delta } \right]}</em>[G}}+s[[\left[ A \right]}<em>[G}}+r[[\left[ B \right]}</em>[G}}-rs[[\left[ \delta \right]}_[G}},\(\)<br />여기서 \(h\left( x \right)=\sum\nolimits_[k=0}^[n-2}[[[d}_[k}}[[x}^[k}}}\)이고, \([[\left[ B \right]}_[G}}:=[[\left[ \beta \right]}_[G}}+\sum\nolimits_[i=1}^[m}[[[c}_[i}}\sum\nolimits_[k=0}^[n-1}[[[b}_[i,k}}}[[\left[ [[x}^[k}} \right]}_[G}}}+s[[\left[ \delta \right]}_[G}}.\)<br /><br />5. 세 개의 증거 리스트 \(\pi :=\left( [[\left[ A \right]}_[G}},[[\left[ B \right]}_[H}},[[\left[ C \right]}_[G}} \right)\)를 공개한다.</td>
+    </tr>
+    <tr>
+      <td>Verify: 검증자가 수행한다. 검증자가 아는 공개정보와 증거 \(\pi\), 그리고 CRS \([[\sigma }_[G}}\),\([[\sigma }_[H}}\)를 조합하여 증거를 생성한다.</td>
+    </tr>
+    <tr>
+      <td>1. 증거 \(\pi\)의 데이터들이 모두 타원곡선상의 점이 맞는지 확인한다.<br />2. 증거 \(\pi\)를 사용하여 \(LHS:=[[\left[ A \right]}_[G}}\cdot [[\left[ B \right]}_[H}}\)를 계산한다.<br />3. 증거 \(\pi\)와 CRS를 사용하여 다음을 계산한다:<br />\(\)RHS:=[[\left[ \alpha \right]}<em>[G}}\cdot [[\left[ \beta \right]}</em>[H}}+\left( \sum\nolimits_[i=m-1}^[m}[[[c}<em>[i}}[[\left[ \frac[\beta [[v}</em>[i}}\left( x \right)+\alpha [[w}<em>[i}}\left( x \right)+[[y}</em>[i}}\left( x \right)}[\gamma } \right]}<em>[G}}} \right)\cdot [[\left[ \gamma \right]}</em>[H}}+[[\left[ C \right]}<em>[G}}\cdot [[\left[ \delta \right]}</em>[H}}.\(\)<br /><br />4. \(LHS=RHS\)를 확인하여, 만약 등호가 성립하면 증거를 인정하고, 그렇지 않으면 증거를 부정한다.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="groth16의-영지식-증명-성능-분석">Groth16의 영지식 증명 성능 분석</h2>
+
+<p><strong><em>Q. (완전성) 만약 증명자가 비공개정보를 알고있다면, 검증자는 \(LHS=RHS\)를 확인함으로써 이를 납득할 수 있는가?</em></strong></p>
+
+<p><em>A. 그렇다.</em></p>
+
+<p>연산 \([[\left[ \cdot \right]}_[G}}\)와 \([[\left[ \cdot \right]}_[G\cdot H}}\)의 정의를 사용하여 \(LHS\)와 \(RHS\)를 각각 정리하면 <strong><em>정리 1</em></strong>의 조건 인 \(p\left( x \right)=t\left( x \right)h\left( x \right)\)를 유도 할 수 있다. 이는 곧 <strong><em>정리 3</em></strong><sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>에 의해 증명자는 써킷을 완벽히 복원 할 수 있고 따라서 모든 비공개 정보를 다 알고 있음을 말한다.</p>
+
+<p>\(p\left( x \right)=t\left( x \right)h\left( x \right)\)를 유도하기 위해 ,먼저 \([[\left[ A \right]}_[G}}\) 와 \([[\left[ B \right]}_[H}}\)를 정리하면 각각 다음과 같다: 
+\(\)
+\begin[align}</p>
+
+<p>&amp; [[\left[ A \right]}<em>[G}}=[[\left[ \alpha
++\sum\nolimits</em>[i=1}^[m}[[[c}<em>[i}}[[v}</em>[i}}\left( x
+\right)}+r\delta \right]}_[G}}, \</p>
+
+<p>&amp; [[\left[ B \right]}<em>[H}}=[[\left[ \beta
++\sum\nolimits</em>[i=1}^[m}[[[c}<em>[i}}[[w}</em>[i}}\left( x
+\right)}+s\delta \right]}_[H}}. \</p>
+
+<p>\end[align}
+\(\)</p>
+
+<p>그리고, \([[\left[ C \right]}_[G}}\)를 정리하면 다음과 같다:
+\(\)
+[[\left[ C \right]}<em>[G}}=[[\left[
+\frac[\sum\nolimits</em>[i=1}^[i=m-2}[[[c}<em>[i}}\left( \beta
+[[v}</em>[i}}\left( x \right)+\alpha [[w}<em>[i}}\left( x
+\right)+[[y}</em>[i}}\left( x \right) \right)}+h\left( x
+\right)t\left( x \right)}[\delta }+sA+rB-rs\delta
+\right]}_[G}}.
+\(\)</p>
+
+<p>먼저 \(LHS\)를 정리하면,
+\(\)
+\begin[align}</p>
+
+<p>\nonumber &amp; LHS=[[\left[ A \right]}<em>[G}}\cdot [[\left[ B
+\right]}</em>[H}}=[[\left[ \alpha
++\sum\nolimits_[i=1}^[m}[[[c}<em>[i}}[[v}</em>[i}}\left( x
+\right)}+r\delta \right]}<em>[G}}\cdot [[\left[ \beta
++\sum\nolimits</em>[i=1}^[m}[[[c}<em>[i}}[[w}</em>[i}}\left( x
+\right)}+s\delta \right]}_[H}} \</p>
+
+<p>&amp; =[[\left[ \alpha \beta
++\sum\nolimits_[i=1}^[m}[[[c}<em>[i}}[[v}</em>[i}}\left( x
+\right)\cdot \sum\nolimits_[i=1}^[m}[[[c}<em>[i}}[[w}</em>[i}}\left( x
+\right)}+}\left( \alpha +r\delta
+\right)\sum\nolimits_[i=1}^[m}[[[c}<em>[i}}[[w}</em>[i}}\left( x
+\right)}+\left( \beta +s\delta
+\right)\sum\nolimits_[i=1}^[m}[[[c}<em>[i}}[[v}</em>[i}}\left( x
+\right)+\alpha s\delta +\beta r\delta +rs[[\delta }^[2}}}
+\right]}_[G\cdot H}}.</p>
+
+<p>\end[align}
+\(\)</p>
+
+<p>그리고 \(RHS\)를 정리하면,
+\(\)
+\begin[align}</p>
+
+<p>\nonumber &amp; RHS=[[\left[ \alpha \right]}<em>[G}}\cdot [[\left[ \beta
+\right]}</em>[H}}+\left(
+\sum\nolimits_[i=m-1}^[m}[[[c}<em>[i}}[[\left[ \frac[\beta
+[[v}</em>[i}}\left( x \right)+\alpha [[w}<em>[i}}\left( x
+\right)+[[y}</em>[i}}\left( x \right)}[\gamma } \right]}<em>[G}}}
+\right)\cdot [[\left[ \gamma \right]}</em>[H}}+[[\left[ C
+\right]}<em>[G}}\cdot [[\left[ \delta \right]}</em>[H}} \</p>
+
+<p>&amp; =[[\left[ \alpha \beta
++\sum\nolimits_[i=1}^[m}[[[c}<em>[i}}\left( \beta [[v}</em>[i}}\left(
+x \right)+\alpha [[w}<em>[i}}\left( x \right)+[[y}</em>[i}}\left( x
+\right) \right)+h\left( x \right)t\left( x \right)+s\delta
+A+r\delta B-rs[[\delta }^[2}}} \right]}_[G\cdot H}}.</p>
+
+<p>\end[align}
+\(\)</p>
+
+<p>\(LHS\)와 \(RHS\)에 공통으로 존재하는 항들을 제거하면 다음과 같다:
+\(\)
+\begin[align}</p>
+
+<p>\nonumber &amp; \frac[LHS}[RHS}=[[\left[
+\sum\nolimits_[i=1}^[m}[[[c}<em>[i}}[[v}</em>[i}}\left( x \right)\cdot
+\sum\nolimits_[i=1}^[m}[[[c}<em>[i}}[[w}</em>[i}}\left( x
+\right)-\sum\nolimits_[i=1}^[m}[[[c}<em>[i}}[[y}</em>[i}}\left( x
+\right)}-h\left( x \right)t\left( x \right)}} \right]}_[G\cdot
+H}} \</p>
+
+<p>\nonumber &amp; +[[\left[ s\delta
+\sum\nolimits_[i=1}^[m}[[[c}<em>[i}}[[v}</em>[i}}\left( x
+\right)}+r\delta
+\sum\nolimits_[i=1}^[m}[[[c}<em>[i}}[[w}</em>[i}}\left( x \right)}
+\right]}_[G\cdot H}} \</p>
+
+<p>&amp; +[[\left[ \alpha s\delta +\beta r\delta +2rs[[\delta
+}^[2}}-s\delta A-r\delta B \right]}_[G\cdot H}}.</p>
+
+<p>\end[align}
+\(\)
+식 (6)에 의 \(A\)와 \(B\)를 대입하면,
+\(\)
+\frac[LHS}[RHS}=[[\left[
+\sum\nolimits_[i=1}^[m}[[[c}<em>[i}}[[v}</em>[i}}\left( x \right)\cdot
+\sum\nolimits_[i=1}^[m}[[[c}<em>[i}}[[w}</em>[i}}\left( x
+\right)-\sum\nolimits_[i=1}^[m}[[[c}<em>[i}}[[y}</em>[i}}\left( x
+\right)-h\left( x \right)t\left( x \right)}}} \right]}_[G\cdot
+H}}.
+\(\)</p>
+
+<p>복원방정식 \(p\left( x \right)\)의 정의를 대입하면 식 (7)은 다음과같다:
+\(\)
+\frac[LHS}[RHS}=[[\left[ p\left( x \right)-h\left( x
+\right)t\left( x \right) \right]}_[G\cdot H}}.
+\(\)</p>
+
+<p>결과적으로, \(LHS=RHS\Leftrightarrow p\left( x \right)=h\left( x \right)t\left( x \right)\)이고, 정리 1에 의해 관계식 \(LHS=RHS\)와 명제 “증명자가 써킷을 완벽히 복원 할 수 있다”는 것이 등가이다.</p>
+
+<p><strong><em>Q. (건실성) 만약 거짓 증명자가 비공개 정보를 모른다면, 제출한 거짓 증거가 \(LHS=RHS\)를 만족시킬 수 있는가?</em></strong></p>
+
+<p><em>A.</em> CRS의 내용이 암호화 되어있지 않으면 거짓 증명자가 검증자를 쉽게 기만 할 수 있다. 그러나 Groth16 프로토콜에서는 <em>CRS가 암호화 되어 있기 때문에 그렇게 하기가 어렵다.</em></p>
+
+<p>만약 Setup 과정에서 비공개 정수 리스트 \(\tau =\left( \alpha ,\beta ,\gamma ,\delta ,x \right)\)의 값들이 공개된다면 거짓 증명자가 검증자를 속이는 것은 매우 쉽다. \(x\)는 변수가 아닌 정수 상수이기 때문에 \([[v}_[i}}\left( x \right)\), \([[w}_[i}}\left( x \right)\), \([[y}_[i}}\left( x \right)\), \(t\left( x \right)\),그리고 \(h\left( x \right)\)도 더 이상 다항식이 아닌 어떤 정수이다. 다음과 같이 정의하자: 
+\(\)
+\nonumber V:=\sum\nolimits_[i=1}^[m-2}[[[c}<em>[i}}[[v}</em>[i}}\left( x
+\right)},<br />
+\nonumber W:=\sum\nolimits_[i=1}^[m-2}[[[c}<em>[i}}[[w}</em>[i}}\left( x
+\right)},<br />
+\nonumber Y:=\sum\nolimits_[i=1}^[m-2}[[[c}<em>[i}}[[y}</em>[i}}\left( x
+\right)},\ 
+\nonumber H:=h\left( x \right).
+\(\)</p>
+
+<p>이제 거짓 증명자가 할 일은 식 (8)의 계산 결과가 1이 되도록 하여 정리 3<sup id="fnref:1:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>의 조건을 만족시키는 적절한 정수 \(V\), \(W\), \(Y\), \(H\)를 임의로 선택하는 것이다. 예를 들어, \(V,W,Y\)를 무작위로 선택 한 후, 다음의 조건을 만족하는 정수 \(H\)를 찾는다:
+\(\)
+\nonumber \left( V+\sum\nolimits_[i=m-1}^[m}[[[c}<em>[i}}[[v}</em>[i}}\left(
+x \right)} \right)\left(
+W+\sum\nolimits_[i=m-1}^[m}[[[c}<em>[i}}[[w}</em>[i}}\left( x \right)}
+\right)-\left(
+Y+\sum\nolimits_[i=m-1}^[m}[[[c}<em>[i}}[[y}</em>[i}}\left( x \right)}
+\right)=t\left( x \right)H.
+\(\)</p>
+
+<p>마지막으로 거짓 증명자가 최종적으로 제출 할 거짓 증거는 다음과 같다:
+\(\)
+[\pi }’=\left( \begin[matrix}</p>
+
+<p>[[\left[ [[A}’} \right]}<em>[G}}:=[[\left[ \alpha
+\right]}</em>[G}}+[[\left[ V \right]}<em>[G}}+[[\left[
+\sum\nolimits</em>[i=m-1}^[m}[[[c}<em>[i}}[[v}</em>[i}}\left( x \right)}
+\right]}<em>[G}}+r[[\left[ \delta \right]}</em>[G}}, \</p>
+
+<p>[[\left[ [[B}’} \right]}<em>[H}}:=[[\left[ \beta
+\right]}</em>[H}}+[[\left[ W \right]}<em>[H}}+[[\left[
+\sum\nolimits</em>[i=m-1}^[m}[[[c}<em>[i}}[[w}</em>[i}}\left( x \right)}
+\right]}<em>[H}}+s[[\left[ \delta \right]}</em>[H}}, \</p>
+
+<p>[[\left[ [[C}’} \right]}<em>[G}}:=[[\left[ \frac[\left( \beta
+V+\alpha W+Y \right)}[\delta } \right]}</em>[G}}+[[\left[
+\frac[t\left( x \right)H}[\delta } \right]}<em>[G}}+s[[\left[
+[[A}’} \right]}</em>[G}}+r[[\left[ [[B}’}
+\right]}<em>[G}}-rs[[\left[ \delta \right]}</em>[G}} \</p>
+
+<p>\end[matrix} \right).
+\(\)</p>
+
+<p>거짓 증거를 사용하여 Verify과정의 \(LHS\)와 \(RHS\)를 계산 해 보면 \(LHS=RHS\)인 것을 알 수 있다.</p>
+
+<p>Groth16 프로토콜에서는 Setup 과정에서 생성되는 비공개 정수 리스트 \(\tau =\left( \alpha ,\beta ,\gamma ,\delta ,x \right)\)가 암호화 후 공개된다. 그렇기 때문에 증명자는 \(\tau\)의 값들을 알지 못한다. 구체적으로, \(x\)를 모르기 때문에 과 같이 정리 1의 조건을 만족시키는 값 \(V,W,Y,H\)도 찾지 못한다. 이 뿐만 아니라, \(\alpha ,\beta ,\delta\)를 모르기 때문에 와 같은 거짓 증거를 만들어 낼 수도 없다.</p>
+
+<p><strong><em>Q. (영지식성) 검증자는 증거 \(\pi\)로부터 비공개 정보 \([[c}_[1}},\cdots ,[[c}_[m-2}}\)를 알아 낼 수 있는가?</em></strong></p>
+
+<p><em>A.</em> ECC에 의해 암호화된 증거를 복호하여 <em>비공개 정보를 추출하는 것은 매우 어렵다.</em> 비록 비공개 정보를 추출하지 못하더라도, 악의적인 검증자가 증거를 재사용 하려는 경우가 있을 수 있다. 이러한 <em>재사용 시도는 증명자가 임의로 생성하는 비공개 값 \(r,s\)에 의해 차단 된다.</em></p>
+
+<p>만약 \(r,s\)가 존재하지 않는다면, 혹은 \(r,s\)의 값이 노출된다면, 악의적인 검증자가 증거를 조작하여 재사용 할 수 있다. 여기서 악의적인 검증자가 Setup 과정에서 생성된 비공개 정수 리스트 \(\tau\)를 알고 있다고 가정하겠다. 동일한 증명자의 비공개 정보는 일정하다고 가정하겠다. 증명자는 프로토콜을 \(N\)회 사용하였으며, 따라서 검증자는 \(N\)개의 증거를 보유하고 있다. 여기서 \(N\&gt;m-2\)이다. \(k=1,\cdots ,N\)번째 제출된 증거를 \([[\pi }_[k}}=\left( [[\left[ [[A}_[k}} \right]}_[G}},[[\left[ [[B}_[k}} \right]}_[H}},[[\left[ [[C}_[k}} \right]}_[G}} \right)\)라 하겠다. 증명자가 \(k\)번째 증거를 생성할 때 사용 한 파라미터를 \([[\tau }_[k}}=\left( [[\alpha }_[k}},[[\beta }_[k}},[[\gamma }_[k}},[[\delta }_[k}},[[x}_[k}} \right)\),\([[r}_[k}}\),\([[s}_[k}}\)라 하겠다. 다음의 알고리즘은 \([[\tau }_[k}},[[r}_[k}},[[s}_[k}}\)의 값이 검증자에게 알려져 있을 때, 검증자가 증거를 재사용 할 수 있도록 하는 알고리즘이다:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>알고리즘 5. 보안 파라미터인 \([[\tau }_[k}},[[r}_[k}},[[s}_[k}}\)가 공개된 경우 Groth16 프로토콜에 사용 될 수 있는 증거 재사용 알고리즘</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1. 검증자는 \(k=1,\cdots ,N\)에 해당하는 각각의 증거에 대하여 다음을 계산한다:<br />\(\)[[D}<em>[k}}:=[[\left[ [[A}</em>[k}} \right]}<em>[G}}-[[\left[ [[\alpha }</em>[k}} \right]}<em>[G}}-[[\left[ [[r}</em>[k}}[[\delta }<em>[k}} \right]}</em>[G}},\ [[E}<em>[k}}:=[[\left[ [[B}</em>[k}} \right]}<em>[H}}-[[\left[ [[\beta }</em>[k}} \right]}<em>[H}}-[[\left[ [[s}</em>[k}}[[\delta }<em>[k}} \right]}</em>[H}}.\(\)<br /><br />2. 계산 결과는 다음의 관계식을 갖는다: \([[D}_[k}}=\sum\nolimits_[i=1}^[m-2}[[[v}_[i}}\left( [[x}_[k}} \right)}[[\left[ [[c}_[i}} \right]}_[G}}\), \([[E}_[k}}=\sum\nolimits_[i=1}^[m-2}[[[w}_[i}}\left( [[x}_[k}} \right)}[[\left[ [[c}_[i}} \right]}_[H}}\).<br />3. \([[\left[ [[c}_[i}} \right]}_[G}}\)와 \([[\left[ [[c}_[i}} \right]}_[H}}\)에 대하여, \([[D}_[k}}\)와 \([[E}_[k}}\)로부터 선형 연립방정식에 해를 구한다.<br />4. \([[\left[ [[c}_[i}} \right]}_[G}}\)와 \([[\left[ [[c}_[i}} \right]}_[H}}\)를 사용하여 \([[\left[ [[C}_[N}} \right]}_[G}}\)로부터 다음을 계산한다:<br />\(\)\begin[align} \nonumber [[\left[ \frac[h\left( [[x}<em>[N}} \right)t\left( [[x}</em>[N}} \right)}[[[\delta }<em>[N}}} \right]}</em>[G}}=[[\left[ [[C}<em>[N}} \right]}</em>[G}}-\sum\nolimits_[i=1}^[i=m-2}[\frac[\left( [[\beta }<em>[N}}[[v}</em>[i}}\left( [[x}<em>[N}} \right)+[[\alpha }</em>[N}}[[w}<em>[i}}\left( [[x}</em>[N}} \right)+[[y}<em>[i}}\left( [[x}</em>[N}} \right) \right)}[[[\delta }<em>[N}}}}[[\left[ [[c}</em>[i}} \right]}<em>[G}}\-[[s}</em>[N}}[[\left[ [[A}<em>[N}} \right]}</em>[G}}-[[r}<em>[N}}[[\left[ [[B}</em>[N}} \right]}<em>[G}}-[[\left[ [[r}</em>[N}}[[s}<em>[N}}[[\delta }</em>[N}} \right]}<em>[G}}.\end[align} \(\)<br />5. (10) 의 계산 결과를 사용하여 다음을 계산한다:<br />\(\)[[\left[ h\left( [[x}</em>[N}} \right)t\left( [[x}<em>[N}} \right) \right]}</em>[G}}=[[\delta }<em>[N}}[[\left[ \frac[h\left( [[x}</em>[N}} \right)t\left( [[x}<em>[N}} \right)}[[[\delta }</em>[N}}} \right]}<em>[G}}.\(\)<br /><br />6.새로운 \([[\tau }_[N+1}}:=\left( \alpha ,\beta ,\delta ,\gamma ,x \right)\)에 관하여 다음의 재사용 증거를 생성한다:<br />\(\)[\pi }’=\nonumber \left( \begin[align}[[\left[ [[A}’} \right]}</em>[G}}:=[[\left[ \alpha +r\delta \right]}<em>[G}}+\sum\nolimits</em>[i=1}^[m}[[[v}<em>[i}}\left( [[x}</em>[N}} \right)[[\left[ [[c}<em>[i}} \right]}</em>[G}}}, \ \nonumber [[\left[ [[B}’} \right]}<em>[H}}=[[\left[ \beta +s\delta \right]}</em>[H}}+\sum\nolimits_[i=1}^[m}[[[w}<em>[i}}\left( [[x}</em>[N}} \right)[[\left[ [[c}<em>[i}} \right]}</em>[H}}}, \[[\left[ [[C}’} \right]}<em>[G}}=\sum\nolimits</em>[i=1}^[i=m}[\frac[\left( \beta [[v}<em>[i}}\left( [[x}</em>[N}} \right)+\alpha [[w}<em>[i}}\left( [[x}</em>[N}} \right)+[[y}<em>[i}}\left( [[x}</em>[N}} \right) \right)}[\delta }[[\left[ [[c}<em>[i}} \right]}</em>[G}}}\ \nonumber -\sum\nolimits_[i=m-1}^[i=m}[\frac[\left( \beta [[v}<em>[i}}\left( x \right)+\alpha [[w}</em>[i}}\left( x \right)+[[y}<em>[i}}\left( x \right) \right)}[\delta }[[\left[ [[c}</em>[i}} \right]}<em>[G}}} \ \nonumber +\frac[[[\left[ h\left( [[x}</em>[N}} \right)t\left( [[x}<em>[N}} \right) \right]}</em>[G}}}[\delta }+[[\left[ s[A}’+r[B}’-rs\delta \right]}_[G}}. \end[align} \right).\(\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>알고리즘 5에 의해 생성된 재사용 증거 \([\pi }'\)의 완전성을 조사하기 위해 \(LHS\)와 \(RHS\)를 계산 해 보면, 각각 과 의 관계에서 \(x\)대신 \([[x}_[N}}\)이 대입된 것과 같다. 따라서 \(x\)가 아닌 \([[x}_[N}}\)에 대하여 의 등호를 만족하므로, 재사용 증거 \([\pi }'\)는 완전하다.</p>
+
+<p>결과적으로, 악의적인 검증자가 보안 파라미터인 \(\tau ,r,s\)를 알고 있을 때 알고리즘 5의 방법으로 증거를 재사용 할 수 있음을 보였다. 그러나 다행히도, Groth16은 Prove과정에서 증명자에게 임의의 정수 값 \(r\)과 \(s\)를 선택하게 하여 공개하지 않도록 한다. 설령 검증자가 \(\tau\)를 알고 있다 하여도 \(r\),\(s\)를 모르는 한, 와 을 계산 할 수 없기 때문에 적어도 알고리즘 5와 같은 방법으로는 증거를 조작하여 재활용 할 수 없다.</p>
+
+<p><strong><em>Q. (간결성) 증거의 길이는 간결한가?</em></strong></p>
+
+<p><em>A.</em> Groth16에서 증거 데이터는 타원곡선의 좌표들이다. 따라서 증거의 길이의 단위를 타원곡선 좌표의 개수로서 정의하겠다. 결과적으로 증거의 길이는 \(3n+m+5\)으로, 연산 프로그램의 크기에 <em>선형적으로 비례한다.</em> 따라서 증거가 간결하다고 말할 수 있다.</p>
+
+<p>프로토콜의 보안문제, 즉 건실성과 영지식성을 보장하기 위하여 매 증거 생성시마다 CRS가 갱신되어야 한다. 그리고 검증자는 검증을 위해 CRS와 증거 \(\pi\)를 함께 확보하여야 한다. 즉, 증거 \(\pi\) 뿐만 아니라 CRS도 매번 공유되어야 하는 데이터이기 때문에, CRS의 길이 또한 증거로 포함할 수 있다.</p>
+
+<p>프로토콜 4를 확인하면 증거 \(\pi\)의 길이는 3으로 고정되어 있음을 알 수 있다. 반면 증거 CRS의 길이는 연산 프로그램의 크기에 따라 변한다. 어떤 연산 프로그램을 program analysis한 결과로서 써킷에 선의 개수가 \(m\)개, 곱셈 게이트의 개수가 \(n\)개가 존재한다면, CRS의 길이는 총 \(3n+m+5\)이다. 결과적으로, 증거 \(\\)와 CRS의 총 길이는 \(3n+m+8\)이며, 이는 연산프로그램의 크기인 \(m\)과 \(n\)에 선형적이다.</p>
+
+<h2 id="정리-보안-파라미터-tau와-rs의-중요성">정리) 보안 파라미터 \(\tau\)와 \(r\),\(s\)의 중요성</h2>
+
+<p>요약하면, Groth16 프로토콜의 건실성을 보장하기위한 필요조건은 파라미터 리스트 \(\tau\)가 거짓증명자에게 공개되지 않는것이다. 위의 분석을 통해 만약 \(\tau\)가 거짓증명자에게 알려지면, 거짓증명자는 검증자를 기만 할 수 있음을 보였다. 그렇기 때문에 프로토콜에서는 \(\tau\)를 ECC를 사용하여 암호화 한 후, 그 결과를 CRS라는 이름으로 공개하고, 원본 \(\tau\)는 즉각 소멸시킨다. 이렇게 사용 후 소멸시켜야 하는 파라미터들을 “보안폐기물(toxic waste)”이라 부른다.</p>
+
+<p>한편 Groth16 프로토콜은 영지식성 보장을 위해 \(\tau\)와 \(r\),\(s\)라는 이중보안장치를 사용한다. 만약 \(\tau\)와 \(r\),\(s\) 모두 악의적인 검증자에게 공개된다면, 악의적인 검증자가 알고리즘 5를 이용해 기 제출된 증거들을 수집하여 재활용 할 수 있음을 보였다. 만약 \(\tau\)나 \(\left( r,s \right)\)중 하나라도 노출되지 않는다면, 알고리즘 5를 사용 할 수 없다. \(\left( r,s \right)\)또한 \(\tau\)와 같이 보안폐기물이다.</p>
+
+<p>다음은 \(\tau\) 혹은 \((r,s)\)가 노출되었을 때 발생할 수 있는 보안 문제를 정리한 표이다:</p>
+
+<p>| 유출된 파라미터  |  건실성   | 영지식성  |
+| :————–: | :——-: | :——-: |
+|      \(\tau\)      | 침해 가능 |    -     |
+|     \((r,s)\)      |    -     |    -     |
+| \(\tau\)와 \((r,s)\) | 침해 가능 | 침해 가능 |
+표 6 보안 파라미터 \(\tau\) 혹은 \(\left( r,s \right)\)가 노출되었을 때 건실성과 영지식성의 침해 가능 여부</p>
+
+<p>보안 파라미터인 \(\tau\)를 생성하는 주체는 신뢰받는 제 3자(trusted third-party)인 것이 가장 이상적이지만, 제 3자를 정말로 신뢰할 수 있는가의 실용적인 문제가 고려 될 수 있다. 구체적으로 제 3자에 대한 신뢰를 법과 정책, 혹은 컴퓨터 프로토콜로써 완벽히 보장 할 수 있는가와 같은 문제이다. 여기서 “완벽한 신뢰”라는 표현은 \(\tau\)가 증명자나 검증자에게 알려질 가능성이 전혀 없음을 의미한다. 실용적인 환경에서는 제 3자에게 완벽환 신뢰를 기대하기 어렵다. 한 가지 예로 보안인증 시스템과 같이 검증자가 서버이고 증명자가 클라이언트인 경우가 있을 수 있다. 이 경우 검증자가 제 3자를 선별 및 구성한다. 검증자가 악의적인 의도가 있다면 제 3자와 모의하여 증명자를 기만할 수 있다.</p>
+
+<p>보안 파라미터 \(r,s\)의 역할은 제 3자를 신뢰할 수 없는 경우에도 증명자의 비밀정보를 보호해주는 것이다. 파라미터 \(r,s\)는 증명자가 생성하고 사용 후 소멸시키기 때문에 검증자 혹은 제 3자가 그 값을 알아내는 것이 불가능하다. 결과적으로, 파라미터 \(r,s\)의 존재 덕분에 제 3자에 대한 의존이 필요 없어지게 된다.</p>
+
+<p><em>참고) Multi-party computation of CRS: “Powers of Tau ceremony”</em></p>
+
+<p>분석 결과와 같이, Groth16 프로토콜의 건실성과 영지식성은 파라미터 리스트 \(\tau\)(tau)에 의존하고 있다. Tau는 증명자에게는 절대 공개되어서는 안되고, 검증자에게도 공개되지 않으면 더 좋다. 이 때문에 Groth16 프로토콜에서는 제3자가 tau를 생성 한 후 암호화하여 공개하고 원본 tau는 즉시 소멸한다.</p>
+
+<p>제 3자에 대한 의존을 완화하기 위해, 파라미터 tau의 생성을 분산화 하려는 노력이 시도된 적이 있다. ZCash가 2017년에 개최한 "Powers of Tau ceremony"가 그러한 노력이다<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">2</a></sup>. Powers of Tau는 전 세계의 참가자들이 공동으로 tau를 생성할 수 있도록 하는 행사이다. 누구나 기여 할 수 있지만, 누구도 최종 생성된 tau의 값은 알지 못한다. 다만 tau의 암호화 결과가 공개 될 뿐이다<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote">3</a></sup>. 2019년에는 Plonk 프로토콜을 개발한 회사 Aztec protocol에서도 Powers of Tau와 유사한 “multiparty computing ceremony”를 개최하였다<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote">4</a></sup>.</p>
+
+<p>아직 ZCash의 Powers of Tau가 정말로 안전한가에 관한 논란이 있을 수 있다. ZCash와 같이 ceremony의 형태로 다수가 참여하여 tau를 생성하면, tau의 값을 수시로 변경하기가 어렵다. 만약 tau가 증거를 생성하는데 한번 사용 된 직후 바뀌지 않는다면, 악의적인 검증자는 추가적인 조작 없이도 증거를 재사용 할 수 있다. 그럼에도 불구하고 분산화 계산을 도입하는 것은 훌륭한 접근이기도 하다. 더 많은 사람들이 참여할수록 tau를 악의적으로 조작하는 것이 어려워지기 때문이다. 실증연구를 통해 참여자 수와 tau의 변경 주기간의 trade-off 관계가 사용 환경에 따라 적절히 최적화 된다면, 보다 안전한 증명 프로토콜이 될 수 있을 것이다.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>정리 3. Divisibility check: 복원다항식 \(p\left( x \right)\)가 써킷을 완벽히 복원할 수 있기 위한 필요충분조건은 \(p\left( x\right)\)를 \(t\left( x \right)\)로 나눴을 때 몫 다항식 \(h\left( x\right)\)가 존재하는 것이다. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>Zcash 세레모니 개최 포스트: https://www.zfnd.org/blog/powers-of-tau <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>Zcash 세레모니 종료 포스트: https://www.zfnd.org/blog/conclusion-of-powers-of-tau <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p>Aztec 세레모니 개최 포스트: https://medium.com/aztec-protocol/aztec-announcing-our-ignition-ceremony-757850264cfe <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+:ET
