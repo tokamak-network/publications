@@ -1,0 +1,27 @@
+I"{<ul id="markdown-toc">
+  <li><a href="#video" id="markdown-toc-video">Video</a></li>
+  <li><a href="#slide" id="markdown-toc-slide">Slide</a></li>
+  <li><a href="#related-links" id="markdown-toc-related-links">Related links</a></li>
+</ul>
+
+<hr />
+<h1 id="video">Video</h1>
+
+<div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/5Hb_Oj4OOic" allowfullscreen=""></iframe>
+  </div>
+<hr />
+
+<h1 id="slide">Slide</h1>
+<div class="slide-wrapper">
+<!-- this is the embed code provided by Google -->
+  <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR6sFcbIaYWWv4OEscgNV-dI8e-WEJImoGXeMv3DXYNDKWclMKIYLK_HTMBN8XJ1n6E1BhME9erNLrQ/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<!-- Google embed ends -->
+</div>
+<hr />
+
+<h1 id="related-links">Related links</h1>
+<ul>
+  <li><a href="https://medium.com/onther-tech/erc20-%ED%86%A0%ED%81%B0-top100-business-model%EA%B3%BC-%ED%86%A0%ED%81%B0-%EB%B6%84%EB%A5%98-1-9f471797bc33">RC20 토큰 Top100 Business model과 토큰 분류</a></li>
+</ul>
+:ET
