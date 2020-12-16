@@ -48,7 +48,8 @@ Groth16 프로토콜의 증명-검증 과정이 프로토콜 4에 소개되어 �
 
  1. 무작위 비공개 정수 리스트 $$\tau :=\left( \alpha ,\beta ,\gamma ,\delta ,x \right)$$를 생성한다 ($$\tau $$는 증명자에게 알려져서는 안된다).<br/> 2. 타원곡선상의 두 점(generator) $$G$$와 $$H$$를 선택하여 공개한다.<br/> 3. 첫 번째 CRS인 $$\sigma _G$$를 생성한다:<br/>
 $$\sigma _G:= \begin{Bmatrix} \left [ \alpha \right]_G, \left[ \beta \right]_G,\left[ \delta \right]_G, \left\{ {\left[ {x^i} \right]}_G \right\}_{i=0}^{n-1}, \\ \left\{ {\left[ \frac{\beta v_i\left( x \right)+\alpha w_i\left( x \right)+y_i\left( x \right)}{\gamma } \right]}_G \right\}_{i=m-1}^{m},\\ \left\{ {\left[ \frac{\beta v_i\left( x \right)+\alpha w_i\left( x \right)+y_i\left( x \right)}{\delta } \right]}_G \right\}_{i=1}^{m-2}, \\ \left\{ {\left[ \frac{x^i t(x)}{\delta } \right]}_G \right\}_{i=0}^{n-2}& \\ \end{Bmatrix}$$<br/><br/>
-4. 두 번째 CRS인 $$\sigma _H$$를 생성한다:<br/>$$\sigma _H:=( \left [ \beta \right]_H, \left[ \gamma \right]_H, \left[ \delta \right]_H, \left\{ {\left[ {x^i} \right]}_H \right\}_{i=0}^{n-1} )$$.<br/><br/>5. $$\sigma _G$$와 $$\sigma _H$$를 공개한다.
+2. 두 번째 CRS인 $$\sigma _H$$를 생성한다:<br/>$$\sigma _H:=( \left [ \beta \right]_H, \left[ \gamma \right]_H, \left[ \delta \right]_H, \left\{ {\left[ {x^i} \right]}_H \right\}_{i=0}^{n-1} )$$.<br/><br/>
+3. $$\sigma _G$$와 $$\sigma _H$$를 공개한다.
 
 
 | Prove: 증명자가 수행한다. 증명자만이 아는 비공개 정보와 CRS $$\sigma _G$$, $$\sigma _H$$를 조합하여 증거를 생성한다. |
