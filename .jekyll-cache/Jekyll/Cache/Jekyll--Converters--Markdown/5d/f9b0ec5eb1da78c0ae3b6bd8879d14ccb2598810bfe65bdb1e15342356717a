@@ -1,0 +1,27 @@
+I"2<ul id="markdown-toc">
+  <li><a href="#video" id="markdown-toc-video">Video</a></li>
+  <li><a href="#slide" id="markdown-toc-slide">Slide</a></li>
+  <li><a href="#reference" id="markdown-toc-reference">reference</a></li>
+</ul>
+
+<hr />
+<h1 id="video">Video</h1>
+
+<div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/1qUUtzeLQow" allowfullscreen=""></iframe>
+  </div>
+<hr />
+
+<h1 id="slide">Slide</h1>
+<div class="slide-wrapper">
+<!-- this is the embed code provided by Google -->
+  <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRO-xVxTxQDtINKJiu6jmJi1tLM7i5xkl1jEsnkIOqqTRCWOAP5qYGd_WU7A5nfzg6MLz0vTMUJKuTP/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<!-- Google embed ends -->
+</div>
+<hr />
+
+<h1 id="reference">reference</h1>
+<ul>
+  <li><a href="https://medium.com/onther-tech/create2-%EC%B7%A8%EC%95%BD%EC%A0%90-%EB%B6%84%EC%84%9D-d82e913ad28b">CREATE2는 정말 문제가 없을까?</a></li>
+</ul>
+:ET

@@ -1,0 +1,28 @@
+I"d<ul id="markdown-toc">
+  <li><a href="#video" id="markdown-toc-video">Video</a></li>
+  <li><a href="#slide" id="markdown-toc-slide">Slide</a>    <ul>
+      <li><a href="#related-links" id="markdown-toc-related-links">Related links</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+<h1 id="video">Video</h1>
+
+<div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/ciog3ksfuqo" allowfullscreen=""></iframe>
+  </div>
+<hr />
+
+<h1 id="slide">Slide</h1>
+<div class="slide-wrapper">
+<!-- this is the embed code provided by Google -->
+  <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT-1EoFezQHY4JLmuR_vBT1E_8rLUq4qwioWlcrh4_u-YI9ndbqDUCfmc4vRwkv4VREr2iFmNvugPL1/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<!-- Google embed ends -->
+</div>
+<hr />
+
+<h2 id="related-links">Related links</h2>
+
+<p><a href="https://medium.com/onther-tech/transaction-fee-gas-delegated-execution-model-in-py-evm-f2d57cea1008">Transaction Fee(GAS) Delegated Execution Model in Py-EVM</a></p>
+:ET

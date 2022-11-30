@@ -35,4 +35,8 @@ markdown: kramdown
 kramdown:
    math_engine: mathjax
 
+#eric
+kramdown:
+   math_engine: mathjax
+
 # baidu_analysis: 94be4b0f9fc5d94cc0d0415ea6761ae9

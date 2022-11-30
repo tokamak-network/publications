@@ -1,0 +1,184 @@
+I"�6<ul id="markdown-toc">
+  <li><a href="#video" id="markdown-toc-video">Video</a></li>
+  <li><a href="#abstract" id="markdown-toc-abstract">Abstract</a></li>
+  <li><a href="#user-activated-fork" id="markdown-toc-user-activated-fork">User-activated Fork</a></li>
+  <li><a href="#undo-request" id="markdown-toc-undo-request">Undo Request</a>    <ul>
+      <li><a href="#pseudocode-samplerequestablecontract" id="markdown-toc-pseudocode-samplerequestablecontract">Pseudocode: SampleRequestableContract</a></li>
+    </ul>
+  </li>
+  <li><a href="#rebase-and-resubmit-urbs" id="markdown-toc-rebase-and-resubmit-urbs">Rebase and Resubmit URBs</a></li>
+  <li><a href="#computation-challenge-and-renew" id="markdown-toc-computation-challenge-and-renew">Computation Challenge and Renew</a></li>
+  <li><a href="#related-links" id="markdown-toc-related-links">Related Links</a></li>
+</ul>
+
+<hr />
+<h1 id="video">Video</h1>
+
+<div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/ikIhihHyCK0" allowfullscreen=""></iframe>
+  </div>
+<hr />
+
+<h1 id="abstract">Abstract</h1>
+
+<p><em>User-activated fork</em> (UAF) makes sure that users can protect assets when operator withholds blocks. When user prepare <em>User-submitted request epoch</em> (URE) and submit <em>user-submitted block</em> (URB) based on last finalized block, the canonical chain is forked to new chain from the last finalized block. In the new chain, all epochs after finalized epoch (epoch whose last block is finalized) should be rebased (like git but the commit sequence is not same) to the new fork.</p>
+
+<p>When child chain is forked, new <strong>3</strong> epochs are placed as this sequence.
+<code class="language-plaintext highlighter-rouge">last finalized epoch - URE - not finalized ORE' - not finalized NRE'</code>
+Users can protect their asset unless withheld NRBs are not finalized. Exit requests for ORB are not rebased into the new fork to prevent them from being challenged because exit requests for URB MUST be created in case of operator’s block withholding attack.</p>
+
+<p>Users who want to exit should recreate exit request if child chain is forked.</p>
+
+<h1 id="user-activated-fork">User-activated Fork</h1>
+
+<p>User can create and submit URB, which is more expensive than ORB, to fork child chain if he is willing to. User have to prepare URE before submit URB. In the prepare step, the RootChain contract emits <code class="language-plaintext highlighter-rouge">EpochPrepared(bool isRequest, bool userActivated, uint requestStart, uint requestEnd)</code> event. <code class="language-plaintext highlighter-rouge">requestStart</code> is the first id of ERU (exit request and undo request for URB) to be applied, and <code class="language-plaintext highlighter-rouge">first id = last id of previous URE if there was fork else 0</code>.</p>
+
+<p>We can say an ERU is valid if 1) it is exit request and exit request transaction is not reverted or 2) it is undo request and the corresponding enter request is not applied yet in child chain.</p>
+
+<p>When URE is prepared, anyone can submit URBs to fill the epoch with bond as Ether.</p>
+
+<p>After URE, two epochs, ORE’ <em>without exit requests</em> and NRE’, are placed. ORE’ is a single epoch that covers all ORE in previous chain and so is NRE’. Because previous exit requests for ORB may not be valid after URE, they should not be included in ORE’, but user can exit in URB by creating exit request for URB (ERU). User who want to exit have to make an exit request for URB if he notices BWA. If he think operator is honest, he will make another exit request for ORB.</p>
+
+<h1 id="undo-request">Undo Request</h1>
+
+<p>Undo request prevents future enter request in child chain from being applied. When undo request is finalized in root chain, state change is rewound and the undo request bond is refunded if enter request is not finalized yet. If the enter request is aleady finalized, there is no rewinding and no refund because the undo request is invalid. User shall create undo request only if he is convinced of user-activated fork.</p>
+
+<ul>
+  <li>
+    <p>\(r_e\): Enter Request for ORB</p>
+  </li>
+  <li>
+    <p>\(r_u\): Undo Request of \(r_e\) for URB</p>
+  </li>
+  <li>
+    <p>\(r_u\) is created after \(r_e\) is in root chain</p>
+  </li>
+  <li>
+    <p>\(r_u\) is applied <strong>before</strong> \(r_e\) is in child chain</p>
+  </li>
+  <li>
+    <p><strong>\(r_u\) cancels the future \(r_e\).</strong></p>
+  </li>
+  <li>
+    <p>\(r_u\) _MUST_ have same \(trieKey\) and \(trieValue\) as \(r_e\), and it is enforced by the RootChain contract</p>
+  </li>
+</ul>
+
+<p>User creates \(r_u\) when he want to cancel the previous \(r_e\). \(r_u\) is applied before \(r_e\) if child chain is forked. \(r_u\) is invalid if child chain is not forked and \(r_e\) is applied.</p>
+
+<p>When \(r_u\) is finalized, state change, that is already applied in root chain, should be rewound. The finalization means that \(r_e\) in child chain cannot be applied anymore, because \(r_u\) is prior to \(r_e\) by the UAF as opposed to the sequence in root chain. If \(r_e\) is already applied in child chain, \(r_u\) <em>MUST</em> not rewind the state change and <em>MUST</em> not refund request bond.</p>
+
+<h2 id="pseudocode-samplerequestablecontract">Pseudocode: SampleRequestableContract</h2>
+
+<div class="language-solidity highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">contract</span> <span class="n">SampleRequestableContract</span> <span class="p">{</span>
+  <span class="k">mapping</span> <span class="p">(</span><span class="kt">uint</span> <span class="o">=&gt;</span> <span class="kt">bool</span><span class="p">)</span> <span class="k">public</span> <span class="n">appliedRequests</span><span class="p">;</span>
+
+  <span class="c1">// actually, this represents "ERU"
+</span>  <span class="k">mapping</span> <span class="p">(</span><span class="kt">uint</span> <span class="o">=&gt;</span> <span class="kt">bool</span><span class="p">)</span> <span class="k">public</span> <span class="n">appliedUndoRequests</span><span class="p">;</span>
+
+  <span class="c1">// requests to be undone
+</span>  <span class="k">mapping</span> <span class="p">(</span><span class="kt">uint</span> <span class="o">=&gt;</span> <span class="kt">bool</span><span class="p">)</span> <span class="k">public</span> <span class="n">undoneRequests</span><span class="p">;</span>
+
+  <span class="k">function</span> <span class="n">applyRequest</span><span class="p">(</span>
+    <span class="kt">bool</span> <span class="n">isExit</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">isRootChain</span>
+    <span class="kt">uint256</span> <span class="n">requestId</span><span class="p">,</span> <span class="kt">address</span> <span class="n">requestor</span><span class="p">,</span>
+    <span class="kt">bytes32</span> <span class="n">trieKey</span><span class="p">,</span> <span class="kt">bytes32</span> <span class="n">trieValue</span>
+  <span class="p">)</span> <span class="k">external</span> <span class="k">returns</span> <span class="p">(</span><span class="kt">bool</span> <span class="n">success</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">...</span> <span class="c1">// check msg.sender is rootchain or null address
+</span>
+    <span class="c1">// check r_e
+</span>    <span class="nb">require</span><span class="p">(</span><span class="o">!</span><span class="n">appliedRequests</span><span class="p">[</span><span class="n">requestId</span><span class="p">]);</span>
+
+    <span class="c1">// revert if r_u is already applied in child chain
+</span>    <span class="c1">// Or we may just return false with emitting AlreadyUndoneRequest event.
+</span>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">isRootChain</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nb">require</span><span class="p">(</span><span class="o">!</span><span class="n">undoneRequests</span><span class="p">[</span><span class="n">requestId</span><span class="p">]);</span>
+    <span class="p">}</span>
+
+    <span class="p">...</span> <span class="c1">// do something
+</span>
+    <span class="n">appliedRequests</span><span class="p">[</span><span class="n">requestId</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c1">// undo a FUTURE request
+</span>  <span class="k">function</span> <span class="n">undoRequest</span><span class="p">(</span>
+    <span class="c1">// bool isExit,               // undo only enter request
+</span>    <span class="kt">bool</span> <span class="n">isRootChain</span><span class="p">,</span>
+    <span class="kt">uint256</span> <span class="n">targetRequestId</span><span class="p">,</span>              <span class="c1">// r_e, request to be undone
+</span>    <span class="kt">uint256</span> <span class="n">requestId</span><span class="p">,</span> <span class="kt">address</span> <span class="n">requestor</span><span class="p">,</span> <span class="c1">// r_u, undo request
+</span>    <span class="kt">bytes32</span> <span class="n">trieKey</span><span class="p">,</span> <span class="kt">bytes32</span> <span class="n">trieValue</span>
+  <span class="p">)</span> <span class="k">external</span> <span class="k">returns</span> <span class="p">(</span><span class="kt">bool</span> <span class="n">success</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">...</span> <span class="c1">// check msg.sender is rootchain or null address
+</span>
+    <span class="c1">// check r_u
+</span>    <span class="nb">require</span><span class="p">(</span><span class="o">!</span><span class="n">appliedUndoRequests</span><span class="p">[</span><span class="n">requestId</span><span class="p">]);</span>
+
+    <span class="c1">// check r_e
+</span>    <span class="nb">require</span><span class="p">(</span><span class="o">!</span><span class="n">undoneRequests</span><span class="p">[</span><span class="n">targetRequestId</span><span class="p">]);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">isRootChain</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// r_e should be already applied in root chain
+</span>      <span class="nb">require</span><span class="p">(</span><span class="n">appliedRequests</span><span class="p">[</span><span class="n">targetRequestId</span><span class="p">]);</span>
+
+      <span class="p">...</span> <span class="c1">// rewind the previous change
+</span>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="c1">// r_e should not be already applied in root chain
+</span>      <span class="nb">require</span><span class="p">(</span><span class="o">!</span><span class="n">appliedRequests</span><span class="p">[</span><span class="n">targetRequestId</span><span class="p">]);</span>
+
+      <span class="c1">// do nothing
+</span>    <span class="p">}</span>
+
+    <span class="n">appliedUndoRequests</span><span class="p">[</span><span class="n">requestId</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="n">undoneRequests</span><span class="p">[</span><span class="n">targetRequestId</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="rebase-and-resubmit-urbs">Rebase and Resubmit URBs</h1>
+
+<p>UAF requires child chain to be rebased as follow.</p>
+
+<p><code class="language-plaintext highlighter-rouge">last finalized epoch - URE - not finalized ORE' - not finalized NRE'</code></p>
+
+<p>If user create and submit another URB before previous URB is finalized, next chain is rebased based on <code class="language-plaintext highlighter-rouge">not finalized ORE's</code>. Any user can submit <code class="language-plaintext highlighter-rouge">ORB's</code> to the RootChain. ORB’ submiter may be incentivised from the URB submit cost. But details will be covered from Plasma EVM economic paper.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Action</th>
+      <th>Valid canonical chain</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Initial State</td>
+      <td>Finalized Block#1 - ORB#2 - NRB#3 - ORB#4 - NRB#5 - …</td>
+    </tr>
+    <tr>
+      <td>UAF 1</td>
+      <td>Block#1 - <strong>URB#2 - ORB’#3 - NRB’#4</strong></td>
+    </tr>
+    <tr>
+      <td>extend forked chain</td>
+      <td>Block#1 - URB#2 - ORB’#3 - NRB’#4 - <strong>ORB#5 - NRB#6 - ORB#7 - NRB#8</strong> - …</td>
+    </tr>
+    <tr>
+      <td>UAF 2</td>
+      <td>Block#1 - URB#2 - ORB’#3 - <strong>URB#4 - ORB’#5 - NRB’#6</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Resubmitted URB and ORB’ following the URB can be verified by verification game.</p>
+
+<h1 id="computation-challenge-and-renew">Computation Challenge and Renew</h1>
+
+<p>Any computation challenge requires all blocks after the challenged block to be renewed their <code class="language-plaintext highlighter-rouge">stateRoot</code> and <code class="language-plaintext highlighter-rouge">receiptRoot</code>. A block is renewed with its 2 merkle roots and renewer.</p>
+
+<p>If operator-submitetd block is challenged, we can even halt the chain and disincentivize her, but details will be covered from the economic paper. But in most case, she will withhold the block rather than broadcast invalid block.</p>
+
+<p>If user-submitted block is challenged, other user can challenge on the block becuase user-submitted block data are available to anyone. We can disincentivize submiter and renew the block with the data based on challenger.</p>
+
+<h1 id="related-links">Related Links</h1>
+<p><a href="https://github.com/Onther-Tech/research/blob/master/plasma-evm/2-user-activated-fork-and-undo-request.md">Github Issue Link</a></p>
+:ET

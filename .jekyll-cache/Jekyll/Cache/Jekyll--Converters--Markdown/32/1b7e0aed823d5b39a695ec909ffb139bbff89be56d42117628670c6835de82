@@ -1,0 +1,563 @@
+I"Ē<h1 id="영지식-증명을-활용한-프라이버시-토큰zk-erc20-구현">영지식 증명을 활용한 프라이버시 토큰(zk-ERC20) 구현</h1>
+
+<h2 id="주의--코드가-많음"><strong>주의 : 코드가 많음</strong></h2>
+
+<p>Special Thanks to <a href="https://github.com/4000D">Carl Park(4000d)</a></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*mkZDyso7UvVyutxpP5ugDA.png" alt="" />
+<span class="figcaption_hack">P2P 시스템에서 검증자(Verifier)는 누구?</span></p>
+
+<p>안녕하세요, <a href="https://medium.com/@kevin.j">철학자(정순형)</a>입니다.</p>
+
+<p>블록체인 업계는 영지식 증명(Zero Knowledge Proof; ZKP)에 대한 관심이 매우 높습니다. 영지식 증명이라는 기술은 대중에게
+“<strong>데이터를 상대방에게 보여주지 않고도 해당 내용이 문제가 있는지 없는지</strong>”를 알려주는 마법으로 알려져 있습니다(<a href="https://ko.wikipedia.org/wiki/%EC%98%81%EC%A7%80%EC%8B%9D_%EC%A6%9D%EB%AA%85">동굴
+이야기</a>는 널리 알려진 비유이고, 더하여 국문으로된 많은
+자료들에 첨부된 <a href="https://en.wikipedia.org/wiki/Zero-knowledge_proof">난해한 수식</a>들은 이 기술에
+신비감을 더하죠).</p>
+
+<p>이번 포스트는 영지식 증명에 관한 이론에 집중하기보다는, 실제로 블록체인에 만들어서 쓸 수 있는 영지식 증명의 <strong>구현과 활용</strong>에 조금 더
+집중해보고자 합니다. 특히 이번 포스팅은 이더리움 블록체인에 이미 배포되어 거래되는 시총 <a href="https://docs.google.com/spreadsheets/d/1zwpZl09NNwFkuAMFB1XkeOQkVsdxwoQUXESa8-Pu_zg/edit?usp=sharing">9조
+5천억원</a>(2019.6.4.
+기준)에 달하는 이더리움의 <a href="https://en.wikipedia.org/wiki/ERC-20">ERC20 토큰</a>을 영지식 증명 라이브러리인
+<a href="https://github.com/Zokrates/ZoKrates">Zokrates</a>를 활용해 거래기록을 뒤섞어 <strong>토큰 소유자 및 거래
+기록을 숨기는 방법에 관한 구현 아이디어</strong>를 다루고 있습니다. 영지식 증명 자체에 관한 이론적인 접근을 원하실 경우 아래의 자료를 참조하시면
+좋을 것 같습니다.</p>
+
+<ul>
+  <li><a href="http://blog.onther.io/tag/#zkp-ref">온더의 영지식 증명 기초와 원리 세미나 자료(총 7편, 영상)</a></li>
+  <li><a href="https://medium.com/decipher-media/zero-knowledge-proof-chapter-1-introduction-to-zero-knowledge-proof-zk-snarks-6475f5e9b17b">Decipher의 Introduction to Zero Knowledge Proof
+시리즈</a>(블로그)</li>
+</ul>
+
+<p>영어에 익숙하시면 비탈릭의 ZKP시리즈글도 좋습니다.</p>
+
+<p><strong>만약 개발자 혹은 연구자가 아니시라면</strong>, 이 글에서 다루는 내용과 서술이 익숙하지 않을 수 있습니다. 그럴 경우 <strong>서론의 기본적인
+개념</strong>만 받아들이신 후마지막에 다루는 <strong>향후 연구 및 응용</strong>과 <strong>*별첨2: 프라이버시 기술의 가치 **항목 문단을 먼저 읽어보시기를
+**권장</strong>합니다.</p>
+
+<blockquote>
+  <p>이 글에 쓰여진 코드는 지난 2018년 12월 <a href="https://ethsingapore.devpost.com/">ethsingapore</a>
+해커톤에서 발표된<a href="https://medium.com/@atvanguard/zkdai-private-dai-transactions-on-ethereum-using-zk-snarks-9e3ef4676e22">
+zkDAI</a>
+프로젝트를 참조했음을 미리 알립니다.</p>
+</blockquote>
+
+<h3 id="서론-트랜잭션-토폴로지-변경">서론: 트랜잭션 토폴로지 변경</h3>
+
+<p>이더리움 블록체인에서 발생하는 토큰 전송(Token Transfer) 트랜잭션은 계정에서 계정으로 토큰의 잔액이 이동하는 매쉬형
+토폴로지(meshed topology) 구조를 띄고 있습니다. 얼핏 보기에 이러한 구조는 매우 복잡해 보이지만, 모든 트랜잭션이 공개되기 때문에
+사실상 거래 기록의 프라이버시는 없다고 봐도 무방하죠(10조원에 달하는 ERC20토큰의 거래기록은 단 하나도 빠지지 않고 1원 단위까지 이더리움
+블록체인에 기록되어 공개됩니다).</p>
+
+<p>익명화된 토큰(zk-ERC20)은 이 “계정-계정” 구조를 믹서(Mixer) 컨트랙트를 중심으로한 “계정-믹서”간 집중형
+토폴로지(centralized topology)로 변경시킵니다(어려워도 조금만 참으세요).</p>
+
+<p><span class="figcaption_hack">Transaction Topology 변경 — 출처 : <a href="https://arxiv.org/pdf/1904.00905.pdf">ZETH</a></span></p>
+
+<p>믹서로 들어온 토큰은(그 이름 그대로) 데이터가 뒤섞이면서 “<strong>누가 누구에게 얼마의 토큰을 전송했는지 알 수 없는 상태</strong>”로 바뀌게 됩니다.
+이 개념은 시크릿노트(SecretNote)라는 <strong>해시화된 토큰 소유 증서</strong>를 통해 구현될 수 있습니다.</p>
+
+<h3 id="노트note--소유자와-액면가-정보가-기록된-증서">노트(Note) : 소유자와 액면가 정보가 기록된 증서</h3>
+
+<h4 id="노트-시크릿노트note-secretnote">노트, 시크릿노트(Note, SecretNote)</h4>
+
+<p><strong>노트(Note)</strong><em>란 소유자 및 해당 소유자가 보유한 토큰의 액면가를 기록한 증서(note)</em>입니다. 그리고 이 증서를 사용하기 위해서는
+해당 증서의 소유주임을 증명(verify)해야 합니다. 이러한 방식의 소유자 증명은 블록체인에서 일반적으로 사용하는 공개키 암호화 알고리즘이
+활용되죠(노트는 개념은 봤을때, 비트코인의 UTXO와 같습니다). 하지만 노트 자체는 익명화되기 힘듭니다. 그래서 믹서는 익명화를 위해
+<strong>해시화된 노트</strong>만을 기록으로 유지합니다. 그리고 이렇게 해시화된 노트를 <strong>시크릿
+노트(SecretNote)-</strong>비..밀..노트..?<strong>-</strong>라고 부릅니다.</p>
+
+<blockquote>
+  <p>Note = (소유자, 액면가) = (Public Key, Amount) = (Address, Amount)</p>
+</blockquote>
+
+<blockquote>
+  <p>SecretNote= hash(Note)</p>
+</blockquote>
+
+<p>믹서 컨트랙트(블록체인)에는 시크릿 노트와 트랜잭션을 생성한 계정(msg.sender)만 기록됩니다. 예를들면 아래와 같이 저장되는것이죠 .</p>
+
+<blockquote>
+  <p>→Tx(트랜잭션 생성 계정, 시크릿 노트)</p>
+</blockquote>
+
+<blockquote>
+  <p>Tx(A, 86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52)</p>
+</blockquote>
+
+<blockquote>
+  <p>Tx(B, D4735E3A265E16EEE03F59718B9B5D03019C07D8B6C51F90DA3A)</p>
+</blockquote>
+
+<blockquote>
+  <p>Tx(C, 4E07408562BEDB8B60CE05C1DECFE3AD16B72230967DE01F640B)</p>
+</blockquote>
+
+<blockquote>
+  <p>Tx(D, 4B227777D4DD1FC61C6F884F48641D02B4D121D3FD328CB08B5)</p>
+</blockquote>
+
+<blockquote>
+  <p>…</p>
+</blockquote>
+
+<p>해시화된 노트 정보만으로는 누구로부터 누구에게 얼마의 토큰을 전송했는 전혀 알 수 없습니다. 위와 같은 기록은 <strong>누군가 계속 노트를
+만들었구나</strong> 정도밖에 파악이 안되죠. 하지만 어떻게 이러한 <strong>최소한의 기록으로 이중지불(Double Speding)등의 기록 조작이 일어나지
+않는것을 보장</strong>할 수 있을까요?</p>
+
+<p>이때 영지식증명(ZKP)이 쓰입니다. 트랜잭션에 <strong>1) 원래 노트의 소유자는 내가 맞고 2)새롭게 발행된 노트는 새로운 소유자에게 귀속되었다는
+연산</strong>에 관한 영지식 증거(ZK Proof)를 첨부합니다(영지식 알고리즘으로 SNARK등을 활용하면 이 증거의 크기는 매우
+간결-succinct-해지기 때문에 연산 능력이 충분치 못한 퍼블릭 블록체인에서 활용하기에 매우 유리합니다). 영지식 증거가 첨부된 트랜잭션을
+묘사하면 다음과 같습니다.</p>
+
+<blockquote>
+  <p>→Tx(트랜잭션 생성 계정, 시크릿 노트, 영지식 증거)</p>
+</blockquote>
+
+<blockquote>
+  <p>Tx(A, 86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D, Proof*)</p>
+</blockquote>
+
+<blockquote>
+  <p>Tx(B, D4735E3A265E16EEE03F59718B9B5D03019C07D8B6C5, Proof**)</p>
+</blockquote>
+
+<blockquote>
+  <p>Tx(C, 4E07408562BEDB8B60CE05C1DECFE3AD16B72230967D, Proof***)</p>
+</blockquote>
+
+<blockquote>
+  <p>Tx(D, 4B227777D4DD1FC61C6F884F48641D02B4D121D3FD32, Proof<em>**</em>)</p>
+</blockquote>
+
+<blockquote>
+  <p>…</p>
+</blockquote>
+
+<p>ZKP의 마법은 간결한 증거(Proof)만 가지고도 해당되는 노트가 문제없이 사용되었다는것을 보장한다는 데에 있습니다. 구체적으로 이러한 증거가
+어떻게 만들어지는지 살펴보도록 하겠습니다.</p>
+
+<h4 id="시크릿-노트를-사용할-수-있는-지식knowledge-of-transfer-value-of-secretnote">시크릿 노트를 사용할 수 있는 지식(Knowledge of Transfer Value of SecretNote)</h4>
+
+<p>구현의 단순화를 위해서 노트의 소유권을 옮기기 위해서는 <strong>하나의 노트는 태워 없어져 매번 새롭게 2개의 노트가 만들어지는 모델</strong>을
+사용합니다. 2개의 노트중 하나는 하나는 당사자에게 귀속시키고, 나머지 하나는 본인이게 돌려줍니다.</p>
+
+<p><span class="figcaption_hack">PK1소유주는 PK2소유주에게 v’만큼의 토큰을 전송했다</span></p>
+
+<p>pk는 퍼블릭키(주소)를 뜻하고, v는 노트의 액면가를 뜻합니다. 위와 같은 구조를 만들어 내기 위해서 증명해야하는 지식(Knowledge)은
+생각보다 매우 단순합니다. 풀어쓰면 다음과 같죠.</p>
+
+<blockquote>
+  <p><strong>노트 소유자가 노트를 보내기 위해 증명해야 하는 지식(Knowledge)</strong></p>
+</blockquote>
+
+<blockquote>
+  <ol>
+    <li>나는(pk1) 시크릿노트1에 대한 소유권자가 확실해!</li>
+  </ol>
+</blockquote>
+
+<blockquote>
+  <ol>
+    <li>v = v’ + change도 확실해!</li>
+  </ol>
+</blockquote>
+
+<blockquote>
+  <ol>
+    <li>시크릿노트2는 Pk2의 공개키를 통해 만들어졌어!</li>
+  </ol>
+</blockquote>
+
+<blockquote>
+  <ol>
+    <li>시크릿노트3은 나(pk1)을 통해 만들어졌어!</li>
+  </ol>
+</blockquote>
+
+<p>1을 통해서 노트1의 소유권을 확인하고 2를 통해 이중지불을 방지하며, 3을 통해서 정확한 액면가와 소유권을 이전하고 4를 이용해 남은 잔액을
+다시 본인에게 되돌려줍니다.</p>
+
+<p>구체적인 설계를 위해서, 이때 사용되는 연산(지식, knowledge)을 C( )라고 정의하고 여기에 사용되는 파라미터를 구체화하면 다음과
+같습니다.</p>
+
+<blockquote>
+  <p><strong>C(oldNote, newNote1, newNote2, sk, v, receiverPk, v’, change)</strong></p>
+</blockquote>
+
+<blockquote>
+  <p>OldNote : 예전에 소유하던 노트(해시)</p>
+</blockquote>
+
+<blockquote>
+  <p>newNote1 : 소유권이 옮겨진(전송된) 노트(해시)</p>
+</blockquote>
+
+<blockquote>
+  <p>newNote2 : 소유권을 옮기고 난(전송된) 후 남은 노트(해시)</p>
+</blockquote>
+
+<blockquote>
+  <p>sk : 예전 노트(oldNote)의 개인키</p>
+</blockquote>
+
+<blockquote>
+  <p>v : 예전 노트(oldNote)의 잔액</p>
+</blockquote>
+
+<blockquote>
+  <p>receivePk : 전송된 노트 소유자의 공개키</p>
+</blockquote>
+
+<blockquote>
+  <p>v’ : 전송된 노트의 잔액</p>
+</blockquote>
+
+<blockquote>
+  <p>change : 예전노트 액면가액-전송될노트의액면가액 =되돌려받는액면가</p>
+</blockquote>
+
+<p>이렇게 정의된 파라미터를 통해서 앞서 정의한 지식(Knowledge)을 의사코드로 표현하면 다음의 형태가 됩니다.</p>
+
+<blockquote>
+  <p>line 2: 전달된 개인키(sk)를 통해서 공개키(pk)를 구합니다.</p>
+</blockquote>
+
+<blockquote>
+  <p>line 3: 내가 소모하려는 노트(oldNote)가 앞선 과정에서 구한 공개키(pk)와 전달된 액면가(v)를 통해 만들어진 노트인지
+확인합니다.</p>
+</blockquote>
+
+<blockquote>
+  <p>line 4 : 소모하려는 액면 금액(v)이 내가 소유권을 이전하고자(전달하고자) 하는 노트의 액면가(v’)와 되돌려받은 잔액(change)과
+같은지 확인합니다.</p>
+</blockquote>
+
+<blockquote>
+  <p>line 5 : 내가 전달하고자 하는 시크릿노트의 해시값(newNote1)이 hash(받는사람(receiverPk), 전달할 금액(v’))과
+일치하는지 확인합니다.</p>
+</blockquote>
+
+<blockquote>
+  <p>line 6 : 내가 쓰고 남은 시크릿노트의 해시값(newNote2)이 hash(나(Pk), 잔액(v’))과 일치하는지 확인합니다.</p>
+</blockquote>
+
+<blockquote>
+  <p>line7 : 라인2~6을 문제없이 통과했다면 1을 반환합니다.</p>
+</blockquote>
+
+<p><a href="https://zokrates.github.io/">zokrates</a>는 이렇게 설계된 C( )라는 함수 연산에 관한 지식(knowledge)에
+대한 <strong>1)증거(proof)</strong>와 이를 **2)검증(verify) **할 수 있는 실질적인 수단을 제공합니다. 앞서의 의사코드를
+<a href="https://zokrates.github.io/gettingstarted.html#hello-zokrates">zokrates
+language</a>로 구현한
+결과는 다음과 같습니다.</p>
+
+<p><span class="figcaption_hack">고수준 서킷 코드</span></p>
+
+<p>앞선 설계의 C( )는 에서는 8개의 변수만을 전달받았는데, 실질적인 구현과정에서 16개의 파라미터로 변경되었습니다(이론과 실전은 다릅니다ㅜㅜ
+코드를 보시면 알겠지만 1개의 변수를 2개로 쪼개서 쓰고있죠. 그건 zokrates language가 함수의 파라미터를 무려 254비트(?)라는
+듣도보도 못한 낮선 크기로 처리하기 때문입니다). ZKP에서는 이렇게 정의된 코드를 서킷(circuit)이라고 부릅니다.-엄밀히 말해서 아직
+완벽한 circuit이 구성된건 아닙니다. 컴파일을 해야 circuit이 되죠-</p>
+
+<p>영지식의 세계에 오신걸 환영합니다. 이제 막 지식(knowledge)을 정의할 수 있는 도구를 손에 익히게 되었습니다. 다음으로 해야할 일은
+일련의 개념으로부터 시작한 지식(knowledge)에 대한 1)<strong>증거(proof)</strong>와 2)<strong>검증(verify)</strong>을 할 수 있는
+환경(Trusted Setup → <a href="https://z.cash/ko_KR/technology/paramgen/">ZCASH의 Trusted Setup
+참조</a>)을 갖추는 일입니다. 즉, 시크릿노트를 쓸 수 있는 실행
+환경을 갖추는 일이죠. 이러한 실행 환경에서 만들어진 증거(proof)의 실체를 마주하면, 왜 ZK-SNARK의 S(succinctness,
+간결함)가 들어간 것인지, <a href="https://medium.com/@VitalikButerin/zk-snarks-under-the-hood-b33151a013f6">Toxic
+Waste</a>이란
+무엇인지에 관한 개념에 대해서 쉽게 이해할 수 있습니다.</p>
+
+<h3 id="trusted-setup">Trusted Setup</h3>
+
+<p>일단 <a href="https://zokrates.github.io/gettingstarted.html#one-line-install">컴퓨터에 zokrates를
+설치</a>합니다. 그리고 설치된
+환경에 앞서 제작한 서킷 코드를 옮겨서 다음 명령어를 순서대로 입력합니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//out, out.code 파일 생성
+$./zokrates compile -i zk-circuit.code
+
+, verification.key파일 생성
+$ ./zokrates setup --proving-scheme pghr13
+
+ 생성
+$./zokrates export-verifier --proving-scheme pghr13
+</code></pre></div></div>
+
+<ul>
+  <li>compile : 해당 명령어를 통해서 고수준 언어로 작성된 서킷 로직이 저수준의 바이너리 서킷으로 옮겨집니다. 직접적으로
+<a href="https://medium.com/@VitalikButerin/quadratic-arithmetic-programs-from-zero-to-hero-f6d558cea649">QAP</a>를
+만들어냅니다.</li>
+  <li>setup : 만들어진 QAP를 이용해서(컴파일된 서킷을 이용해서) verification.key와 proving.key를 만듭니다. 이
+과정에서 toxic waste라는 랜덤값이 사용되는데, 이 값은 사라져야 하며 해당 값이 어딘가에 남아있으면 <a href="https://medium.com/qed-it/how-toxic-is-the-waste-in-a-zksnark-trusted-setup-9b250d59bdb4">가짜 증거(fake
+proof)</a>를
+만들어 낼 수 있습니다(이중지불이 가능하게 되죠).</li>
+  <li>export-verifier : 정의된 서킷을 검증할 수 있는 솔리디티 컨트랙트 코드를 만들어줍니다.
+<a href="https://github.com/Onther-Tech/zk-ERC20/blob/master/zk-related/verifier.sol">verifier.sol</a>파일이
+그것이고, 컨트랙트 호출간<a href="https://github.com/Onther-Tech/zk-ERC20/blob/master/zk-related/verifier.sol#L603-L613">
+verifyTx()</a>라는
+심플한 함수를 사용해 영지식 검증을 수행 합니다.</li>
+</ul>
+
+<p>여기서 유의할 점은 이렇게 만들어진 verifier.sol은 앞에서 설계 및 구현한 서킷에 관한 검증을 수행한다는 점입니다. 그렇게 때문에
+새로운 서킷을 설계하고 만들면 방금전 trusted setup절차를 다시 반복해야 합니다. — 그리고 이 결과 만들어진
+verifier.sol파일은 전혀 다른 코드가 되겠죠. 지식(knowledge)이 달라지면 해당 지식에 대한 검증(verify)로직도
+달라진다는것을 이해하는것이 중요합니다. -</p>
+
+<p>어렵게 만들어진 verifier.sol이지만, 아직 이 컨트랙트는 주어진 증거(Proof)를 바탕으로 그저 노트1개가 노트2개로 나눠질 수 있는
+공개키와 액면가 검증이 옳은지 옳지 않은지만 판단합니다. 이 자체가 노트는 아닙니다. verifier.sol을 상속한
+mixer.sol(SecretNote를 다루는 컨트랙트)은 별도로 만들어야 하죠. 지금부터는 실질적으로 노트를 기록하고 관리하는 mixer를
+살펴보도록 하겠습니다.</p>
+
+<h3 id="mixersol--secretnote-management-contract">Mixer.sol : SecretNote Management Contract</h3>
+
+<p>컨트랙트는 객체이고, 객체를 통해 상태(variables)와 행위(function)를 정의할 수 있습니다. 믹서 컨트랙트 앞서 만들어진
+verifier를 상속해 시크릿노트에 관한 상태와 행위를 제어합니다.</p>
+
+<h4 id="상태variables--state-notes-allnotes-allhashednotes">상태(variables) : State, notes, allNotes, allHashedNotes</h4>
+
+<p><span class="figcaption_hack">노트의 상태값들</span></p>
+
+<p>상태값들은 직관적이고 단순합니다. 모든 시크릿노트는 리스트(allHashedNotes)형태로 관리되고, 기록된 각각의 시크릿 노트들의 상태는
+mapping형태의 notes로 처리하죠. 중요한 것은 노트들의 상태값 flag인 State입니다. 각각의 노트는** Invalid,
+Created, Spent**상태가 있는데, 노트를 쪼개기 위해서는(사용하기 위해서는) 기록된 노트가 Created 상태여야 합니다. 사용된
+노트는 Spent상태로 바뀝니다. 노트 전송이 2번 이루어진 상황을 그림으로 나타내면 다음과 같습니다.</p>
+
+<p><span class="figcaption_hack">노트1, 노트2가 사용되는 과정에서 Crated → Spent 상태로 변경</span></p>
+
+<p>구체적으로 노트가 사용되면서 상태값이 변경되는 명령행은
+<a href="https://github.com/Onther-Tech/zk-ERC20/blob/master/contracts/SecretNote.sol#L57-L66">transferNote()</a>함수에
+정의되어 있습니다.</p>
+
+<p>상태값 중 특이한 부분은 문자열 배열인 allNotes인데, 이는 향후 노트 소유주가 본인의 노트 정보를 조회할 때 사용합니다. 만약 해당
+노트의 소유주라면, allNotes의 요소값을 보유한 private key로 복호화(decrypt)하여 해시화되지 않은 노트정보(액면가 및
+소유자)를 알 수 있습니다.</p>
+
+<h4 id="행위functions--transfernote-">행위(functions) : transferNote( )</h4>
+
+<p>앞서 노트는 다양한 상태(Invalid, Created, Spent)를 가질 수 있고, 노트가 쓰이는 과정에서 이러한 상태가 바뀌는것은 이해
+했습니다만, 구체적으로 어떠한 코드를 통해 이러한 변화가 이뤄지 살펴보도록 하겠습니다.</p>
+
+<p><span class="figcaption_hack">Mixer.sol의 transferNote( ) 함수</span></p>
+
+<p>transferNote( )함수를 호출하기 위해서 유저는 11개의 파라미터(배열 길이까지 하면 27개 파라미터가 되겠네요)를 준비해야합니다.
+이중 a~k까지는 ZK Proof이고, input은 종전에 설계한 C( )함수의 퍼블릭 파라미터인 OldNote, newNote1,
+newNote2의 해시값과 리턴값 입니다(input배열의 길이가 7개인 이유는 노트해시를 2개의 값으로 표현하기 때문입니다).</p>
+
+<p>주목할 점은 이 함수 <strong>파라미터들에 관한 검증함수(라인:19)와 노트해시(라인:24)만 통과하면 노트를 사용(라인:29)할 수 있다는
+것</strong>입니다. 실제로 사용되는 파라미터는 다음과 같습니다.</p>
+
+<p><span class="figcaption_hack">Proof.json</span></p>
+
+<p>얼핏 보기에 값이 복잡해 보이지만, Proof 키값인 a~k까지의 값을 자연수로 표기하면 아래와 같은 단순한 5차원 백터값이 됩니다.</p>
+
+<blockquote>
+  <p>[179426333, 181327921, 198492781, 533001793, 334216237]</p>
+</blockquote>
+
+<p>단순한 숫자 5개처럼 보이지만 이 값은 다음의 복잡한 내용을 간결하게 증명 증명(Succinct Proof)하고 있습니다.</p>
+
+<p>“<strong>나는(pk1) 시크릿노트1에 대한 소유권자가 확실하고, 5(원래 노트 액면가)= 3(노트1의 액면가)+ 2(노트2의 액면가)이고,
+시크릿노트2는 Pk2의 공개키를 통해 만들어졌고, 시크릿노트3은 나(pk1)을 통해 만들어졌어!</strong> ”</p>
+
+<p>5차원 벡터 자체로부터 위의 <strong>메시지에 관한 어떠한 내용을 유추할 수 없음에도 불구하고 이를 통해 해당 메시지에 관한 연산이 제대로
+수행되었는지는 정확하게 알 수 있습니다</strong>. 이처럼 영지식 증명은 그 말처럼 메시지 검증에 <strong>어떠한 지식도 요구하지 않죠(Zero
+Knowledge)</strong><em>.</em> 다음은 이 Proof가 어떠한 과정을 통해서 만들어졌는지 살펴보도록 하겠습니다.</p>
+
+<h4 id="연산증명--witness--proofjson">연산증명 : witness → Proof.json</h4>
+
+<p>witness란 컴파일된 zokrates소스코드(out파일)에 명시된 main() 함수에 파라미터를 전달해 만들어진 영지식 증거(proof)를
+뜻합니다. 앞서 구현된 서킷은 16개의 파라미터로 구성되어 있으니, 해당 내용에 맞는 파라미터를 생성해서 zokrates에 전달하면 됩니다.
+예를들어 <a href="https://github.com/Onther-Tech/zk-ERC20/blob/master/test/SecretNoteTest.js#L48-L56">0x65f01a39f2b7e3cb9b0f0f933ae13309e2b814fc 계정(계정0번)이 가진 액면가 5의 노트를
+0x23f18f142c93dd1d719eaf67b56973517f6ebcb8 계정(계정1)에게 3만큼 보내는 witness를
+계산</a>
+할 때는 다음의 명령을 주면 됩니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./zokrates compute-witness -a 299336082027245038390806872836251868434 146214785280603262054605348855920364042 1710234169 322627985543346917984603212343009613052 0 5 338680819269871046518773602934504523249 240032092968569212144514626611958402952 603033364 59253784198043682718523328310826417336 0 3 170846492286112848076693656918639323381 285388887744989578963627759440747666135 0 2
+</code></pre></div></div>
+
+<p>시크릿노트를 이용해 가치이전을 하기 위해서는 노트를 2개로 쪼개야 하므로 3개의 노트정보 및 소유자정보가 필요합니다만, 앞서 말씀 드렸다시피
+zokrates는 256비트를 2개로 나눠서 입력해줘야 하므로 의사코드에 비해 <a href="https://github.com/Onther-Tech/zk-ERC20/blob/master/zk-related/zk-circuit.code#L9-L19">파라미터 갯수가
+많습니다</a>.</p>
+
+<p>만들어진 witness를 json포멧으로 변경을 위해서 다음 명령을 줍니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./zokrates generate-proof --proving-scheme pghr13
+</code></pre></div></div>
+
+<p>실행결과 proof.json파일이 생성됩니다.</p>
+
+<h3 id="구현-및-테스트-아키텍처">구현 및 테스트 아키텍처</h3>
+
+<p><a href="https://github.com/Onther-Tech/zk-ERC20">온더의 깃헙 레포지토리</a>에 앞서 서술한 내용에 관한 테스트를 해볼 수
+있는 소스코드와 테스트 스크립트를 첨부해두었습니다. Docker와 ganachi-cli가 필요합니다.</p>
+
+<p>README.md파일에 적힌 setup스크립트를 순서대로 수행하면 로컬에 zokrates 컨테이너와 레포지토리 디렉토리의 zk-related 를
+공유해 일련의 명령을 자동으로 수행합니다.</p>
+
+<p>트러플 테스트는 accounts[0] 소유인 액면가 5토큰의 노트를 생성하고, accounts[1]에게 3토큰을 보냅니다.</p>
+
+<h3 id="한계">한계</h3>
+
+<p>zkERC20은 매우 단순한 형태의 구현이기 때문에 여러 제약 및 한계가 있으며, 실제 production수준으로 가기 위해서는 이러한 문제들을
+해결해야 합니다. 특히나 많은 양의 가스를 소모한다는점으로 인해서 이더리움 메인체인보다는 튜링 완전함을 지원하는 확장성 높은 레이어2(<a href="https://tokamak.network/">토카막
+플라즈마</a> 등)등에서 오히려 활용 가능성이 높습니다.</p>
+
+<h4 id="구현된-스마트-컨트랙트-문제">구현된 스마트 컨트랙트 문제</h4>
+
+<ul>
+  <li>검증 함수(verifyTx) 가 가스를 상당히 많이 소모한다(약 7백만).</li>
+  <li>노트 소유자 잔액 조회 문제 encrypt( hash(pk, v) ).</li>
+  <li>내가 소유한 노트의 정확한 잔액을 알아야만 트랜잭션을 날릴 수 있다.</li>
+  <li>노트를 배열 처리해서 노트가 많아지면 매우 느려진다.</li>
+  <li>노트를 쓰려면 항상 2개로 쪼갠다(튜링 불완전성).</li>
+  <li>모든 금액을 보내는 경우 노트 하나는 잔액이 0이된다.</li>
+  <li>조건부 거래 : 여러명에게, 멀티 시그를 하고 싶을 때는..?</li>
+  <li>충분한 노트가 쌓이지 않으면 프라이버시가 보장 되기 힘들다.</li>
+</ul>
+
+<h4 id="zkp-구조적-문제">ZKP 구조적 문제</h4>
+
+<ul>
+  <li>이니셜 셋업에 toxic waste를 누가 셋업할 것인가? → MPC 등으로 보완</li>
+  <li>witness를 만드는 연산이 클라이언트에게 부담이 적지 않고, 유저는 플라즈마 외에 별도의 클라이언트 혹은 서비스가 필요</li>
+</ul>
+
+<h4 id="실용성의-문제">실용성의 문제</h4>
+
+<ul>
+  <li>zokrates랭귀지가 지원하는 라이브러리가 많지 않음</li>
+</ul>
+
+<h3 id="향후-연구-및-응용">향후 연구 및 응용</h3>
+
+<p>현재까지의 시크릿노트의 구현은 단순 전송을 위해 2개의 노트가 항상 만들어져야 하는 등 구조적으로 유연하지 못하게 설계되어있습니다. 그렇기때문에
+다양한 조건부 거래(멀티시그 등의 소유권 이전에 관한 권한을 스마트 컨트랙트에게 부여하는 문제 등)가 어렵고 이에 대한 개선이 필요합니다.
+조건부 거래가 가능한 노트의 설계와 이에 근거한 서킷 코드의 정교한 설계가 필요하고, 이렇게 만들어진 코드가 해당 체인에서 동작 가능한지에 관한
+실무적인 검토 또한 필요합니다 — Practical한 수준에서 이더리움 메인체인에서 직접 활용은 어렵다고 보는게 맞을 것 같습니다. 스마트
+컨트랙트를 지원하는 플라즈마 등 레이어2체인에서 활용 가능성이 높아보입니다 — .</p>
+
+<p>하지만 이러한 난관에도 불구하고 이러한 형태의 조건부 거래가 가능해진다면 이들 거래를 중개할 수 있는 스마트 컨트랙트를 통해서 프라이버시를
+완벽하게 보장하는 탈중앙화된 거래소를 만드는 것도 가능합니다.</p>
+
+<p><span class="figcaption_hack">토카막 플라즈마에 응용된 시크릿노트 거래소</span></p>
+
+<p>위의 그림은 온더의 <a href="https://tokamak.network/">토카막 네트워크</a>를 이용한 프라이버시를 보장하는 탈중앙화 거래소에 관한
+아키텍쳐를 묘사하고 있습니다. 이더리움 메인체인에 이미 만드어진 ERC20토큰을 <a href="https://youtu.be/M65Oq_rbHGs">Requestable
+컨트랙트</a>로 래핑하고 이를 플라즈마로 진입시킨다면 기존 ERC20토큰 보유자들은 본인들의
+거래 프라이버시를 보장받은 상태에서 토큰 거래가 가능해지게 됩니다.</p>
+
+<p>조건부 거래는 단순 거래뿐만 아니라 다양한 탈중앙화 금융(DeFi)영역으로 확장될 수 있고, 이는
+<a href="https://www.kisa.or.kr/business/gdpr/gdpr_tab1.jsp">GDPR</a>등 최근의 개인정보 보호 흐름에 맞춰진
+금융솔루션 등 다양한 영역으로 적용 및 확대될 수 있습니다.</p>
+
+<p>하지만 쏟아지는 연구에 비해, 여전히 부족한 라이브러리는 실질적인 개발에 많은 어려움을 주고 있고, 이러한 부분에 대한 커뮤니티의 관심이 필요할
+것 같습니다.</p>
+
+<p>긴 글을 끝까지 읽어주셔서 감사합니다.</p>
+
+<h3 id="별첨1--zkdai세미나-영상">*별첨1 : zkDAI세미나 영상</h3>
+
+<p><span class="figcaption_hack">프라이버시를 보장하는 스테이블 코인 zk-DAI 깊게 살펴보기(철학자, Onther Inc.)</span></p>
+
+<h3 id="별첨2--프라이버시-기술의-가치">*별첨2 : 프라이버시 기술의 가치</h3>
+
+<p>온더의 ZKP에 관한 리서치와 개발은 단순한 지적 호기심을 충족하기 위해 혹은 엔지니어링 퍼즐의 만족감을 위해 이뤄지는 것은 아닙니다 — 사실
+생각보다 많은 연구개발 산출물들이 연구자들의 호기심으로부터 시작해 연구팀만 쓰는 시제품 형태의 장난감으로 남습니다 — . <strong>ERC20의
+프라이버시를 보장할 수 있는 완벽한 기술</strong>이 나온다면 얼마정도의 가치를 가지게 될까요?</p>
+
+<p>이를 합리적으로 추정하기 위해 두개의 데이터를 살폈습니다.</p>
+
+<ol>
+  <li>(프라이버시가 보장되지 않은) ERC20의 시가 총액 규모</li>
+  <li>(프라이버시 보장 기능이 갖춰진) 코인의 시총 규모와 비중</li>
+</ol>
+
+<h4 id="erc20-시가-총액의-규모">ERC20 시가 총액의 규모</h4>
+
+<ul>
+  <li>Coinmarketcap.com에 등록된 ERC20토큰의 갯수는 92개</li>
+  <li>(2019.6.4 기준)이들 토큰의 시총 합은 <strong>9조 5천억원</strong></li>
+</ul>
+
+<h4 id="프라이버시-코인의-시총과-비중">프라이버시 코인의 시총과 비중</h4>
+
+<ul>
+  <li>3대 프라이버시 코인 : 모네로, 대시, ZCASH</li>
+  <li>(2019.6.4)시총 합 : <strong>3조 7천억원(출처 — coinmarketcap.com)</strong></li>
+  <li>전체 코인 시총 중 프라이버시 코인 비중 : 약 <strong>1.3%(출처 — coinmarketcap.com)</strong></li>
+</ul>
+
+<p>모네로, DASH, ZCASH 코인의 시총이 전체 시총의 1.3%를 차지하고 있으니, 프라이버시에 대한 수요는 <strong>전체 코인 시장의
+1.3%</strong>라고 합리적으로 추정할 수 있고, 아직 프라이버시가 보장되고 있지 않은 ERC20토큰 9조 5천억원에 1.3%를 곱하면 최소한의
+기술가치는 약 <strong>1천 2백억원</strong>으로 추정할 수 있습니다.</p>
+
+<p>더불어 많은 거래소들이 프라이버시 코인의 자금세탁 가능성으로 인해 <a href="https://news.joins.com/article/22471236">프라이버시 코인을
+상장폐지</a>하고 있기 때문에 이로 인해 위축된 시총을 고려하면 실질적인
+크립토 프라이버시의 기능 수요는 1.3%이상일 수 있고, 더해서 단순 토큰 전송 이외에 다양한 응용(예를 들어 거래소, 각종 금융 기능 등)
+기술을 통해 부가가치를 더하는 것도 가능합니다. ERC20 그 자체는 오늘의 포스팅과 같이 별도로 만들지 않는 한 프라이버시 기능이 없기 때문에
+상장폐지를 당할 명분도 없죠.</p>
+
+<p>지금까지 논의는 토큰에만 국한되어 말씀을 드렸지만, 프라이버시 영역이 우리가 평소에 사용하는 데이터 전체로 확장된다면 이 기술가치는 산정조차
+어려울정도로 커지게 됩니다. 데이터의 내용이 전혀 볼 필요가 없으면서도 다양한 데이터 거래의 안정성이 보장된다는 것은 정말 멋진 일입니다 —
+물론 아직은 더 풀어야할 기술적 한계들이 있지만요 — .</p>
+
+<p>엄밀한 마켓 리서칭을 위해서는 <strong>1) 경쟁자에 관한 정보</strong> <strong>2) 외부적인 위협과 기회 요소</strong> — 제도적, 법적, 기술적 이슈와 동향 —
+<strong>3) 내부적인 요소</strong> — 보유기술 등 — 등을 더 서술해야 하지만 이러한 내용은 별도로 다루도록 하겠습니다.</p>
+
+<ul>
+  <li><a href="https://medium.com/tag/research?source=post">Research</a></li>
+  <li><a href="https://medium.com/tag/zkp?source=post">Zkp</a></li>
+  <li><a href="https://medium.com/tag/zero-knowledge?source=post">Zero Knowledge</a></li>
+  <li><a href="https://medium.com/tag/ìì§ì?source=post">영지식</a></li>
+  <li><a href="https://medium.com/tag/erc20?source=post">Erc20</a></li>
+</ul>
+
+<h3 id="철학자정순형"><a href="https://medium.com/@kevin.j">철학자(정순형)</a></h3>
+
+<p>Onther Inc Founder. Seoul Ethereum Meetup Co-organizer. Blockchain Engineer.
+Crypto Lover.</p>
+
+<h3 id="onther-tech"><a href="https://medium.com/onther-tech?source=footer_card">Onther-Tech</a></h3>
+
+<p>Building an Ethereum Blockchain ECO system to Change the World</p>
+
+<ul id="markdown-toc">
+  <li><a href="#영지식-증명을-활용한-프라이버시-토큰zk-erc20-구현" id="markdown-toc-영지식-증명을-활용한-프라이버시-토큰zk-erc20-구현">영지식 증명을 활용한 프라이버시 토큰(zk-ERC20) 구현</a>    <ul>
+      <li><a href="#주의--코드가-많음" id="markdown-toc-주의--코드가-많음"><strong>주의 : 코드가 많음</strong></a>        <ul>
+          <li><a href="#서론-트랜잭션-토폴로지-변경" id="markdown-toc-서론-트랜잭션-토폴로지-변경">서론: 트랜잭션 토폴로지 변경</a></li>
+          <li><a href="#노트note--소유자와-액면가-정보가-기록된-증서" id="markdown-toc-노트note--소유자와-액면가-정보가-기록된-증서">노트(Note) : 소유자와 액면가 정보가 기록된 증서</a>            <ul>
+              <li><a href="#노트-시크릿노트note-secretnote" id="markdown-toc-노트-시크릿노트note-secretnote">노트, 시크릿노트(Note, SecretNote)</a></li>
+              <li><a href="#시크릿-노트를-사용할-수-있는-지식knowledge-of-transfer-value-of-secretnote" id="markdown-toc-시크릿-노트를-사용할-수-있는-지식knowledge-of-transfer-value-of-secretnote">시크릿 노트를 사용할 수 있는 지식(Knowledge of Transfer Value of SecretNote)</a></li>
+            </ul>
+          </li>
+          <li><a href="#trusted-setup" id="markdown-toc-trusted-setup">Trusted Setup</a></li>
+          <li><a href="#mixersol--secretnote-management-contract" id="markdown-toc-mixersol--secretnote-management-contract">Mixer.sol : SecretNote Management Contract</a>            <ul>
+              <li><a href="#상태variables--state-notes-allnotes-allhashednotes" id="markdown-toc-상태variables--state-notes-allnotes-allhashednotes">상태(variables) : State, notes, allNotes, allHashedNotes</a></li>
+              <li><a href="#행위functions--transfernote-" id="markdown-toc-행위functions--transfernote-">행위(functions) : transferNote( )</a></li>
+              <li><a href="#연산증명--witness--proofjson" id="markdown-toc-연산증명--witness--proofjson">연산증명 : witness → Proof.json</a></li>
+            </ul>
+          </li>
+          <li><a href="#구현-및-테스트-아키텍처" id="markdown-toc-구현-및-테스트-아키텍처">구현 및 테스트 아키텍처</a></li>
+          <li><a href="#한계" id="markdown-toc-한계">한계</a>            <ul>
+              <li><a href="#구현된-스마트-컨트랙트-문제" id="markdown-toc-구현된-스마트-컨트랙트-문제">구현된 스마트 컨트랙트 문제</a></li>
+              <li><a href="#zkp-구조적-문제" id="markdown-toc-zkp-구조적-문제">ZKP 구조적 문제</a></li>
+              <li><a href="#실용성의-문제" id="markdown-toc-실용성의-문제">실용성의 문제</a></li>
+            </ul>
+          </li>
+          <li><a href="#향후-연구-및-응용" id="markdown-toc-향후-연구-및-응용">향후 연구 및 응용</a></li>
+          <li><a href="#별첨1--zkdai세미나-영상" id="markdown-toc-별첨1--zkdai세미나-영상">*별첨1 : zkDAI세미나 영상</a></li>
+          <li><a href="#별첨2--프라이버시-기술의-가치" id="markdown-toc-별첨2--프라이버시-기술의-가치">*별첨2 : 프라이버시 기술의 가치</a>            <ul>
+              <li><a href="#erc20-시가-총액의-규모" id="markdown-toc-erc20-시가-총액의-규모">ERC20 시가 총액의 규모</a></li>
+              <li><a href="#프라이버시-코인의-시총과-비중" id="markdown-toc-프라이버시-코인의-시총과-비중">프라이버시 코인의 시총과 비중</a></li>
+            </ul>
+          </li>
+          <li><a href="#철학자정순형" id="markdown-toc-철학자정순형">철학자(정순형)</a></li>
+          <li><a href="#onther-tech" id="markdown-toc-onther-tech">Onther-Tech</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+:ET
